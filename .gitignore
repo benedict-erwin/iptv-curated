@@ -1,0 +1,23 @@
+# Python virtual environment
+.venv/
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+
+# Playlists: stray ones in the repo root stay out; tracked playlists live in m3u/
+*.m3u
+!m3u/**
+
+# VPN configs and the VPNGate cache: keep the folder, ignore its contents
+ovpn/*
+!ovpn/.gitkeep
+
+# CI / local scratch
+vpngate.csv
+vpn_countries.json
+matrix.json
+*.ovpn
+/new/
+/site/
+/.localstate/

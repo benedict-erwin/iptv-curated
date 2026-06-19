@@ -1,0 +1,139 @@
+name: verify-iptv
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # every 6h (GitHub cron is imprecise; disables after 60d idle)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # peaceiris pushes the result to the gh-pages branch
+
+concurrency:
+  group: verify-iptv
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Fetch VPNGate list (once)
+        run: python vpngate.py fetch --out vpngate.csv
+      - name: List VPNGate countries
+        run: python vpngate.py list-countries --csv vpngate.csv --out vpn_countries.json
+      - name: Build matrix
+        id: gen
+        run: |
+          python build_matrix.py --vpn vpn_countries.json --out matrix.json
+          echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
+      - name: Share VPNGate CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: vpngate-csv
+          path: vpngate.csv
+
+  verify:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install ffmpeg + openvpn
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg openvpn
+      - name: Get VPNGate CSV
+        if: matrix.mode == 'vpn'
+        uses: actions/download-artifact@v4
+        with:
+          name: vpngate-csv
+      - name: Connect VPN
+        if: matrix.mode == 'vpn'
+        continue-on-error: true # VPN failure => verify direct (geo-limited), don't fail the job
+        run: |
+          set +e
+          want="${{ matrix.country }}"
+          for rank in 0 1 2 3 4; do
+            python vpngate.py get-config "$want" --rank "$rank" --csv vpngate.csv --out vpn.ovpn || continue
+            sudo openvpn --config vpn.ovpn --daemon --log vpn.log --writepid /tmp/vpn.pid
+            for _ in $(seq 1 20); do
+              ip addr show tun0 >/dev/null 2>&1 && break
+              sleep 2
+            done
+            sleep 3
+            got=$(curl -s --max-time 15 https://ipinfo.io/country | tr -d '[:space:]' | tr 'A-Z' 'a-z')
+            if [ "$got" = "$want" ]; then
+              echo "VPN up in $got"
+              exit 0
+            fi
+            echo "got '$got' want '$want' (rank $rank) - retrying"
+            sudo kill "$(cat /tmp/vpn.pid 2>/dev/null)" 2>/dev/null
+            sudo pkill openvpn 2>/dev/null
+            sleep 2
+          done
+          echo "VPN unavailable for $want - verifying direct (geo-limited)"
+      - name: Verify
+        run: |
+          python verify.py \
+            --url "https://iptv-org.github.io/iptv/countries/${{ matrix.country }}.m3u" \
+            --output "${{ matrix.country }}.m3u" \
+            --workers ${{ matrix.mode == 'vpn' && 25 || 40 }} \
+            --timeout ${{ matrix.mode == 'vpn' && 15 || 8 }} \
+            --skip-empty || true
+      - name: Disconnect VPN
+        if: always()
+        run: sudo pkill openvpn 2>/dev/null || true
+      - name: Upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: m3u-${{ matrix.country }}
+          path: ${{ matrix.country }}.m3u
+          if-no-files-found: ignore
+
+  merge:
+    needs: verify
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Download all results
+        uses: actions/download-artifact@v4
+        with:
+          path: new
+          pattern: m3u-*
+          merge-multiple: true
+      - name: Checkout previous publish (gh-pages)
+        uses: actions/checkout@v4
+        continue-on-error: true # first run: branch doesn't exist yet
+        with:
+          ref: gh-pages
+          path: site
+      - name: Merge + guard
+        env:
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          mkdir -p site
+          python merge.py --new-dir new --site-dir site --output site/index.m3u \
+            --site-url "https://${OWNER}.github.io/${REPO}" \
+            --repo-url "https://github.com/${OWNER}/${REPO}"
+          rm -rf site/.git # don't publish the gh-pages checkout's git dir
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages

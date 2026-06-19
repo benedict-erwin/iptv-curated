@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iptv-curated</title>
+<meta name="description" content="Auto-verified IPTV playlist: only channels that actually play, grouped by country and rebuilt automatically. Free M3U for VLC, TiViMate, Kodi.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://benedict-erwin.github.io/iptv-curated/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="iptv-curated">
+<meta property="og:description" content="Auto-verified IPTV playlist: only channels that actually play, grouped by country and rebuilt automatically. Free M3U for VLC, TiViMate, Kodi.">
+<meta property="og:url" content="https://benedict-erwin.github.io/iptv-curated/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iptv-curated">
+<meta name="twitter:description" content="Auto-verified IPTV playlist: only channels that actually play, grouped by country and rebuilt automatically. Free M3U for VLC, TiViMate, Kodi.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"iptv-curated","description":"Auto-verified IPTV playlist: only channels that actually play, grouped by country and rebuilt automatically. Free M3U for VLC, TiViMate, Kodi.","dateModified":"2026-06-20T01:15:36Z","creator":{"@type":"Organization","name":"iptv-org","url":"https://github.com/iptv-org/iptv"},"url":"https://benedict-erwin.github.io/iptv-curated/"}
+</script>
+<style>
+:root{color-scheme:light dark;--bg:#fafafa;--fg:#16181d;--muted:#6b7280;--card:#fff;--line:#e6e8eb;--accent:#2563eb}
+@media(prefers-color-scheme:dark){:root{--bg:#0d0f13;--fg:#e8eaed;--muted:#9aa0a6;--card:#15181e;--line:#262a31;--accent:#6ea8fe}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;
+font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+main{width:100%;max-width:720px}
+h1{font-size:1.5rem;margin:0 0 .25rem;letter-spacing:-.01em}
+.lead{color:var(--muted);margin:0 0 2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+.label{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:.5rem}
+.urlrow{display:flex;gap:.5rem;align-items:stretch}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem;
+white-space:nowrap;overflow-x:auto;
+background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.6rem .75rem;flex:1;display:flex;align-items:center}
+button{font:inherit;font-size:.85rem;cursor:pointer;border:1px solid var(--line);background:var(--accent);color:#fff;
+border-radius:8px;padding:0 1rem;white-space:nowrap;min-width:5.5rem;transition:background .15s}
+button:active{transform:translateY(1px)}
+button.ok{background:#16a34a;border-color:#16a34a}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);
+border-radius:12px;overflow:hidden;margin-bottom:1.5rem}
+.stat{background:var(--card);padding:1.1rem 1rem;text-align:center}
+.stat b{display:block;font-size:1.6rem;letter-spacing:-.02em}
+.stat span{font-size:.78rem;color:var(--muted)}
+.how{color:var(--muted);font-size:.92rem}
+footer{color:var(--muted);font-size:.82rem;margin-top:2rem}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<main>
+<h1>iptv-curated</h1>
+<p class="lead">Auto-verified IPTV playlist: only channels that actually play, grouped by country and rebuilt automatically. Free M3U for VLC, TiViMate, Kodi.</p>
+<div class="card">
+<div class="label">Playlist URL</div>
+<div class="urlrow">
+<code id="u">https://benedict-erwin.github.io/iptv-curated/index.m3u</code>
+<button id="c" type="button">Copy</button>
+</div>
+</div>
+<div class="stats">
+<div class="stat"><b>2,399</b><span>channels</span></div>
+<div class="stat"><b>158</b><span>countries</span></div>
+<div class="stat"><b>2026-06-20 01:15</b><span>updated (UTC)</span></div>
+</div>
+<p class="how">Paste the URL into any M3U player (VLC, TiViMate, Kodi, IPTV Smarters).
+Channels are grouped by country. Dead and unreachable streams are removed, and
+the list is rebuilt automatically about every 6 hours, so keep the same URL and
+your player picks up each refresh.</p>
+<footer>Source links from <a href="https://github.com/iptv-org/iptv">iptv-org</a>.
+This site stores no video, only checks which public links still play. <a href="https://github.com/benedict-erwin/iptv-curated">Source on GitHub</a>.</footer>
+</main>
+<script>
+(function(){
+var b=document.getElementById('c'),u=document.getElementById('u'),t;
+b.addEventListener('click',function(){
+navigator.clipboard.writeText(u.textContent).then(function(){
+b.textContent='Copied';b.classList.add('ok');
+clearTimeout(t);t=setTimeout(function(){b.textContent='Copy';b.classList.remove('ok');},1500);
+});
+});
+})();
+</script>
+</body>
+</html>

@@ -351,10 +351,11 @@ border:1px solid var(--line);background:transparent;color:var(--accent);cursor:p
 .pcol{display:flex;flex-direction:column;gap:.5rem}
 .pcol h3{font-size:.78rem;margin:0 0 .1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:center}
 .pick{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:.75rem .6rem;
-display:flex;flex-direction:column;gap:.45rem;align-items:center;text-align:center}
+display:flex;flex-direction:column;gap:.4rem;align-items:center;text-align:center;justify-content:flex-start;height:100%}
 .pick img,.pick .ph{width:52px;height:52px;flex:none;object-fit:contain;border-radius:8px;background:var(--bg)}
-.pick b{font-size:.82rem;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.pick span{font-size:.72rem;color:var(--muted)}
+.pick b{font-size:.82rem;line-height:1.25;min-height:2.5em;display:-webkit-box;-webkit-line-clamp:2;
+-webkit-box-orient:vertical;overflow:hidden;align-items:center}
+.pick span{font-size:.72rem;color:var(--muted);margin-top:auto}
 </style>
 </head>
 <body>

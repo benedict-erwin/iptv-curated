@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iptv-curated</title>
 <meta name="description" content="Search and browse a free, auto-verified IPTV playlist. Find live TV channels by name, filter by country and category, and copy direct stream URLs for VLC, TiViMate, and Kodi.">
-<meta name="keywords" content="IPTV, M3U playlist, free IPTV, live TV, IPTV channels, IPTV by country, channel search, VLC, TiViMate, Kodi">
+<meta name="keywords" content="IPTV, M3U playlist, free IPTV, live TV, IPTV channels, IPTV by country, channel search, VLC, TiViMate, Kodi, France 24 French, FIFA+ United States, Comedy Central, Lifetime, RMTV, VH1, Trace UK, TeenNick, Nickelodeon, BabyTV Spain, PBS Kids Eastern/Central, Novela TV, Zylo Todo Novelas, Tastemade, Kitchen TV, Pluto TV Food, RTL Crime HD, Police TV, FBI Files, Love Nature, Fora Tedio TV, Cosmos TV, Pluto TV Science, Espace TV, TV Cosmos, UniNettuno University TV, Persiana Docs, watch France 24 French free, watch FIFA+ United States free, watch Comedy Central free, watch Lifetime free, watch RMTV free, watch VH1 free, watch Trace UK free, watch TeenNick free, watch Nickelodeon free, watch BabyTV Spain free">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://benedict-erwin.github.io/iptv-curated/">
 <meta property="og:type" content="website">
@@ -18,9 +18,10 @@
 <meta name="twitter:title" content="iptv-curated">
 <meta name="twitter:description" content="Search and browse a free, auto-verified IPTV playlist. Find live TV channels by name, filter by country and category, and copy direct stream URLs for VLC, TiViMate, and Kodi.">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dataset","name":"iptv-curated","description":"Search and browse a free, auto-verified IPTV playlist. Find live TV channels by name, filter by country and category, and copy direct stream URLs for VLC, TiViMate, and Kodi.","dateModified":"2026-06-20T05:42:30Z","creator":{"@type":"Organization","name":"iptv-org","url":"https://github.com/iptv-org/iptv"},"url":"https://benedict-erwin.github.io/iptv-curated/"}
+{"@context":"https://schema.org","@type":"Dataset","name":"iptv-curated","description":"Search and browse a free, auto-verified IPTV playlist. Find live TV channels by name, filter by country and category, and copy direct stream URLs for VLC, TiViMate, and Kodi.","dateModified":"2026-06-20T07:25:26Z","creator":{"@type":"Organization","name":"iptv-org","url":"https://github.com/iptv-org/iptv"},"url":"https://benedict-erwin.github.io/iptv-curated/"}
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"iptv-curated","url":"https://benedict-erwin.github.io/iptv-curated/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://benedict-erwin.github.io/iptv-curated/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Featured live channels","itemListElement":[{"@type":"ListItem","position":1,"name":"France 24 French"},{"@type":"ListItem","position":2,"name":"FIFA+ United States"},{"@type":"ListItem","position":3,"name":"Comedy Central"},{"@type":"ListItem","position":4,"name":"Lifetime"},{"@type":"ListItem","position":5,"name":"RMTV"},{"@type":"ListItem","position":6,"name":"VH1"},{"@type":"ListItem","position":7,"name":"Trace UK"},{"@type":"ListItem","position":8,"name":"TeenNick"},{"@type":"ListItem","position":9,"name":"Nickelodeon"},{"@type":"ListItem","position":10,"name":"BabyTV Spain"},{"@type":"ListItem","position":11,"name":"PBS Kids Eastern/Central"},{"@type":"ListItem","position":12,"name":"Novela TV"},{"@type":"ListItem","position":13,"name":"Zylo Todo Novelas"},{"@type":"ListItem","position":14,"name":"Tastemade"},{"@type":"ListItem","position":15,"name":"Kitchen TV"},{"@type":"ListItem","position":16,"name":"Pluto TV Food"},{"@type":"ListItem","position":17,"name":"RTL Crime HD"},{"@type":"ListItem","position":18,"name":"Police TV"},{"@type":"ListItem","position":19,"name":"FBI Files"},{"@type":"ListItem","position":20,"name":"Love Nature"},{"@type":"ListItem","position":21,"name":"Fora Tedio TV"},{"@type":"ListItem","position":22,"name":"Cosmos TV"},{"@type":"ListItem","position":23,"name":"Pluto TV Science"},{"@type":"ListItem","position":24,"name":"Espace TV"},{"@type":"ListItem","position":25,"name":"TV Cosmos"},{"@type":"ListItem","position":26,"name":"UniNettuno University TV"},{"@type":"ListItem","position":27,"name":"Persiana Docs"}]}</script>
 <script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t)}catch(e){}</script>
 <style>
 :root,:root[data-theme=light]{color-scheme:light;--bg:#fafafa;--fg:#16181d;--muted:#6b7280;--card:#fff;--line:#e6e8eb;--accent:#2563eb}
@@ -78,6 +79,7 @@ background:var(--card);margin-bottom:.5rem}
 border:1px solid var(--line);background:transparent;color:var(--accent);cursor:pointer;text-decoration:none;white-space:nowrap}
 .ch .a button.ok{background:#16a34a;border-color:#16a34a;color:#fff}
 .note{color:var(--muted);font-size:.85rem;margin:.4rem 0 .9rem;word-break:break-all}
+.feat{color:var(--muted);font-size:.8rem;margin-top:1.75rem}
 .pcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.6rem;align-items:start}
 .pcol{display:flex;flex-direction:column;gap:.5rem}
 .pcol h3{font-size:.78rem;margin:0 0 .1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:center}
@@ -103,7 +105,7 @@ display:flex;flex-direction:column;gap:.4rem;align-items:center;text-align:cente
 <div class="stats">
 <div class="stat"><b>2,399</b><span>channels</span></div>
 <div class="stat"><b>158</b><span>countries</span></div>
-<div class="stat"><b>2026-06-20 05:42</b><span>updated (UTC)</span></div>
+<div class="stat"><b>2026-06-20 07:25</b><span>updated (UTC)</span></div>
 </div>
 <p class="how">Paste the URL into any M3U player (VLC, TiViMate, Kodi, IPTV Smarters).
 Channels are grouped by country. Dead and unreachable streams are removed, and
@@ -135,6 +137,7 @@ list, so load it to get them all.</p>
 <input id="q" type="search" placeholder="Search channels by name, e.g. trans tv" autocomplete="off">
 <div id="crumb" class="crumb"></div>
 <div id="list"></div>
+<p class="feat">Featured live channels: France 24 French, FIFA+ United States, Comedy Central, Lifetime, RMTV, VH1, Trace UK, TeenNick, Nickelodeon, BabyTV Spain, PBS Kids Eastern/Central, Novela TV, Zylo Todo Novelas, Tastemade, Kitchen TV, Pluto TV Food, RTL Crime HD, Police TV, FBI Files, Love Nature, Fora Tedio TV, Cosmos TV, Pluto TV Science, Espace TV, TV Cosmos, UniNettuno University TV, Persiana Docs.</p>
 <footer>Source links from <a href="https://github.com/iptv-org/iptv">iptv-org</a>.
 This site stores no video, only checks which public links still play. <a href="https://github.com/benedict-erwin/iptv-curated">Source on GitHub</a>.</footer>
 </main>

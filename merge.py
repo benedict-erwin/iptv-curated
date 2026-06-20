@@ -26,6 +26,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 import urllib.request
 from datetime import datetime, timezone
 from string import Template
@@ -279,7 +280,7 @@ PAGE_TEMPLATE = Template(
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$title</title>
 <meta name="description" content="$desc">
-<meta name="keywords" content="IPTV, M3U playlist, free IPTV, live TV, IPTV channels, IPTV by country, channel search, VLC, TiViMate, Kodi">
+<meta name="keywords" content="$keywords">
 <meta name="robots" content="index, follow">
 $canonical<meta property="og:type" content="website">
 <meta property="og:site_name" content="$title">
@@ -292,7 +293,7 @@ $og_url<meta name="twitter:card" content="summary">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Dataset","name":"$title","description":"$desc","dateModified":"$iso","creator":{"@type":"Organization","name":"iptv-org","url":"https://github.com/iptv-org/iptv"}$json_url}
 </script>
-$website_ld<script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t)}catch(e){}</script>
+$website_ld$itemlist_ld<script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t)}catch(e){}</script>
 <style>
 :root,:root[data-theme=light]{color-scheme:light;--bg:#fafafa;--fg:#16181d;--muted:#6b7280;--card:#fff;--line:#e6e8eb;--accent:#2563eb}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#0d0f13;--fg:#e8eaed;--muted:#9aa0a6;--card:#15181e;--line:#262a31;--accent:#6ea8fe}}
@@ -349,6 +350,7 @@ background:var(--card);margin-bottom:.5rem}
 border:1px solid var(--line);background:transparent;color:var(--accent);cursor:pointer;text-decoration:none;white-space:nowrap}
 .ch .a button.ok{background:#16a34a;border-color:#16a34a;color:#fff}
 .note{color:var(--muted);font-size:.85rem;margin:.4rem 0 .9rem;word-break:break-all}
+.feat{color:var(--muted);font-size:.8rem;margin-top:1.75rem}
 .pcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.6rem;align-items:start}
 .pcol{display:flex;flex-direction:column;gap:.5rem}
 .pcol h3{font-size:.78rem;margin:0 0 .1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:center}
@@ -406,7 +408,7 @@ list, so load it to get them all.</p>
 <input id="q" type="search" placeholder="Search channels by name, e.g. trans tv" autocomplete="off">
 <div id="crumb" class="crumb"></div>
 <div id="list"></div>
-<footer>Source links from <a href="https://github.com/iptv-org/iptv">iptv-org</a>.
+$featured_line<footer>Source links from <a href="https://github.com/iptv-org/iptv">iptv-org</a>.
 This site stores no video, only checks which public links still play.$repo</footer>
 </main>
 <script>
@@ -523,8 +525,26 @@ cp.textContent='Copied';cp.classList.add('ok');setTimeout(function(){cp.textCont
 )
 
 
+def clean_title(name: str) -> str:
+    """Clean brand name for SEO: drop resolution/marker suffixes, fold to ASCII.
+
+    Folding (Clasicas, Acao) keeps the generated HTML ASCII while staying a valid
+    search term; the cards themselves render the original names from data.json.
+    """
+    name = re.sub(r"\s*[\(\[].*?[\)\]]", "", name).strip()
+    folded = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii")
+    return folded.strip()
+
+
 def build_html(
-    *, total: int, countries: int, updated: str, iso: str, site_url: str | None, repo_url: str | None
+    *,
+    total: int,
+    countries: int,
+    updated: str,
+    iso: str,
+    site_url: str | None,
+    repo_url: str | None,
+    featured: list[str] | None = None,
 ) -> str:
     title = "iptv-curated"
     desc = (
@@ -553,6 +573,44 @@ def build_html(
             '"query-input":"required name=search_term_string"}}'
             "</script>\n"
         )
+
+    # Featured channel names drive dynamic, channel-specific SEO: keywords meta,
+    # an ItemList for crawlers, and a server-rendered text line (visible without JS).
+    names: list[str] = []
+    for n in featured or []:
+        c = clean_title(n)
+        if c and c not in names:
+            names.append(c)
+
+    base_kw = (
+        "IPTV, M3U playlist, free IPTV, live TV, IPTV channels, IPTV by country, "
+        "channel search, VLC, TiViMate, Kodi"
+    )
+    chan_kw = ", ".join(names[:45])
+    intent_kw = ", ".join(f"watch {n} free" for n in names[:10])
+    keywords = ", ".join(p for p in [base_kw, chan_kw, intent_kw] if p)
+
+    itemlist_ld = ""
+    if names:
+        items = ",".join(
+            f'{{"@type":"ListItem","position":{i + 1},"name":{json.dumps(n)}}}'
+            for i, n in enumerate(names[:35])
+        )
+        itemlist_ld = (
+            '<script type="application/ld+json">'
+            '{"@context":"https://schema.org","@type":"ItemList",'
+            '"name":"Featured live channels","itemListElement":[' + items + "]}"
+            "</script>\n"
+        )
+
+    featured_line = ""
+    if names:
+        featured_line = (
+            '<p class="feat">Featured live channels: '
+            + html.escape(", ".join(names[:35]))
+            + ".</p>\n"
+        )
+
     return PAGE_TEMPLATE.substitute(
         title=title,
         desc=desc,
@@ -563,6 +621,9 @@ def build_html(
         og_url=og_url,
         json_url=json_url,
         website_ld=website_ld,
+        itemlist_ld=itemlist_ld,
+        keywords=html.escape(keywords),
+        featured_line=featured_line,
         iso=iso,
         channels=f"{total:,}",
         countries=str(countries),
@@ -714,10 +775,10 @@ def main(argv: list[str] | None = None) -> int:
     # preview (cards_per_cat) so the page stays compact.
     def emit_section(
         seed_path: str, m3u_name: str, label: str, cards_per_cat: int, m3u_per_cat: int
-    ) -> list[dict]:
+    ) -> tuple[list[dict], list[str]]:
         seed = load_seed(seed_path)
         if not seed:
-            return []
+            return [], []
         if os.path.isfile(seed_path):
             with open(seed_path, "r", encoding="utf-8") as src:
                 with open(os.path.join(outdir, os.path.basename(seed_path)), "w", encoding="utf-8") as dst:
@@ -733,15 +794,17 @@ def main(argv: list[str] | None = None) -> int:
             print(
                 f"{label}: {cards_n} cards, {len(flat)} in {m3u_name}", file=sys.stderr
             )
-        # Cards show only the first `cards_per_cat` per category.
-        return [
+        cards = [
             {"cat": g["cat"], "items": [it["d"] for it in g["items"][:cards_per_cat]]}
             for g in groups
         ]
+        all_names = [it["d"]["n"] for g in groups for it in g["items"]]
+        return cards, all_names
 
     per = args.picks_per_category
-    top_picks_data = emit_section(args.recommended_seed, "top-picks.m3u", "top picks", per, per)
-    discover_data = emit_section(args.discover_seed, "discover.m3u", "discover", per, 99)
+    top_picks_data, top_names = emit_section(args.recommended_seed, "top-picks.m3u", "top picks", per, per)
+    discover_data, disc_names = emit_section(args.discover_seed, "discover.m3u", "discover", per, 99)
+    featured_names = top_names + disc_names
 
     write_data_json(
         os.path.join(outdir, "data.json"),
@@ -761,6 +824,7 @@ def main(argv: list[str] | None = None) -> int:
             iso=now.strftime("%Y-%m-%dT%H:%M:%SZ"),
             site_url=args.site_url.rstrip("/") if args.site_url else None,
             repo_url=args.repo_url,
+            featured=featured_names,
         )
         html_path = os.path.join(outdir, "index.html")
         with open(html_path, "w", encoding="utf-8") as fh:

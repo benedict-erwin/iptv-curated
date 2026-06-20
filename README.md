@@ -148,11 +148,19 @@ On macOS OpenVPN routing can need extra setup; failures degrade to direct.
 
 ```
 m3u/index.m3u          merged playlist (tracked - this is what you push)
-m3u/index.html         landing page with the URL, stats, last-updated
+m3u/top-picks.m3u      shortlist playlist for the Top picks section
+m3u/index.html         landing page: Top picks, search, browse by country
+m3u/data.json          channel dataset the page filters over
 m3u/countries/<cc>.m3u per-country results (tracked)
+recommended_seed.json  curated seed (tvg-id + name) for Top picks
 ovpn/                  VPNGate cache + per-country .ovpn (gitignored)
 .localstate/           guard state across local runs (gitignored)
 ```
+
+Top picks: `merge.py` matches `recommended_seed.json` (a curated list of ~60
+channels) against the playable set and keeps up to 12, so the section only ever
+shows channels that are live. The seed is a buffer; if some are down a given run,
+the rest fill in.
 
 The landing page links to an absolute URL when you set `SITE_URL` (and
 `REPO_URL`), otherwise it uses a relative link:

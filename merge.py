@@ -127,8 +127,29 @@ def parse_extinf(tags: list[str]) -> tuple[dict[str, str], str]:
     return {}, ""
 
 
+def channel_record(ch: Channel, cc: str, cn: str) -> dict[str, str]:
+    """Flatten one channel into the app's short-key record."""
+    attrs, title = parse_extinf(ch.tags)
+    category = (attrs.get("group-title", "") or "").strip()
+    if not category or category.lower() == "undefined":
+        category = "Other"
+    return {
+        "n": title or attrs.get("tvg-id", "") or "Unknown",
+        "u": ch.url,
+        "l": attrs.get("tvg-logo", ""),
+        "i": attrs.get("tvg-id", ""),
+        "cc": cc,
+        "cn": cn,
+        "g": category,
+    }
+
+
 def write_data_json(
-    path: str, chosen: dict[str, list[Channel]], names: dict[str, str], updated_iso: str
+    path: str,
+    chosen: dict[str, list[Channel]],
+    names: dict[str, str],
+    updated_iso: str,
+    top_picks: list[dict[str, str]] | None = None,
 ) -> None:
     """Write the flat channel dataset the browser app filters over.
 
@@ -139,26 +160,97 @@ def write_data_json(
     for cc in sorted(chosen):
         cn = names.get(cc, cc.upper())
         for ch in chosen[cc]:
+            if ch.url:
+                channels.append(channel_record(ch, cc, cn))
+    payload = {
+        "updated": updated_iso,
+        "count": len(channels),
+        "top_picks": top_picks or [],
+        "channels": channels,
+    }
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
+
+
+def load_seed(path: str) -> list[dict[str, str]]:
+    """Load the curated recommendation seed (tvg-id + name, in priority order)."""
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            data = json.load(fh)
+    except (OSError, ValueError):
+        return []
+    return [s for s in data if isinstance(s, dict)]
+
+
+def set_group_title(channel: Channel, value: str) -> Channel:
+    """Return a copy whose EXTINF group-title is replaced with a fixed value."""
+    new_tags: list[str] = []
+    for tag in channel.tags:
+        if tag.startswith("#EXTINF"):
+            if GROUP_TITLE_RE.search(tag):
+                tag = GROUP_TITLE_RE.sub(f'group-title="{value}"', tag, count=1)
+            else:
+                head, sep, name = _split_extinf(tag)
+                tag = f'{head} group-title="{value}"{sep}{name}'
+        new_tags.append(tag)
+    return Channel(tags=new_tags, url=channel.url)
+
+
+def build_top_picks(
+    chosen: dict[str, list[Channel]],
+    seed: list[dict[str, str]],
+    names: dict[str, str],
+    limit: int,
+) -> list[dict]:
+    """Match the seed against the playable set, in seed order, up to `limit`.
+
+    Returns dicts with the original Channel ("ch") and its display record ("d").
+    Matching is by tvg-id first, then a name-substring fallback.
+    """
+    by_id: dict[str, tuple] = {}
+    by_name: dict[str, tuple] = {}
+    for cc in sorted(chosen):
+        cn = names.get(cc, cc.upper())
+        for ch in chosen[cc]:
             if not ch.url:
                 continue
             attrs, title = parse_extinf(ch.tags)
-            category = (attrs.get("group-title", "") or "").strip()
-            if not category or category.lower() == "undefined":
-                category = "Other"
-            channels.append(
-                {
-                    "n": title or attrs.get("tvg-id", "") or "Unknown",
-                    "u": ch.url,
-                    "l": attrs.get("tvg-logo", ""),
-                    "i": attrs.get("tvg-id", ""),
-                    "cc": cc,
-                    "cn": cn,
-                    "g": category,
-                }
-            )
-    payload = {"updated": updated_iso, "count": len(channels), "channels": channels}
-    with open(path, "w", encoding="utf-8") as fh:
-        json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
+            if "[geo-blocked]" in title.lower():
+                continue  # never recommend a geo-blocked stream
+            rec = (ch, cc, cn)
+            tid = (attrs.get("tvg-id", "") or "").lower()
+            if tid and tid not in by_id:
+                by_id[tid] = rec
+            nm = title.lower()
+            if nm and nm not in by_name:
+                by_name[nm] = rec
+
+    picks: list[dict] = []
+    used: set[str] = set()
+    for s in seed:
+        rec = None
+        sid = (s.get("id", "") or "").lower()
+        if sid and sid in by_id:
+            rec = by_id[sid]
+        if rec is None:
+            snm = (s.get("name", "") or "").lower()
+            if snm in by_name:
+                rec = by_name[snm]
+            elif snm:
+                for nm, r in by_name.items():
+                    if snm in nm:
+                        rec = r
+                        break
+        if rec is None:
+            continue
+        ch, cc, cn = rec
+        if ch.url in used:
+            continue
+        used.add(ch.url)
+        picks.append({"ch": ch, "d": channel_record(ch, cc, cn)})
+        if len(picks) >= limit:
+            break
+    return picks
 
 
 PAGE_TEMPLATE = Template(
@@ -239,6 +331,12 @@ background:var(--card);margin-bottom:.5rem}
 border:1px solid var(--line);background:transparent;color:var(--accent);cursor:pointer;text-decoration:none;white-space:nowrap}
 .ch .a button.ok{background:#16a34a;border-color:#16a34a;color:#fff}
 .note{color:var(--muted);font-size:.85rem;margin:.4rem 0 .9rem;word-break:break-all}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.55rem}
+.pick{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:.75rem .6rem;
+display:flex;flex-direction:column;gap:.45rem;align-items:center;text-align:center}
+.pick img,.pick .ph{width:52px;height:52px;flex:none;object-fit:contain;border-radius:8px;background:var(--bg)}
+.pick b{font-size:.82rem;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pick span{font-size:.72rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -261,6 +359,16 @@ border:1px solid var(--line);background:transparent;color:var(--accent);cursor:p
 Channels are grouped by country. Dead and unreachable streams are removed, and
 the list is rebuilt automatically about every 6 hours, so keep the same URL and
 your player picks up each refresh.</p>
+<section id="picksec">
+<h2>Top picks</h2>
+<p class="how">A ready-to-play shortlist of strong channels that are live right now.
+Load this single playlist, or use the full list above.</p>
+<div class="card">
+<div class="label">Top picks playlist</div>
+<div class="urlrow"><code id="pu">$picks_url</code><button id="pc" type="button">Copy</button></div>
+</div>
+<div id="picks" class="pgrid"></div>
+</section>
 <h2>Browse and search</h2>
 <input id="q" type="search" placeholder="Search channels by name, e.g. trans tv" autocomplete="off">
 <div id="crumb" class="crumb"></div>
@@ -276,11 +384,12 @@ var DATA={channels:[]},BASE=new URL('.',location.href).href;
 var q=el('q'),crumb=el('crumb'),list=el('list');
 var nav={cc:null,cat:null};
 
-var b=el('c'),u=el('u'),ct;
-b.addEventListener('click',function(){
-navigator.clipboard.writeText(u.textContent).then(function(){
-b.textContent='Copied';b.classList.add('ok');
-clearTimeout(ct);ct=setTimeout(function(){b.textContent='Copy';b.classList.remove('ok')},1500)})});
+function wireCopy(btn,src){var t;btn.addEventListener('click',function(){
+navigator.clipboard.writeText(src.textContent).then(function(){
+btn.textContent='Copied';btn.classList.add('ok');
+clearTimeout(t);t=setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok')},1500)})})}
+wireCopy(el('c'),el('u'));
+wireCopy(el('pc'),el('pu'));
 
 var SUN='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.2 17.2L18.6 18.6M5 19l1.4-1.4M17.2 6.8L18.6 5.4"></path></svg>';
 var MOON='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path></svg>';
@@ -298,8 +407,14 @@ if(e.target&&e.target.tagName==='IMG'){e.target.style.visibility='hidden'}},true
 
 try{var qp=new URLSearchParams(location.search).get('q');if(qp)q.value=qp}catch(e){}
 
-fetch('data.json').then(function(r){return r.json()}).then(function(d){DATA=d;render()})
+fetch('data.json').then(function(r){return r.json()}).then(function(d){DATA=d;renderPicks();render()})
 .catch(function(){list.innerHTML='<p class="note">Could not load channel data.</p>'});
+
+function renderPicks(){var ps=DATA.top_picks||[];var sec=el('picksec');
+if(!ps.length){sec.style.display='none';return}
+el('picks').innerHTML=ps.map(function(c){
+var logo=c.l?'<img loading="lazy" src="'+esc(c.l)+'" alt="">':'<div class="ph"></div>';
+return '<div class="pick">'+logo+'<b>'+esc(c.n)+'</b><span>'+esc(c.cn)+' - '+esc(c.g)+'</span></div>'}).join('')}
 
 q.addEventListener('input',function(){nav={cc:null,cat:null};render()});
 
@@ -377,6 +492,7 @@ def build_html(
         "URLs for VLC, TiViMate, and Kodi."
     )
     playlist = f"{site_url}/index.m3u" if site_url else "index.m3u"
+    picks_url = f"{site_url}/top-picks.m3u" if site_url else "top-picks.m3u"
     canonical = f'<link rel="canonical" href="{html.escape(site_url)}/">\n' if site_url else ""
     og_url = f'<meta property="og:url" content="{html.escape(site_url)}/">\n' if site_url else ""
     json_url = f',"url":"{site_url}/"' if site_url else ""
@@ -399,6 +515,7 @@ def build_html(
         title=title,
         desc=desc,
         url=html.escape(playlist),
+        picks_url=html.escape(picks_url),
         canonical=canonical,
         og_url=og_url,
         json_url=json_url,
@@ -462,6 +579,14 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--no-html", action="store_true", help="Do not write the index.html landing page."
+    )
+    parser.add_argument(
+        "--recommended-seed",
+        default="recommended_seed.json",
+        help="Curated seed list of channels for the Top picks section.",
+    )
+    parser.add_argument(
+        "--picks", type=int, default=12, help="Max channels in the Top picks section."
     )
     args = parser.parse_args(argv)
 
@@ -532,8 +657,26 @@ def main(argv: list[str] | None = None) -> int:
     for cc, channels in chosen.items():
         if channels:
             write_channels(os.path.join(pub_countries, f"{cc}.m3u"), channels)
+
+    # Top picks: match the curated seed against the playable set (seed order).
+    seed = load_seed(args.recommended_seed)
+    picks = build_top_picks(chosen, seed, names, args.picks) if seed else []
+    if picks:
+        write_channels(
+            os.path.join(outdir, "top-picks.m3u"),
+            [set_group_title(p["ch"], "Top Picks") for p in picks],
+        )
+        print(
+            f"top picks: {len(picks)}/{args.picks} playable (seed of {len(seed)})",
+            file=sys.stderr,
+        )
+
     write_data_json(
-        os.path.join(outdir, "data.json"), chosen, names, now.strftime("%Y-%m-%dT%H:%M:%SZ")
+        os.path.join(outdir, "data.json"),
+        chosen,
+        names,
+        now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        top_picks=[p["d"] for p in picks],
     )
 
     if not args.no_html:

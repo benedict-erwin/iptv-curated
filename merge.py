@@ -685,6 +685,10 @@ def main(argv: list[str] | None = None) -> int:
 
     # Top picks: per-category shortlist from the curated seed vs the playable set.
     seed = load_seed(args.recommended_seed)
+    if seed and os.path.isfile(args.recommended_seed):
+        with open(args.recommended_seed, "r", encoding="utf-8") as src:
+            with open(os.path.join(outdir, "recommended_seed.json"), "w", encoding="utf-8") as dst:
+                dst.write(src.read())  # publish the seed for transparency
     picks = build_top_picks(chosen, seed, names, args.picks_per_category) if seed else []
     flat = [(g["cat"], it["ch"]) for g in picks for it in g["items"]]
     if flat:

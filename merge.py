@@ -149,7 +149,8 @@ def write_data_json(
     chosen: dict[str, list[Channel]],
     names: dict[str, str],
     updated_iso: str,
-    top_picks: list[dict[str, str]] | None = None,
+    top_picks: list[dict] | None = None,
+    discover: list[dict] | None = None,
 ) -> None:
     """Write the flat channel dataset the browser app filters over.
 
@@ -166,6 +167,7 @@ def write_data_json(
         "updated": updated_iso,
         "count": len(channels),
         "top_picks": top_picks or [],
+        "discover": discover or [],
         "channels": channels,
     }
     with open(path, "w", encoding="utf-8") as fh:
@@ -388,6 +390,16 @@ Load this single playlist, or use the full list above.</p>
 </div>
 <div id="picks" class="pcols"></div>
 </section>
+<section id="discsec">
+<h2>More picks</h2>
+<p class="how">A wider shortlist by genre: anime, cartoons, telenovelas, cooking,
+crime, nature, education and documentaries that are live right now.</p>
+<div class="card">
+<div class="label">More picks playlist</div>
+<div class="urlrow"><code id="du">$discover_url</code><button id="dc" type="button">Copy</button></div>
+</div>
+<div id="disc" class="pcols"></div>
+</section>
 <h2>Browse and search</h2>
 <input id="q" type="search" placeholder="Search channels by name, e.g. trans tv" autocomplete="off">
 <div id="crumb" class="crumb"></div>
@@ -409,6 +421,7 @@ btn.textContent='Copied';btn.classList.add('ok');
 clearTimeout(t);t=setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok')},1500)})})}
 wireCopy(el('c'),el('u'));
 wireCopy(el('pc'),el('pu'));
+wireCopy(el('dc'),el('du'));
 
 var SUN='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.2 17.2L18.6 18.6M5 19l1.4-1.4M17.2 6.8L18.6 5.4"></path></svg>';
 var MOON='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path></svg>';
@@ -426,13 +439,16 @@ if(e.target&&e.target.tagName==='IMG'){e.target.style.visibility='hidden'}},true
 
 try{var qp=new URLSearchParams(location.search).get('q');if(qp)q.value=qp}catch(e){}
 
-fetch('data.json').then(function(r){return r.json()}).then(function(d){DATA=d;renderPicks();render()})
+fetch('data.json').then(function(r){return r.json()}).then(function(d){DATA=d;
+renderGroups(DATA.top_picks,'picks','picksec');
+renderGroups(DATA.discover,'disc','discsec');
+render()})
 .catch(function(){list.innerHTML='<p class="note">Could not load channel data.</p>'});
 
-function renderPicks(){var groups=DATA.top_picks||[];var sec=el('picksec');
+function renderGroups(groups,containerId,sectionId){groups=groups||[];
 var total=groups.reduce(function(a,g){return a+((g.items&&g.items.length)||0)},0);
-if(!total){sec.style.display='none';return}
-el('picks').innerHTML=groups.map(function(g){
+if(!total){el(sectionId).style.display='none';return}
+el(containerId).innerHTML=groups.map(function(g){
 if(!g.items||!g.items.length)return '';
 var cards=g.items.map(function(c){
 var logo=c.l?'<img loading="lazy" src="'+esc(c.l)+'" alt="">':'<div class="ph"></div>';
@@ -516,6 +532,7 @@ def build_html(
     )
     playlist = f"{site_url}/index.m3u" if site_url else "index.m3u"
     picks_url = f"{site_url}/top-picks.m3u" if site_url else "top-picks.m3u"
+    discover_url = f"{site_url}/discover.m3u" if site_url else "discover.m3u"
     canonical = f'<link rel="canonical" href="{html.escape(site_url)}/">\n' if site_url else ""
     og_url = f'<meta property="og:url" content="{html.escape(site_url)}/">\n' if site_url else ""
     json_url = f',"url":"{site_url}/"' if site_url else ""
@@ -539,6 +556,7 @@ def build_html(
         desc=desc,
         url=html.escape(playlist),
         picks_url=html.escape(picks_url),
+        discover_url=html.escape(discover_url),
         canonical=canonical,
         og_url=og_url,
         json_url=json_url,
@@ -607,6 +625,11 @@ def main(argv: list[str] | None = None) -> int:
         "--recommended-seed",
         default="recommended_seed.json",
         help="Curated seed list of channels for the Top picks section.",
+    )
+    parser.add_argument(
+        "--discover-seed",
+        default="discover_seed.json",
+        help="Curated seed list of channels for the Discover (more picks) section.",
     )
     parser.add_argument(
         "--picks-per-category",
@@ -684,31 +707,39 @@ def main(argv: list[str] | None = None) -> int:
         if channels:
             write_channels(os.path.join(pub_countries, f"{cc}.m3u"), channels)
 
-    # Top picks: per-category shortlist from the curated seed vs the playable set.
-    seed = load_seed(args.recommended_seed)
-    if seed and os.path.isfile(args.recommended_seed):
-        with open(args.recommended_seed, "r", encoding="utf-8") as src:
-            with open(os.path.join(outdir, "recommended_seed.json"), "w", encoding="utf-8") as dst:
-                dst.write(src.read())  # publish the seed for transparency
-    picks = build_top_picks(chosen, seed, names, args.picks_per_category) if seed else []
-    flat = [(g["cat"], it["ch"]) for g in picks for it in g["items"]]
-    if flat:
-        write_channels(
-            os.path.join(outdir, "top-picks.m3u"),
-            [set_group_title(ch, cat) for cat, ch in flat],
-        )
-        summary = ", ".join(f"{g['cat']} {len(g['items'])}" for g in picks)
-        print(f"top picks: {len(flat)} total ({summary})", file=sys.stderr)
+    # Curated sections: match a seed against the playable set, per category, and
+    # emit a shortlist playlist plus the grouped data the page renders.
+    def emit_section(seed_path: str, m3u_name: str, label: str) -> list[dict]:
+        seed = load_seed(seed_path)
+        if not seed:
+            return []
+        if os.path.isfile(seed_path):
+            with open(seed_path, "r", encoding="utf-8") as src:
+                with open(os.path.join(outdir, os.path.basename(seed_path)), "w", encoding="utf-8") as dst:
+                    dst.write(src.read())  # publish the seed for transparency
+        groups = build_top_picks(chosen, seed, names, args.picks_per_category)
+        flat = [(g["cat"], it["ch"]) for g in groups for it in g["items"]]
+        if flat:
+            write_channels(
+                os.path.join(outdir, m3u_name),
+                [set_group_title(ch, cat) for cat, ch in flat],
+            )
+            summary = ", ".join(f"{g['cat']} {len(g['items'])}" for g in groups)
+            print(f"{label}: {len(flat)} total ({summary})", file=sys.stderr)
+        return [
+            {"cat": g["cat"], "items": [it["d"] for it in g["items"]]} for g in groups
+        ]
 
-    top_picks_data = [
-        {"cat": g["cat"], "items": [it["d"] for it in g["items"]]} for g in picks
-    ]
+    top_picks_data = emit_section(args.recommended_seed, "top-picks.m3u", "top picks")
+    discover_data = emit_section(args.discover_seed, "discover.m3u", "discover")
+
     write_data_json(
         os.path.join(outdir, "data.json"),
         chosen,
         names,
         now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         top_picks=top_picks_data,
+        discover=discover_data,
     )
 
     if not args.no_html:

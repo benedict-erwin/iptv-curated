@@ -393,7 +393,9 @@ Load this single playlist, or use the full list above.</p>
 <section id="discsec">
 <h2>More picks</h2>
 <p class="how">A wider shortlist by genre: anime, cartoons, telenovelas, cooking,
-crime, nature, education and documentaries that are live right now.</p>
+crime, nature, education and documentaries that are live right now. The cards
+below preview a few per genre; the playlist holds every live channel from the
+list, so load it to get them all.</p>
 <div class="card">
 <div class="label">More picks playlist</div>
 <div class="urlrow"><code id="du">$discover_url</code><button id="dc" type="button">Copy</button></div>
@@ -707,9 +709,12 @@ def main(argv: list[str] | None = None) -> int:
         if channels:
             write_channels(os.path.join(pub_countries, f"{cc}.m3u"), channels)
 
-    # Curated sections: match a seed against the playable set, per category, and
-    # emit a shortlist playlist plus the grouped data the page renders.
-    def emit_section(seed_path: str, m3u_name: str, label: str) -> list[dict]:
+    # Curated sections: match a seed against the playable set, per category. The
+    # playlist gets every live seed channel (m3u_per_cat); the cards show only a
+    # preview (cards_per_cat) so the page stays compact.
+    def emit_section(
+        seed_path: str, m3u_name: str, label: str, cards_per_cat: int, m3u_per_cat: int
+    ) -> list[dict]:
         seed = load_seed(seed_path)
         if not seed:
             return []
@@ -717,21 +722,26 @@ def main(argv: list[str] | None = None) -> int:
             with open(seed_path, "r", encoding="utf-8") as src:
                 with open(os.path.join(outdir, os.path.basename(seed_path)), "w", encoding="utf-8") as dst:
                     dst.write(src.read())  # publish the seed for transparency
-        groups = build_top_picks(chosen, seed, names, args.picks_per_category)
+        groups = build_top_picks(chosen, seed, names, m3u_per_cat)
         flat = [(g["cat"], it["ch"]) for g in groups for it in g["items"]]
         if flat:
             write_channels(
                 os.path.join(outdir, m3u_name),
                 [set_group_title(ch, cat) for cat, ch in flat],
             )
-            summary = ", ".join(f"{g['cat']} {len(g['items'])}" for g in groups)
-            print(f"{label}: {len(flat)} total ({summary})", file=sys.stderr)
+            cards_n = sum(min(len(g["items"]), cards_per_cat) for g in groups)
+            print(
+                f"{label}: {cards_n} cards, {len(flat)} in {m3u_name}", file=sys.stderr
+            )
+        # Cards show only the first `cards_per_cat` per category.
         return [
-            {"cat": g["cat"], "items": [it["d"] for it in g["items"]]} for g in groups
+            {"cat": g["cat"], "items": [it["d"] for it in g["items"][:cards_per_cat]]}
+            for g in groups
         ]
 
-    top_picks_data = emit_section(args.recommended_seed, "top-picks.m3u", "top picks")
-    discover_data = emit_section(args.discover_seed, "discover.m3u", "discover")
+    per = args.picks_per_category
+    top_picks_data = emit_section(args.recommended_seed, "top-picks.m3u", "top picks", per, per)
+    discover_data = emit_section(args.discover_seed, "discover.m3u", "discover", per, 99)
 
     write_data_json(
         os.path.join(outdir, "data.json"),

@@ -34,6 +34,7 @@ from verify import Channel, parse_m3u
 
 COUNTRIES_URL = "https://iptv-org.github.io/api/countries.json"
 GROUP_TITLE_RE = re.compile(r'group-title="([^"]*)"')
+ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
 STATE_DIR = "state"
 COUNTS_FILE = "counts.json"
@@ -117,6 +118,49 @@ def _split_extinf(line: str) -> tuple[str, str, str]:
     return line, "", ""
 
 
+def parse_extinf(tags: list[str]) -> tuple[dict[str, str], str]:
+    """Return (attributes, display name) from a channel's EXTINF line."""
+    for tag in tags:
+        if tag.startswith("#EXTINF"):
+            head, _, name = _split_extinf(tag)
+            return dict(ATTR_RE.findall(head)), name.strip()
+    return {}, ""
+
+
+def write_data_json(
+    path: str, chosen: dict[str, list[Channel]], names: dict[str, str], updated_iso: str
+) -> None:
+    """Write the flat channel dataset the browser app filters over.
+
+    Short keys keep the file small: n=name, u=url, l=logo, i=tvg-id,
+    cc=country code, cn=country name, g=category.
+    """
+    channels: list[dict[str, str]] = []
+    for cc in sorted(chosen):
+        cn = names.get(cc, cc.upper())
+        for ch in chosen[cc]:
+            if not ch.url:
+                continue
+            attrs, title = parse_extinf(ch.tags)
+            category = (attrs.get("group-title", "") or "").strip()
+            if not category or category.lower() == "undefined":
+                category = "Other"
+            channels.append(
+                {
+                    "n": title or attrs.get("tvg-id", "") or "Unknown",
+                    "u": ch.url,
+                    "l": attrs.get("tvg-logo", ""),
+                    "i": attrs.get("tvg-id", ""),
+                    "cc": cc,
+                    "cn": cn,
+                    "g": category,
+                }
+            )
+    payload = {"updated": updated_iso, "count": len(channels), "channels": channels}
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(payload, fh, ensure_ascii=False, separators=(",", ":"))
+
+
 PAGE_TEMPLATE = Template(
     """<!DOCTYPE html>
 <html lang="en">
@@ -125,8 +169,11 @@ PAGE_TEMPLATE = Template(
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>$title</title>
 <meta name="description" content="$desc">
+<meta name="keywords" content="IPTV, M3U playlist, free IPTV, live TV, IPTV channels, IPTV by country, channel search, VLC, TiViMate, Kodi">
 <meta name="robots" content="index, follow">
 $canonical<meta property="og:type" content="website">
+<meta property="og:site_name" content="$title">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="$title">
 <meta property="og:description" content="$desc">
 $og_url<meta name="twitter:card" content="summary">
@@ -135,14 +182,17 @@ $og_url<meta name="twitter:card" content="summary">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Dataset","name":"$title","description":"$desc","dateModified":"$iso","creator":{"@type":"Organization","name":"iptv-org","url":"https://github.com/iptv-org/iptv"}$json_url}
 </script>
+$website_ld<script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t)}catch(e){}</script>
 <style>
-:root{color-scheme:light dark;--bg:#fafafa;--fg:#16181d;--muted:#6b7280;--card:#fff;--line:#e6e8eb;--accent:#2563eb}
-@media(prefers-color-scheme:dark){:root{--bg:#0d0f13;--fg:#e8eaed;--muted:#9aa0a6;--card:#15181e;--line:#262a31;--accent:#6ea8fe}}
+:root,:root[data-theme=light]{color-scheme:light;--bg:#fafafa;--fg:#16181d;--muted:#6b7280;--card:#fff;--line:#e6e8eb;--accent:#2563eb}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#0d0f13;--fg:#e8eaed;--muted:#9aa0a6;--card:#15181e;--line:#262a31;--accent:#6ea8fe}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0d0f13;--fg:#e8eaed;--muted:#9aa0a6;--card:#15181e;--line:#262a31;--accent:#6ea8fe}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;
+body{margin:0;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:2rem;
 font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg)}
 main{width:100%;max-width:720px}
 h1{font-size:1.5rem;margin:0 0 .25rem;letter-spacing:-.01em}
+h2{font-size:1.05rem;margin:1.75rem 0 .85rem}
 .lead{color:var(--muted);margin:0 0 2rem}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
 .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:.5rem}
@@ -162,11 +212,38 @@ border-radius:12px;overflow:hidden;margin-bottom:1.5rem}
 .how{color:var(--muted);font-size:.92rem}
 footer{color:var(--muted);font-size:.82rem;margin-top:2rem}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.25rem}
+.top h1{margin:0}
+.tg{min-width:0;width:38px;height:38px;padding:0;display:inline-flex;align-items:center;justify-content:center;
+background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:9px;flex:none}
+.tg:hover{border-color:var(--accent)}
+#q{width:100%;font:inherit;font-size:1rem;padding:.7rem .9rem;border:1px solid var(--line);border-radius:10px;
+background:var(--card);color:var(--fg);margin-bottom:1rem}
+.crumb{font-size:.85rem;color:var(--muted);margin-bottom:.85rem;display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+.crumb a{cursor:pointer;color:var(--accent)}
+.crumb .sep{opacity:.5}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.55rem}
+.tile{text-align:left;padding:.65rem .8rem;border:1px solid var(--line);border-radius:10px;background:var(--card);
+cursor:pointer;font:inherit;color:var(--fg);width:100%;min-width:0}
+.tile b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile span{font-size:.76rem;color:var(--muted)}
+.ch{display:flex;gap:.75rem;align-items:center;padding:.55rem .7rem;border:1px solid var(--line);border-radius:10px;
+background:var(--card);margin-bottom:.5rem}
+.ch img,.ch .ph{width:46px;height:46px;flex:none;border-radius:6px;background:var(--bg)}
+.ch img{object-fit:contain}
+.ch .m{flex:1;min-width:0}
+.ch .m b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.ch .m span{font-size:.76rem;color:var(--muted)}
+.ch .a{display:flex;gap:.35rem;flex-wrap:wrap;justify-content:flex-end}
+.ch .a button,.ch .a a{font:inherit;font-size:.74rem;min-width:0;padding:.32rem .55rem;border-radius:7px;
+border:1px solid var(--line);background:transparent;color:var(--accent);cursor:pointer;text-decoration:none;white-space:nowrap}
+.ch .a button.ok{background:#16a34a;border-color:#16a34a;color:#fff}
+.note{color:var(--muted);font-size:.85rem;margin:.4rem 0 .9rem;word-break:break-all}
 </style>
 </head>
 <body>
 <main>
-<h1>$title</h1>
+<div class="top"><h1>$title</h1><button id="theme" class="tg" type="button" aria-label="Toggle dark mode"></button></div>
 <p class="lead">$desc</p>
 <div class="card">
 <div class="label">Playlist URL</div>
@@ -184,18 +261,104 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 Channels are grouped by country. Dead and unreachable streams are removed, and
 the list is rebuilt automatically about every 6 hours, so keep the same URL and
 your player picks up each refresh.</p>
+<h2>Browse and search</h2>
+<input id="q" type="search" placeholder="Search channels by name, e.g. trans tv" autocomplete="off">
+<div id="crumb" class="crumb"></div>
+<div id="list"></div>
 <footer>Source links from <a href="https://github.com/iptv-org/iptv">iptv-org</a>.
 This site stores no video, only checks which public links still play.$repo</footer>
 </main>
 <script>
 (function(){
-var b=document.getElementById('c'),u=document.getElementById('u'),t;
+function el(id){return document.getElementById(id)}
+function esc(s){return (s||'').replace(/[&<>"]/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]})}
+var DATA={channels:[]},BASE=new URL('.',location.href).href;
+var q=el('q'),crumb=el('crumb'),list=el('list');
+var nav={cc:null,cat:null};
+
+var b=el('c'),u=el('u'),ct;
 b.addEventListener('click',function(){
 navigator.clipboard.writeText(u.textContent).then(function(){
 b.textContent='Copied';b.classList.add('ok');
-clearTimeout(t);t=setTimeout(function(){b.textContent='Copy';b.classList.remove('ok');},1500);
-});
-});
+clearTimeout(ct);ct=setTimeout(function(){b.textContent='Copy';b.classList.remove('ok')},1500)})});
+
+var SUN='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.2 17.2L18.6 18.6M5 19l1.4-1.4M17.2 6.8L18.6 5.4"></path></svg>';
+var MOON='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path></svg>';
+var tb=el('theme');
+function sysDark(){return matchMedia('(prefers-color-scheme:dark)').matches}
+function effTheme(){return document.documentElement.getAttribute('data-theme')||(sysDark()?'dark':'light')}
+function setIcon(){tb.innerHTML=effTheme()==='dark'?SUN:MOON}
+tb.addEventListener('click',function(){var next=effTheme()==='dark'?'light':'dark';
+try{localStorage.setItem('theme',next)}catch(e){}
+document.documentElement.setAttribute('data-theme',next);setIcon()});
+setIcon();
+
+document.addEventListener('error',function(e){
+if(e.target&&e.target.tagName==='IMG'){e.target.style.visibility='hidden'}},true);
+
+try{var qp=new URLSearchParams(location.search).get('q');if(qp)q.value=qp}catch(e){}
+
+fetch('data.json').then(function(r){return r.json()}).then(function(d){DATA=d;render()})
+.catch(function(){list.innerHTML='<p class="note">Could not load channel data.</p>'});
+
+q.addEventListener('input',function(){nav={cc:null,cat:null};render()});
+
+function byName(a,b){return a.n.toLowerCase()<b.n.toLowerCase()?-1:1}
+function cnOf(cc){var f=DATA.channels.find(function(c){return c.cc===cc});return f?f.cn:cc.toUpperCase()}
+function countriesList(){var m={};DATA.channels.forEach(function(c){(m[c.cc]=m[c.cc]||{cc:c.cc,cn:c.cn,n:0}).n++});
+return Object.keys(m).map(function(k){return m[k]}).sort(function(a,b){return a.cn<b.cn?-1:1})}
+function catsList(cc){var m={};DATA.channels.forEach(function(c){if(c.cc===cc){(m[c.g]=m[c.g]||{g:c.g,n:0}).n++}});
+return Object.keys(m).map(function(k){return m[k]}).sort(function(a,b){return a.g<b.g?-1:1})}
+function chans(cc,cat){return DATA.channels.filter(function(c){return c.cc===cc&&c.g===cat}).sort(byName)}
+
+function setCrumb(parts){crumb.innerHTML='';parts.forEach(function(p,i){
+if(i){var s=document.createElement('span');s.className='sep';s.textContent='/';crumb.appendChild(s)}
+if(p.fn){var a=document.createElement('a');a.textContent=p.t;a.addEventListener('click',p.fn);crumb.appendChild(a)}
+else{var x=document.createElement('span');x.textContent=p.t;crumb.appendChild(x)}})}
+
+function home(){nav={cc:null,cat:null};q.value='';render()}
+
+function card(c){var purl=BASE+'countries/'+c.cc+'.m3u';
+var logo=c.l?'<img loading="lazy" src="'+esc(c.l)+'" alt="">':'<div class="ph"></div>';
+var sub=esc(c.cn)+' / '+esc(c.g)+(c.i?' . '+esc(c.i):'');
+return '<div class="ch">'+logo+'<div class="m"><b>'+esc(c.n)+'</b><span>'+sub+'</span></div>'+
+'<div class="a"><button class="cp" data-u="'+esc(c.u)+'">Copy URL</button>'+
+'<a href="'+esc(c.u)+'" target="_blank" rel="noopener">Open</a>'+
+'<a href="'+esc(purl)+'" target="_blank" rel="noopener">Country list</a></div></div>'}
+
+function render(){var query=q.value.trim().toLowerCase();
+if(query)return renderSearch(query);
+if(!nav.cc)return renderCountries();
+if(!nav.cat)return renderCats();
+return renderChans()}
+
+function renderCountries(){setCrumb([{t:'All countries'}]);list.className='grid';
+list.innerHTML=countriesList().map(function(c){
+return '<button class="tile" data-cc="'+esc(c.cc)+'"><b>'+esc(c.cn)+'</b><span>'+c.n+' channels</span></button>'}).join('')}
+
+function renderCats(){setCrumb([{t:'All countries',fn:home},{t:cnOf(nav.cc)}]);list.className='grid';
+list.innerHTML=catsList(nav.cc).map(function(c){
+return '<button class="tile" data-cat="'+esc(c.g)+'"><b>'+esc(c.g)+'</b><span>'+c.n+' channels</span></button>'}).join('')}
+
+function renderChans(){var cc=nav.cc;
+setCrumb([{t:'All countries',fn:home},{t:cnOf(cc),fn:function(){nav.cat=null;render()}},{t:nav.cat}]);
+list.className='';
+var head='<p class="note">Country playlist: <a href="'+BASE+'countries/'+cc+'.m3u" target="_blank" rel="noopener">'+
+BASE+'countries/'+cc+'.m3u</a></p>';
+list.innerHTML=head+chans(cc,nav.cat).map(card).join('')}
+
+function renderSearch(query){setCrumb([{t:'Search'}]);list.className='';
+var res=DATA.channels.filter(function(c){return c.n.toLowerCase().indexOf(query)>-1}).sort(byName);
+var cap=res.slice(0,200);
+var note='<p class="note">'+res.length+' result'+(res.length===1?'':'s')+(res.length>200?' (showing first 200)':'')+'</p>';
+list.innerHTML=res.length?note+cap.map(card).join(''):note+'<p class="note">No channels match.</p>'}
+
+list.addEventListener('click',function(e){
+var tile=e.target.closest('.tile');
+if(tile){if(tile.dataset.cc){nav.cc=tile.dataset.cc;nav.cat=null}else if(tile.dataset.cat){nav.cat=tile.dataset.cat}return render()}
+var cp=e.target.closest('.cp');
+if(cp){navigator.clipboard.writeText(cp.dataset.u).then(function(){var o=cp.textContent;
+cp.textContent='Copied';cp.classList.add('ok');setTimeout(function(){cp.textContent=o;cp.classList.remove('ok')},1200)})}});
 })();
 </script>
 </body>
@@ -209,8 +372,9 @@ def build_html(
 ) -> str:
     title = "iptv-curated"
     desc = (
-        "Auto-verified IPTV playlist: only channels that actually play, grouped "
-        "by country and rebuilt automatically. Free M3U for VLC, TiViMate, Kodi."
+        "Search and browse a free, auto-verified IPTV playlist. Find live TV "
+        "channels by name, filter by country and category, and copy direct stream "
+        "URLs for VLC, TiViMate, and Kodi."
     )
     playlist = f"{site_url}/index.m3u" if site_url else "index.m3u"
     canonical = f'<link rel="canonical" href="{html.escape(site_url)}/">\n' if site_url else ""
@@ -219,6 +383,18 @@ def build_html(
     repo = (
         f' <a href="{html.escape(repo_url)}">Source on GitHub</a>.' if repo_url else ""
     )
+    # WebSite + SearchAction lets search engines expose the channel search box.
+    website_ld = ""
+    if site_url:
+        website_ld = (
+            '<script type="application/ld+json">'
+            '{"@context":"https://schema.org","@type":"WebSite",'
+            f'"name":"{title}","url":"{site_url}/",'
+            '"potentialAction":{"@type":"SearchAction",'
+            f'"target":{{"@type":"EntryPoint","urlTemplate":"{site_url}/?q={{search_term_string}}"}},'
+            '"query-input":"required name=search_term_string"}}'
+            "</script>\n"
+        )
     return PAGE_TEMPLATE.substitute(
         title=title,
         desc=desc,
@@ -226,6 +402,7 @@ def build_html(
         canonical=canonical,
         og_url=og_url,
         json_url=json_url,
+        website_ld=website_ld,
         iso=iso,
         channels=f"{total:,}",
         countries=str(countries),
@@ -317,7 +494,7 @@ def main(argv: list[str] | None = None) -> int:
 
     # Assemble the global index, de-duplicating by stream URL and relabeling
     # each channel's group-title with its country so players group by country.
-    names = {} if args.no_country_groups else load_country_names(args.country_names)
+    names = load_country_names(args.country_names)
     seen: set[str] = set()
     index: list[Channel] = []
     for cc in sorted(chosen):
@@ -346,8 +523,20 @@ def main(argv: list[str] | None = None) -> int:
     with open(counts_path, "w", encoding="utf-8") as fh:
         json.dump(new_counts, fh, sort_keys=True)
 
+    now = datetime.now(timezone.utc)
+    outdir = os.path.dirname(args.output) or "."
+
+    # Public per-country playlists (keep original category grouping) so the
+    # browser app can offer a per-country URL, and the channel dataset it filters.
+    pub_countries = os.path.join(outdir, COUNTRIES_DIR)
+    for cc, channels in chosen.items():
+        if channels:
+            write_channels(os.path.join(pub_countries, f"{cc}.m3u"), channels)
+    write_data_json(
+        os.path.join(outdir, "data.json"), chosen, names, now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    )
+
     if not args.no_html:
-        now = datetime.now(timezone.utc)
         countries_published = sum(1 for n in new_counts.values() if n > 0)
         page = build_html(
             total=total,
@@ -357,7 +546,7 @@ def main(argv: list[str] | None = None) -> int:
             site_url=args.site_url.rstrip("/") if args.site_url else None,
             repo_url=args.repo_url,
         )
-        html_path = os.path.join(os.path.dirname(args.output) or ".", "index.html")
+        html_path = os.path.join(outdir, "index.html")
         with open(html_path, "w", encoding="utf-8") as fh:
             fh.write(page)
 

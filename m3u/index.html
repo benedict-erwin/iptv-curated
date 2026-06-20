@@ -18,7 +18,7 @@
 <meta name="twitter:title" content="iptv-curated">
 <meta name="twitter:description" content="Search and browse a free, auto-verified IPTV playlist. Find live TV channels by name, filter by country and category, and copy direct stream URLs for VLC, TiViMate, and Kodi.">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dataset","name":"iptv-curated","description":"Search and browse a free, auto-verified IPTV playlist. Find live TV channels by name, filter by country and category, and copy direct stream URLs for VLC, TiViMate, and Kodi.","dateModified":"2026-06-20T04:16:33Z","creator":{"@type":"Organization","name":"iptv-org","url":"https://github.com/iptv-org/iptv"},"url":"https://benedict-erwin.github.io/iptv-curated/"}
+{"@context":"https://schema.org","@type":"Dataset","name":"iptv-curated","description":"Search and browse a free, auto-verified IPTV playlist. Find live TV channels by name, filter by country and category, and copy direct stream URLs for VLC, TiViMate, and Kodi.","dateModified":"2026-06-20T04:34:24Z","creator":{"@type":"Organization","name":"iptv-org","url":"https://github.com/iptv-org/iptv"},"url":"https://benedict-erwin.github.io/iptv-curated/"}
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"iptv-curated","url":"https://benedict-erwin.github.io/iptv-curated/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://benedict-erwin.github.io/iptv-curated/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
 <script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t)}catch(e){}</script>
@@ -29,7 +29,7 @@
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:2rem;
 font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg)}
-main{width:100%;max-width:720px}
+main{width:100%;max-width:960px}
 h1{font-size:1.5rem;margin:0 0 .25rem;letter-spacing:-.01em}
 h2{font-size:1.05rem;margin:1.75rem 0 .85rem}
 .lead{color:var(--muted);margin:0 0 2rem}
@@ -61,7 +61,7 @@ background:var(--card);color:var(--fg);margin-bottom:1rem}
 .crumb{font-size:.85rem;color:var(--muted);margin-bottom:.85rem;display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
 .crumb a{cursor:pointer;color:var(--accent)}
 .crumb .sep{opacity:.5}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.55rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.55rem}
 .tile{text-align:left;padding:.65rem .8rem;border:1px solid var(--line);border-radius:10px;background:var(--card);
 cursor:pointer;font:inherit;color:var(--fg);width:100%;min-width:0}
 .tile b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -78,7 +78,9 @@ background:var(--card);margin-bottom:.5rem}
 border:1px solid var(--line);background:transparent;color:var(--accent);cursor:pointer;text-decoration:none;white-space:nowrap}
 .ch .a button.ok{background:#16a34a;border-color:#16a34a;color:#fff}
 .note{color:var(--muted);font-size:.85rem;margin:.4rem 0 .9rem;word-break:break-all}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.55rem}
+.pcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.6rem;align-items:start}
+.pcol{display:flex;flex-direction:column;gap:.5rem}
+.pcol h3{font-size:.78rem;margin:0 0 .1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:center}
 .pick{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:.75rem .6rem;
 display:flex;flex-direction:column;gap:.45rem;align-items:center;text-align:center}
 .pick img,.pick .ph{width:52px;height:52px;flex:none;object-fit:contain;border-radius:8px;background:var(--bg)}
@@ -100,7 +102,7 @@ display:flex;flex-direction:column;gap:.45rem;align-items:center;text-align:cent
 <div class="stats">
 <div class="stat"><b>2,399</b><span>channels</span></div>
 <div class="stat"><b>158</b><span>countries</span></div>
-<div class="stat"><b>2026-06-20 04:16</b><span>updated (UTC)</span></div>
+<div class="stat"><b>2026-06-20 04:34</b><span>updated (UTC)</span></div>
 </div>
 <p class="how">Paste the URL into any M3U player (VLC, TiViMate, Kodi, IPTV Smarters).
 Channels are grouped by country. Dead and unreachable streams are removed, and
@@ -114,7 +116,7 @@ Load this single playlist, or use the full list above.</p>
 <div class="label">Top picks playlist</div>
 <div class="urlrow"><code id="pu">https://benedict-erwin.github.io/iptv-curated/top-picks.m3u</code><button id="pc" type="button">Copy</button></div>
 </div>
-<div id="picks" class="pgrid"></div>
+<div id="picks" class="pcols"></div>
 </section>
 <h2>Browse and search</h2>
 <input id="q" type="search" placeholder="Search channels by name, e.g. trans tv" autocomplete="off">
@@ -157,11 +159,15 @@ try{var qp=new URLSearchParams(location.search).get('q');if(qp)q.value=qp}catch(
 fetch('data.json').then(function(r){return r.json()}).then(function(d){DATA=d;renderPicks();render()})
 .catch(function(){list.innerHTML='<p class="note">Could not load channel data.</p>'});
 
-function renderPicks(){var ps=DATA.top_picks||[];var sec=el('picksec');
-if(!ps.length){sec.style.display='none';return}
-el('picks').innerHTML=ps.map(function(c){
+function renderPicks(){var groups=DATA.top_picks||[];var sec=el('picksec');
+var total=groups.reduce(function(a,g){return a+((g.items&&g.items.length)||0)},0);
+if(!total){sec.style.display='none';return}
+el('picks').innerHTML=groups.map(function(g){
+if(!g.items||!g.items.length)return '';
+var cards=g.items.map(function(c){
 var logo=c.l?'<img loading="lazy" src="'+esc(c.l)+'" alt="">':'<div class="ph"></div>';
-return '<div class="pick">'+logo+'<b>'+esc(c.n)+'</b><span>'+esc(c.cn)+' - '+esc(c.g)+'</span></div>'}).join('')}
+return '<div class="pick">'+logo+'<b>'+esc(c.n)+'</b><span>'+esc(c.cn)+'</span></div>'}).join('');
+return '<div class="pcol"><h3>'+esc(g.cat)+'</h3>'+cards+'</div>'}).join('')}
 
 q.addEventListener('input',function(){nav={cc:null,cat:null};render()});
 

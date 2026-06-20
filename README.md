@@ -157,10 +157,11 @@ ovpn/                  VPNGate cache + per-country .ovpn (gitignored)
 .localstate/           guard state across local runs (gitignored)
 ```
 
-Top picks: `merge.py` matches `recommended_seed.json` (a curated list of ~60
-channels) against the playable set and keeps up to 12, so the section only ever
-shows channels that are live. The seed is a buffer; if some are down a given run,
-the rest fill in.
+Top picks: `recommended_seed.json` is a curated seed of 60 channels split into 5
+categories (News, Sports, Entertainment, Movies, Music), 12 per category. Each
+run `merge.py` keeps the first 3 playable per category, so the section shows 5
+columns of 3 (15 channels) that are live now. The 12-per-category buffer covers
+channels that are down on a given run; geo-blocked streams are never picked.
 
 The landing page links to an absolute URL when you set `SITE_URL` (and
 `REPO_URL`), otherwise it uses a relative link:

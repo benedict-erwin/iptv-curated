@@ -200,12 +200,15 @@ def build_top_picks(
     chosen: dict[str, list[Channel]],
     seed: list[dict[str, str]],
     names: dict[str, str],
-    limit: int,
+    per_category: int,
 ) -> list[dict]:
-    """Match the seed against the playable set, in seed order, up to `limit`.
+    """Pick up to `per_category` playable channels per seed category.
 
-    Returns dicts with the original Channel ("ch") and its display record ("d").
-    Matching is by tvg-id first, then a name-substring fallback.
+    Seed entries carry a "cat" bucket (News, Sports, ...). For each bucket, in
+    its priority order, keep the first playable matches (by tvg-id, then name),
+    skipping geo-blocked streams. Returns one group per category, in the order
+    the categories first appear in the seed:
+        [{"cat": "News", "items": [{"ch": Channel, "d": record}, ...]}, ...]
     """
     by_id: dict[str, tuple] = {}
     by_name: dict[str, tuple] = {}
@@ -225,32 +228,45 @@ def build_top_picks(
             if nm and nm not in by_name:
                 by_name[nm] = rec
 
-    picks: list[dict] = []
-    used: set[str] = set()
-    for s in seed:
-        rec = None
+    def match(s: dict[str, str]):
         sid = (s.get("id", "") or "").lower()
         if sid and sid in by_id:
-            rec = by_id[sid]
-        if rec is None:
-            snm = (s.get("name", "") or "").lower()
-            if snm in by_name:
-                rec = by_name[snm]
-            elif snm:
-                for nm, r in by_name.items():
-                    if snm in nm:
-                        rec = r
-                        break
-        if rec is None:
-            continue
-        ch, cc, cn = rec
-        if ch.url in used:
-            continue
-        used.add(ch.url)
-        picks.append({"ch": ch, "d": channel_record(ch, cc, cn)})
-        if len(picks) >= limit:
-            break
-    return picks
+            return by_id[sid]
+        snm = (s.get("name", "") or "").lower()
+        if snm in by_name:
+            return by_name[snm]
+        if snm:
+            for nm, r in by_name.items():
+                if snm in nm:
+                    return r
+        return None
+
+    order: list[str] = []
+    groups: dict[str, list[dict[str, str]]] = {}
+    for s in seed:
+        cat = s.get("cat", "Other")
+        if cat not in groups:
+            groups[cat] = []
+            order.append(cat)
+        groups[cat].append(s)
+
+    used: set[str] = set()
+    result: list[dict] = []
+    for cat in order:
+        items: list[dict] = []
+        for s in groups[cat]:
+            rec = match(s)
+            if rec is None:
+                continue
+            ch, cc, cn = rec
+            if ch.url in used:
+                continue
+            used.add(ch.url)
+            items.append({"ch": ch, "d": channel_record(ch, cc, cn)})
+            if len(items) >= per_category:
+                break
+        result.append({"cat": cat, "items": items})
+    return result
 
 
 PAGE_TEMPLATE = Template(
@@ -282,7 +298,7 @@ $website_ld<script>try{var _t=localStorage.getItem('theme');if(_t)document.docum
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:2rem;
 font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg)}
-main{width:100%;max-width:720px}
+main{width:100%;max-width:960px}
 h1{font-size:1.5rem;margin:0 0 .25rem;letter-spacing:-.01em}
 h2{font-size:1.05rem;margin:1.75rem 0 .85rem}
 .lead{color:var(--muted);margin:0 0 2rem}
@@ -314,7 +330,7 @@ background:var(--card);color:var(--fg);margin-bottom:1rem}
 .crumb{font-size:.85rem;color:var(--muted);margin-bottom:.85rem;display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
 .crumb a{cursor:pointer;color:var(--accent)}
 .crumb .sep{opacity:.5}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.55rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.55rem}
 .tile{text-align:left;padding:.65rem .8rem;border:1px solid var(--line);border-radius:10px;background:var(--card);
 cursor:pointer;font:inherit;color:var(--fg);width:100%;min-width:0}
 .tile b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -331,7 +347,9 @@ background:var(--card);margin-bottom:.5rem}
 border:1px solid var(--line);background:transparent;color:var(--accent);cursor:pointer;text-decoration:none;white-space:nowrap}
 .ch .a button.ok{background:#16a34a;border-color:#16a34a;color:#fff}
 .note{color:var(--muted);font-size:.85rem;margin:.4rem 0 .9rem;word-break:break-all}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.55rem}
+.pcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.6rem;align-items:start}
+.pcol{display:flex;flex-direction:column;gap:.5rem}
+.pcol h3{font-size:.78rem;margin:0 0 .1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:center}
 .pick{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:.75rem .6rem;
 display:flex;flex-direction:column;gap:.45rem;align-items:center;text-align:center}
 .pick img,.pick .ph{width:52px;height:52px;flex:none;object-fit:contain;border-radius:8px;background:var(--bg)}
@@ -367,7 +385,7 @@ Load this single playlist, or use the full list above.</p>
 <div class="label">Top picks playlist</div>
 <div class="urlrow"><code id="pu">$picks_url</code><button id="pc" type="button">Copy</button></div>
 </div>
-<div id="picks" class="pgrid"></div>
+<div id="picks" class="pcols"></div>
 </section>
 <h2>Browse and search</h2>
 <input id="q" type="search" placeholder="Search channels by name, e.g. trans tv" autocomplete="off">
@@ -410,11 +428,15 @@ try{var qp=new URLSearchParams(location.search).get('q');if(qp)q.value=qp}catch(
 fetch('data.json').then(function(r){return r.json()}).then(function(d){DATA=d;renderPicks();render()})
 .catch(function(){list.innerHTML='<p class="note">Could not load channel data.</p>'});
 
-function renderPicks(){var ps=DATA.top_picks||[];var sec=el('picksec');
-if(!ps.length){sec.style.display='none';return}
-el('picks').innerHTML=ps.map(function(c){
+function renderPicks(){var groups=DATA.top_picks||[];var sec=el('picksec');
+var total=groups.reduce(function(a,g){return a+((g.items&&g.items.length)||0)},0);
+if(!total){sec.style.display='none';return}
+el('picks').innerHTML=groups.map(function(g){
+if(!g.items||!g.items.length)return '';
+var cards=g.items.map(function(c){
 var logo=c.l?'<img loading="lazy" src="'+esc(c.l)+'" alt="">':'<div class="ph"></div>';
-return '<div class="pick">'+logo+'<b>'+esc(c.n)+'</b><span>'+esc(c.cn)+' - '+esc(c.g)+'</span></div>'}).join('')}
+return '<div class="pick">'+logo+'<b>'+esc(c.n)+'</b><span>'+esc(c.cn)+'</span></div>'}).join('');
+return '<div class="pcol"><h3>'+esc(g.cat)+'</h3>'+cards+'</div>'}).join('')}
 
 q.addEventListener('input',function(){nav={cc:null,cat:null};render()});
 
@@ -586,7 +608,10 @@ def main(argv: list[str] | None = None) -> int:
         help="Curated seed list of channels for the Top picks section.",
     )
     parser.add_argument(
-        "--picks", type=int, default=12, help="Max channels in the Top picks section."
+        "--picks-per-category",
+        type=int,
+        default=3,
+        help="Top picks channels kept per seed category.",
     )
     args = parser.parse_args(argv)
 
@@ -658,25 +683,27 @@ def main(argv: list[str] | None = None) -> int:
         if channels:
             write_channels(os.path.join(pub_countries, f"{cc}.m3u"), channels)
 
-    # Top picks: match the curated seed against the playable set (seed order).
+    # Top picks: per-category shortlist from the curated seed vs the playable set.
     seed = load_seed(args.recommended_seed)
-    picks = build_top_picks(chosen, seed, names, args.picks) if seed else []
-    if picks:
+    picks = build_top_picks(chosen, seed, names, args.picks_per_category) if seed else []
+    flat = [(g["cat"], it["ch"]) for g in picks for it in g["items"]]
+    if flat:
         write_channels(
             os.path.join(outdir, "top-picks.m3u"),
-            [set_group_title(p["ch"], "Top Picks") for p in picks],
+            [set_group_title(ch, cat) for cat, ch in flat],
         )
-        print(
-            f"top picks: {len(picks)}/{args.picks} playable (seed of {len(seed)})",
-            file=sys.stderr,
-        )
+        summary = ", ".join(f"{g['cat']} {len(g['items'])}" for g in picks)
+        print(f"top picks: {len(flat)} total ({summary})", file=sys.stderr)
 
+    top_picks_data = [
+        {"cat": g["cat"], "items": [it["d"] for it in g["items"]]} for g in picks
+    ]
     write_data_json(
         os.path.join(outdir, "data.json"),
         chosen,
         names,
         now.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        top_picks=[p["d"] for p in picks],
+        top_picks=top_picks_data,
     )
 
     if not args.no_html:

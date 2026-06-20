@@ -1,9 +1,39 @@
 [
  {
-  "id": "Newsy.us@SD",
-  "name": "Newsy",
+  "id": "CBSNews247.us@SD",
+  "name": "CBS News 24/7",
   "cat": "News",
   "cc": "us"
+ },
+ {
+  "id": "ABCNewsLive1.us@SD",
+  "name": "ABC News Live 1",
+  "cat": "News",
+  "cc": "us"
+ },
+ {
+  "id": "NBCNewsNOW.us@SD",
+  "name": "NBC News NOW",
+  "cat": "News",
+  "cc": "uk"
+ },
+ {
+  "id": "SkyNews.ie@SD",
+  "name": "Sky News",
+  "cat": "News",
+  "cc": "ie"
+ },
+ {
+  "id": "BloombergTV.us@Australia",
+  "name": "Bloomberg TV Australia",
+  "cat": "News",
+  "cc": "au"
+ },
+ {
+  "id": "CNBCUK.uk@SD",
+  "name": "CNBC",
+  "cat": "News",
+  "cc": "uk"
  },
  {
   "id": "GBNews.uk@SD",
@@ -12,76 +42,58 @@
   "cc": "uk"
  },
  {
+  "id": "Newsmax2.us@SD",
+  "name": "Newsmax 2",
+  "cat": "News",
+  "cc": "us"
+ },
+ {
+  "id": "Newsy.us@SD",
+  "name": "Newsy",
+  "cat": "News",
+  "cc": "us"
+ },
+ {
+  "id": "France24.fr@French",
+  "name": "France 24 French",
+  "cat": "News",
+  "cc": "fr"
+ },
+ {
+  "id": "EuronewsFrench.fr@SD",
+  "name": "Euronews French",
+  "cat": "News",
+  "cc": "nz"
+ },
+ {
   "id": "CBCNewsNetwork.ca@SD",
   "name": "CBC News",
   "cat": "News",
   "cc": "ca"
  },
  {
-  "id": "ABPNews.in@SD",
-  "name": "ABP News",
-  "cat": "News",
-  "cc": "in"
- },
- {
-  "id": "ETVNews.in@HD",
-  "name": "ETV News",
-  "cat": "News",
-  "cc": "in"
- },
- {
-  "id": "TNPNews.in@SD",
-  "name": "TNP News",
-  "cat": "News",
-  "cc": "in"
- },
- {
-  "id": "ZeeNews.in@SD",
-  "name": "Zee News",
-  "cat": "News",
-  "cc": "in"
- },
- {
-  "id": "INews.iq@SD",
-  "name": "iNEWS TV",
-  "cat": "News",
-  "cc": "iq"
- },
- {
-  "id": "KTVNews.kw@SD",
-  "name": "KTV News",
-  "cat": "News",
-  "cc": "kw"
- },
- {
-  "id": "Meteonews.ch@SD",
-  "name": "Meteonews",
-  "cat": "News",
-  "cc": "ch"
- },
- {
-  "id": "News9Live.in@SD",
-  "name": "News9Live",
-  "cat": "News",
-  "cc": "in"
- },
- {
-  "id": "NewsWorld.hk@FAST",
-  "name": "NewsWorld",
-  "cat": "News",
-  "cc": "pl"
- },
- {
-  "id": "KTVSport.kw@SD",
-  "name": "KTV Sport",
+  "id": "beINSPORTSXTRA.us@SD",
+  "name": "beIN SPORTS XTRA",
   "cat": "Sports",
-  "cc": "kw"
+  "cc": "us"
  },
  {
-  "id": "MNBSport.mn@SD",
-  "name": "MNB Sport",
+  "id": "FoxSports.ar@SD",
+  "name": "FOX Sports",
   "cat": "Sports",
-  "cc": "mn"
+  "cc": "ar"
+ },
+ {
+  "id": "Stadium.us@SD",
+  "name": "Stadium",
+  "cat": "Sports",
+  "cc": "us"
+ },
+ {
+  "id": "RedBullTV.at@BR",
+  "name": "Red Bull TV BR",
+  "cat": "Sports",
+  "cc": "br"
  },
  {
   "id": "talkSPORT.uk@SD",
@@ -90,28 +102,10 @@
   "cc": "uk"
  },
  {
-  "id": "TyCSports.ar@SD",
-  "name": "TyC Sports",
+  "id": "ESPNU.us@SD",
+  "name": "ESPNU",
   "cat": "Sports",
-  "cc": "ar"
- },
- {
-  "id": "TigoSports.bo@SD",
-  "name": "Tigo Sports",
-  "cat": "Sports",
-  "cc": "bo"
- },
- {
-  "id": "Sportitalia.it@SD",
-  "name": "Sportitalia",
-  "cat": "Sports",
-  "cc": "it"
- },
- {
-  "id": "SuperTennis.it@SD",
-  "name": "SuperTennis",
-  "cat": "Sports",
-  "cc": "it"
+  "cc": "us"
  },
  {
   "id": "DAZNCombat.uk@Poland",
@@ -120,70 +114,34 @@
   "cc": "pl"
  },
  {
-  "id": "CanalPlusSport.fr@SD",
-  "name": "Canal+ Sport",
+  "id": "FuboSportsNetwork.us@SD",
+  "name": "fubo Sports Network",
   "cat": "Sports",
-  "cc": "fr"
+  "cc": "us"
  },
  {
-  "id": "DDSports.in@SD",
-  "name": "DD Sports SD",
+  "id": "FIFAPlus.uk@English",
+  "name": "FIFA+",
   "cat": "Sports",
-  "cc": "in"
+  "cc": "uk"
  },
  {
-  "id": "ACISportTV.it@SD",
-  "name": "ACI Sport TV",
+  "id": "Unbeaten.us@SD",
+  "name": "Unbeaten Sports Channel",
   "cat": "Sports",
-  "cc": "it"
+  "cc": "us"
  },
  {
-  "id": "JordanSport.jo@SD",
-  "name": "Jordan Sport",
+  "id": "SwerveSports.us@SD",
+  "name": "Swerve Combat",
   "cat": "Sports",
-  "cc": "jo"
- },
- {
-  "id": "Baywatch.us@US",
-  "name": "Baywatch",
-  "cat": "Entertainment",
   "cc": "us"
  },
  {
-  "id": "RMCStory.fr@SD",
-  "name": "RMC Story",
-  "cat": "Entertainment",
-  "cc": "fr"
- },
- {
-  "id": "ShoutFactoryTV.us@SD",
-  "name": "Shout! TV",
-  "cat": "Entertainment",
-  "cc": "us"
- },
- {
-  "id": "ETVComedy.in@HD",
-  "name": "ETV Comedy",
-  "cat": "Entertainment",
-  "cc": "in"
- },
- {
-  "id": "HistoryHit.uk@SD",
-  "name": "History Hit",
-  "cat": "Entertainment",
-  "cc": "us"
- },
- {
-  "id": "StarzComedy.us@East",
-  "name": "Starz Comedy",
-  "cat": "Entertainment",
-  "cc": "us"
- },
- {
-  "id": "WipeoutXtra.us@SD",
-  "name": "Wipeout Xtra",
-  "cat": "Entertainment",
-  "cc": "us"
+  "id": "WorldPokerTour.us@Poland",
+  "name": "World Poker Tour",
+  "cat": "Sports",
+  "cc": "pl"
  },
  {
   "id": "ComedyCentral.us@East",
@@ -192,20 +150,8 @@
   "cc": "us"
  },
  {
-  "id": "LifetimeMovies.us@East",
-  "name": "Lifetime Movies",
-  "cat": "Entertainment",
-  "cc": "us"
- },
- {
-  "id": "AutenticHistory.de@SD",
-  "name": "Autentic History",
-  "cat": "Entertainment",
-  "cc": "au"
- },
- {
-  "id": "NBCComedyVault.us@SD",
-  "name": "NBC Comedy Vault",
+  "id": "Baywatch.us@US",
+  "name": "Baywatch",
   "cat": "Entertainment",
   "cc": "us"
  },
@@ -216,100 +162,142 @@
   "cc": "uk"
  },
  {
-  "id": "Kinoteatr.uz@SD",
-  "name": "Kinoteatr",
-  "cat": "Movies",
-  "cc": "uz"
- },
- {
-  "id": "BIZCinema.uz@SD",
-  "name": "BIZ Cinema",
-  "cat": "Movies",
-  "cc": "uz"
- },
- {
-  "id": "RojaMovies.in@SD",
-  "name": "Roja Movies",
-  "cat": "Movies",
-  "cc": "in"
- },
- {
-  "id": "MovieSphere.us@US",
-  "name": "MovieSphere",
-  "cat": "Movies",
+  "id": "PlutoTVWipeout.us@SD",
+  "name": "Wipeout",
+  "cat": "Entertainment",
   "cc": "us"
  },
  {
-  "id": "NEWKMOVIES.us@SD",
-  "name": "NEW KMOVIES",
-  "cat": "Movies",
-  "cc": "us"
- },
- {
-  "id": "MegaCineTV.do@HD",
-  "name": "Mega Cine TV",
-  "cat": "Movies",
-  "cc": "do"
- },
- {
-  "id": "alphaCinema.ru@HD",
-  "name": "alpha Cinema",
-  "cat": "Movies",
-  "cc": "ru"
- },
- {
-  "id": "CinePlusFrisson.fr@SD",
-  "name": "Cine+ Frisson",
-  "cat": "Movies",
+  "id": "RMCStory.fr@SD",
+  "name": "RMC Story",
+  "cat": "Entertainment",
   "cc": "fr"
  },
  {
-  "id": "ETVCinema.in@HD",
-  "name": "ETV Cinema HD",
-  "cat": "Movies",
-  "cc": "in"
+  "id": "MTVPlutoTV.de@DACH",
+  "name": "MTV Pluto TV",
+  "cat": "Entertainment",
+  "cc": "at"
  },
  {
-  "id": "GREATmovies.uk@UK",
-  "name": "GREAT! movies",
-  "cat": "Movies",
+  "id": "PlutoTVReality.de@DACH",
+  "name": "Pluto TV Reality",
+  "cat": "Entertainment",
+  "cc": "at"
+ },
+ {
+  "id": "Lifetime.us@East",
+  "name": "Lifetime",
+  "cat": "Entertainment",
+  "cc": "us"
+ },
+ {
+  "id": "MrBeanAnimated.uk@FR",
+  "name": "Banijay Mr Bean Anim\u00e9",
+  "cat": "Entertainment",
+  "cc": "fr"
+ },
+ {
+  "id": "AlwaysFunnyVideos.us@SD",
+  "name": "Always Funny Videos",
+  "cat": "Entertainment",
+  "cc": "us"
+ },
+ {
+  "id": "FailArmy.us@UK",
+  "name": "FailArmy",
+  "cat": "Entertainment",
   "cc": "uk"
  },
  {
-  "id": "MidnightPulp.us@SD",
-  "name": "Midnight Pulp",
+  "id": "Heartland.us@Eastern",
+  "name": "Heartland",
+  "cat": "Entertainment",
+  "cc": "us"
+ },
+ {
+  "id": "PlutoTVMovies.de@DACH",
+  "name": "Pluto TV Movies",
+  "cat": "Movies",
+  "cc": "at"
+ },
+ {
+  "id": "FilmRiseWestern.us@SD",
+  "name": "FilmRise Westerns",
   "cat": "Movies",
   "cc": "us"
  },
  {
-  "id": "MovieSphere.us@AU",
-  "name": "MovieSphere AU",
+  "id": "LifetimeMovies.us@East",
+  "name": "Lifetime Movies",
   "cat": "Movies",
-  "cc": "au"
+  "cc": "us"
  },
  {
-  "id": "GMTV.us@SD",
-  "name": "GMTV",
-  "cat": "Music",
-  "cc": "gy"
+  "id": "MovieSphere.us@CA",
+  "name": "MovieSphere by Lionsgate",
+  "cat": "Movies",
+  "cc": "ca"
  },
  {
-  "id": "MMTV.mv@SD",
-  "name": "MMTV",
-  "cat": "Music",
-  "cc": "mv"
+  "id": "MaverickBlackCinema.us@SD",
+  "name": "Maverick Black Cinema",
+  "cat": "Movies",
+  "cc": "us"
  },
  {
-  "id": "KissTV.ro@SD",
-  "name": "Kiss TV",
-  "cat": "Music",
-  "cc": "ro"
+  "id": "Runtime.us@SD",
+  "name": "Runtime",
+  "cat": "Movies",
+  "cc": "us"
  },
  {
-  "id": "Now80s.uk@SD",
-  "name": "Now 80s",
+  "id": "PlutoTVNetmovies.us@BR",
+  "name": "Pluto TV Netmovies",
+  "cat": "Movies",
+  "cc": "br"
+ },
+ {
+  "id": "FilmRiseClassicTV.us@SD",
+  "name": "FilmRise Classic TV",
+  "cat": "Movies",
+  "cc": "us"
+ },
+ {
+  "id": "PlutoTVCineCrime.us@BR",
+  "name": "Pluto TV Cine Crime",
+  "cat": "Movies",
+  "cc": "br"
+ },
+ {
+  "id": "PlutoTVWesterns.us@CA",
+  "name": "Pluto TV Westerns",
+  "cat": "Movies",
+  "cc": "ca"
+ },
+ {
+  "id": "bTVCinema.bg@SD",
+  "name": "bTV Cinema",
+  "cat": "Movies",
+  "cc": "bg"
+ },
+ {
+  "id": "MadeInHollywood.us@SD",
+  "name": "Made in Hollywood",
+  "cat": "Movies",
+  "cc": "us"
+ },
+ {
+  "id": "MTV.us@East",
+  "name": "MTV",
   "cat": "Music",
-  "cc": "uk"
+  "cc": "us"
+ },
+ {
+  "id": "VH1.us@East",
+  "name": "VH1",
+  "cat": "Music",
+  "cc": "us"
  },
  {
   "id": "Vevo2K.us@SD",
@@ -318,28 +306,10 @@
   "cc": "us"
  },
  {
-  "id": "YoMTV.us@SD",
-  "name": "Yo! MTV",
+  "id": "QelloConcertsbyStingray.ca@SD",
+  "name": "Qello Concerts by Stingray",
   "cat": "Music",
-  "cc": "us"
- },
- {
-  "id": "RedMusic.gr@SD",
-  "name": "RedMusic",
-  "cat": "Music",
-  "cc": "gr"
- },
- {
-  "id": "EUMusic.ua@SD",
-  "name": "EU Music",
-  "cat": "Music",
-  "cc": "ua"
- },
- {
-  "id": "UAMusic.ua@HD",
-  "name": "UA Music",
-  "cat": "Music",
-  "cc": "ua"
+  "cc": "ca"
  },
  {
   "id": "TraceUK.uk@HD",
@@ -348,15 +318,45 @@
   "cc": "uk"
  },
  {
-  "id": "Vevo70s.us@SD",
-  "name": "Vevo 70s",
+  "id": "Now80s.uk@SD",
+  "name": "Now 80s",
   "cat": "Music",
-  "cc": "us"
+  "cc": "uk"
  },
  {
-  "id": "Vevo80s.us@SD",
-  "name": "Vevo 80s",
+  "id": "KissTV.ro@SD",
+  "name": "Kiss TV",
   "cat": "Music",
-  "cc": "us"
+  "cc": "ro"
+ },
+ {
+  "id": "XITE.nl@SD",
+  "name": "XITE",
+  "cat": "Music",
+  "cc": "nl"
+ },
+ {
+  "id": "ClubbingTV.us@UK",
+  "name": "Clubbing TV UK",
+  "cat": "Music",
+  "cc": "uk"
+ },
+ {
+  "id": "StingrayDJAZZ.ca@SD",
+  "name": "Stingray DJAZZ",
+  "cat": "Music",
+  "cc": "ca"
+ },
+ {
+  "id": "RMTV.bg@SD",
+  "name": "RMTV",
+  "cat": "Music",
+  "cc": "bg"
+ },
+ {
+  "id": "DanceFM.cl@SD",
+  "name": "Dance FM",
+  "cat": "Music",
+  "cc": "cl"
  }
 ]

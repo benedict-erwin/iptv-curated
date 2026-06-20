@@ -18,8 +18,8 @@ jobs:
     outputs:
       matrix: ${{ steps.gen.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Fetch VPNGate list (once)
@@ -32,7 +32,7 @@ jobs:
           python build_matrix.py --vpn vpn_countries.json --out matrix.json
           echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
       - name: Share VPNGate CSV
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: vpngate-csv
           path: vpngate.csv
@@ -45,15 +45,15 @@ jobs:
       max-parallel: 20
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Install ffmpeg + openvpn
         run: sudo apt-get update && sudo apt-get install -y ffmpeg openvpn
       - name: Get VPNGate CSV
         if: matrix.mode == 'vpn'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: vpngate-csv
       - name: Connect VPN
@@ -94,7 +94,7 @@ jobs:
         run: sudo pkill openvpn 2>/dev/null || true
       - name: Upload result
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: m3u-${{ matrix.country }}
           path: ${{ matrix.country }}.m3u
@@ -105,18 +105,18 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Download all results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           path: new
           pattern: m3u-*
           merge-multiple: true
       - name: Checkout previous publish (gh-pages)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         continue-on-error: true # first run: branch doesn't exist yet
         with:
           ref: gh-pages

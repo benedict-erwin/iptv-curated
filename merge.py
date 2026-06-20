@@ -30,6 +30,7 @@ import unicodedata
 import urllib.request
 from datetime import datetime, timezone
 from string import Template
+from urllib.parse import quote
 
 from verify import Channel, parse_m3u
 
@@ -290,10 +291,7 @@ $canonical<meta property="og:type" content="website">
 $og_url<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="$title">
 <meta name="twitter:description" content="$desc">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dataset","name":"$title","description":"$desc","dateModified":"$iso","creator":{"@type":"Organization","name":"iptv-org","url":"https://github.com/iptv-org/iptv"}$json_url}
-</script>
-$website_ld$itemlist_ld<script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t)}catch(e){}</script>
+$dataset_ld$website_ld$itemlist_ld<script>try{var _t=localStorage.getItem('theme');if(_t)document.documentElement.setAttribute('data-theme',_t)}catch(e){}</script>
 <style>
 :root,:root[data-theme=light]{color-scheme:light;--bg:#fafafa;--fg:#16181d;--muted:#6b7280;--card:#fff;--line:#e6e8eb;--accent:#2563eb}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#0d0f13;--fg:#e8eaed;--muted:#9aa0a6;--card:#15181e;--line:#262a31;--accent:#6ea8fe}}
@@ -557,25 +555,14 @@ def build_html(
     discover_url = f"{site_url}/discover.m3u" if site_url else "discover.m3u"
     canonical = f'<link rel="canonical" href="{html.escape(site_url)}/">\n' if site_url else ""
     og_url = f'<meta property="og:url" content="{html.escape(site_url)}/">\n' if site_url else ""
-    json_url = f',"url":"{site_url}/"' if site_url else ""
     repo = (
         f' <a href="{html.escape(repo_url)}">Source on GitHub</a>.' if repo_url else ""
     )
-    # WebSite + SearchAction lets search engines expose the channel search box.
-    website_ld = ""
-    if site_url:
-        website_ld = (
-            '<script type="application/ld+json">'
-            '{"@context":"https://schema.org","@type":"WebSite",'
-            f'"name":"{title}","url":"{site_url}/",'
-            '"potentialAction":{"@type":"SearchAction",'
-            f'"target":{{"@type":"EntryPoint","urlTemplate":"{site_url}/?q={{search_term_string}}"}},'
-            '"query-input":"required name=search_term_string"}}'
-            "</script>\n"
-        )
 
-    # Featured channel names drive dynamic, channel-specific SEO: keywords meta,
-    # an ItemList for crawlers, and a server-rendered text line (visible without JS).
+    def ld(obj: dict) -> str:
+        return '<script type="application/ld+json">' + json.dumps(obj) + "</script>\n"
+
+    # Featured channel names drive dynamic, channel-specific SEO.
     names: list[str] = []
     for n in featured or []:
         c = clean_title(n)
@@ -590,17 +577,79 @@ def build_html(
     intent_kw = ", ".join(f"watch {n} free" for n in names[:10])
     keywords = ", ".join(p for p in [base_kw, chan_kw, intent_kw] if p)
 
-    itemlist_ld = ""
-    if names:
-        items = ",".join(
-            f'{{"@type":"ListItem","position":{i + 1},"name":{json.dumps(n)}}}'
-            for i, n in enumerate(names[:35])
+    # Dataset: the rich-result type Google supports here (Google Dataset Search).
+    dataset: dict = {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": title,
+        "description": desc,
+        "dateModified": iso,
+        "isAccessibleForFree": True,
+        "license": "https://unlicense.org/",
+        "creator": {
+            "@type": "Organization",
+            "name": "iptv-org",
+            "url": "https://github.com/iptv-org/iptv",
+        },
+    }
+    if site_url:
+        dataset["url"] = f"{site_url}/"
+        dataset["keywords"] = names[:25]
+        dataset["distribution"] = [
+            {
+                "@type": "DataDownload",
+                "name": label,
+                "encodingFormat": "application/x-mpegurl",
+                "contentUrl": url,
+            }
+            for label, url in (
+                ("Full playlist", playlist),
+                ("Top picks", picks_url),
+                ("More picks", discover_url),
+            )
+        ]
+    dataset_ld = ld(dataset)
+
+    # WebSite name signal. The sitelinks search box was retired by Google in 2024;
+    # the SearchAction no longer renders but is harmless and documents the ?q= API.
+    website_ld = ""
+    if site_url:
+        website_ld = ld(
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": title,
+                "url": f"{site_url}/",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": f"{site_url}/?q={{search_term_string}}",
+                    },
+                    "query-input": "required name=search_term_string",
+                },
+            }
         )
-        itemlist_ld = (
-            '<script type="application/ld+json">'
-            '{"@context":"https://schema.org","@type":"ItemList",'
-            '"name":"Featured live channels","itemListElement":[' + items + "]}"
-            "</script>\n"
+
+    # ItemList of featured channels; each item links back to its on-site search so
+    # the list points to same-domain pages (carousel requirement).
+    itemlist_ld = ""
+    if names and site_url:
+        itemlist_ld = ld(
+            {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": "Featured live channels",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": i + 1,
+                        "name": n,
+                        "url": f"{site_url}/?q={quote(n)}",
+                    }
+                    for i, n in enumerate(names[:35])
+                ],
+            }
         )
 
     featured_line = ""
@@ -619,12 +668,11 @@ def build_html(
         discover_url=html.escape(discover_url),
         canonical=canonical,
         og_url=og_url,
-        json_url=json_url,
+        dataset_ld=dataset_ld,
         website_ld=website_ld,
         itemlist_ld=itemlist_ld,
         keywords=html.escape(keywords),
         featured_line=featured_line,
-        iso=iso,
         channels=f"{total:,}",
         countries=str(countries),
         updated=updated,

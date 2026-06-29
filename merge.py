@@ -403,7 +403,7 @@ list, so load it to get them all.</p>
 <div id="disc" class="pcols"></div>
 </section>
 <h2>Browse and search</h2>
-<input id="q" type="search" placeholder="Search channels by name, e.g. trans tv" autocomplete="off">
+<input id="q" type="search" placeholder="Search channels by name, e.g. BBC" autocomplete="off">
 <div id="crumb" class="crumb"></div>
 <div id="list"></div>
 $featured_line<footer>Source links from <a href="https://github.com/iptv-org/iptv">iptv-org</a>.

@@ -366,9 +366,16 @@ border:1px solid var(--line);background:transparent;color:var(--accent);cursor:p
 .pcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.6rem;align-items:start}
 .pcol{display:flex;flex-direction:column;gap:.5rem}
 .pcol h3{font-size:.78rem;margin:0 0 .1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:center}
-.pick{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:.75rem .6rem;
-display:flex;flex-direction:column;gap:.4rem;align-items:center;text-align:center;justify-content:flex-start;height:100%}
-.pick img,.pick .ph{width:52px;height:52px;flex:none;object-fit:contain;border-radius:8px;background:var(--bg)}
+.pick{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:.75rem .6rem;width:100%;
+display:flex;flex-direction:column;gap:.4rem;align-items:center;text-align:center;justify-content:flex-start;height:100%;
+font:inherit;color:inherit;cursor:pointer;transition:border-color .15s}
+.pick:hover{border-color:var(--accent)}
+.thumb{position:relative;display:inline-flex;flex:none}
+.thumb img,.thumb .ph{width:52px;height:52px;object-fit:contain;border-radius:8px;background:var(--bg)}
+.pov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.5;transition:opacity .15s}
+.pick:hover .pov{opacity:1}
+.pov i{width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center}
+.pov i::before{content:"";border-style:solid;border-width:6px 0 6px 11px;border-color:transparent transparent transparent #fff;margin-left:3px}
 .pick b{font-size:.82rem;line-height:1.25;min-height:2.5em;display:-webkit-box;-webkit-line-clamp:2;
 -webkit-box-orient:vertical;overflow:hidden;align-items:center}
 .pick span{font-size:.72rem;color:var(--muted);margin-top:auto}
@@ -489,8 +496,12 @@ el(containerId).innerHTML=groups.map(function(g){
 if(!g.items||!g.items.length)return '';
 var cards=g.items.map(function(c){
 var logo=c.l?'<img loading="lazy" src="'+esc(c.l)+'" alt="">':'<div class="ph"></div>';
-return '<div class="pick">'+logo+'<b>'+esc(c.n)+'</b><span>'+esc(c.cn)+'</span></div>'}).join('');
+return '<button class="pick pl" data-u="'+esc(c.u)+'" data-n="'+esc(c.n)+'" type="button">'+
+'<span class="thumb">'+logo+'<span class="pov"><i></i></span></span>'+
+'<b>'+esc(c.n)+'</b><span>'+esc(c.cn)+'</span></button>'}).join('');
 return '<div class="pcol"><h3>'+esc(g.cat)+'</h3>'+cards+'</div>'}).join('')}
+['picks','disc'].forEach(function(id){el(id).addEventListener('click',function(e){
+var p=e.target.closest('.pl');if(p)play(p.dataset.u,p.dataset.n)})});
 
 q.addEventListener('input',function(){nav={cc:null,cat:null};render()});
 

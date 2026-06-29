@@ -349,6 +349,20 @@ border:1px solid var(--line);background:transparent;color:var(--accent);cursor:p
 .ch .a button.ok{background:#16a34a;border-color:#16a34a;color:#fff}
 .note{color:var(--muted);font-size:.85rem;margin:.4rem 0 .9rem;word-break:break-all}
 .feat{color:var(--muted);font-size:.8rem;margin-top:1.75rem}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:flex;align-items:center;justify-content:center;z-index:50;padding:1rem}
+.modal[hidden]{display:none}
+.mbox{width:min(960px,96vw);background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.5)}
+.mhead{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.7rem .9rem}
+.mhead b{font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mbtns{display:flex;gap:.4rem;flex:none}
+.mbtns button{font:inherit;font-size:.78rem;min-width:0;padding:.35rem .7rem;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;cursor:pointer}
+.mbtns button:hover{border-color:var(--accent)}
+.mbox video{width:100%;aspect-ratio:16/9;background:#000;display:block}
+.mfall{padding:.9rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);margin:0;word-break:break-all}
+.mfall a{color:var(--accent)}
+.datalist{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.5rem}
+.datalist a{display:block;padding:.6rem .8rem;border:1px solid var(--line);border-radius:9px;background:var(--card)}
+.datalist small{display:block;color:var(--muted);font-size:.72rem;margin-top:.15rem}
 .pcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.6rem;align-items:start}
 .pcol{display:flex;flex-direction:column;gap:.5rem}
 .pcol h3{font-size:.78rem;margin:0 0 .1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:center}
@@ -406,9 +420,30 @@ list, so load it to get them all.</p>
 <input id="q" type="search" placeholder="Search channels by name, e.g. BBC" autocomplete="off">
 <div id="crumb" class="crumb"></div>
 <div id="list"></div>
+<section id="data">
+<h2>Data and downloads</h2>
+<p class="how">Want the raw data? Everything below is regenerated each run and
+free to use. The JSON powers this page; the M3U files load in any player.</p>
+<ul class="datalist">
+<li><a href="data.json">data.json<small>All channels, top picks, more picks (JSON)</small></a></li>
+<li><a href="index.m3u">index.m3u<small>Full verified playlist</small></a></li>
+<li><a href="top-picks.m3u">top-picks.m3u<small>Top picks playlist</small></a></li>
+<li><a href="discover.m3u">discover.m3u<small>More picks playlist (full)</small></a></li>
+<li><a href="recommended_seed.json">recommended_seed.json<small>Top picks seed (JSON)</small></a></li>
+<li><a href="discover_seed.json">discover_seed.json<small>More picks seed (JSON)</small></a></li>
+</ul>
+</section>
 $featured_line<footer>Source links from <a href="https://github.com/iptv-org/iptv">iptv-org</a>.
 This site stores no video, only checks which public links still play.$repo</footer>
 </main>
+<div id="modal" class="modal" hidden>
+<div class="mbox">
+<div class="mhead"><b id="mtitle"></b><div class="mbtns"><button id="mfs" type="button">Fullscreen</button><button id="mclose" type="button">Close</button></div></div>
+<video id="mvideo" controls playsinline></video>
+<p id="mfall" class="mfall" hidden></p>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js"></script>
 <script>
 (function(){
 function el(id){return document.getElementById(id)}
@@ -478,8 +513,8 @@ function card(c){var purl=BASE+'countries/'+c.cc+'.m3u';
 var logo=c.l?'<img loading="lazy" src="'+esc(c.l)+'" alt="">':'<div class="ph"></div>';
 var sub=esc(c.cn)+' / '+esc(c.g)+(c.i?' . '+esc(c.i):'');
 return '<div class="ch">'+logo+'<div class="m"><b>'+esc(c.n)+'</b><span>'+sub+'</span></div>'+
-'<div class="a"><button class="cp" data-u="'+esc(c.u)+'">Copy URL</button>'+
-'<a href="'+esc(c.u)+'" target="_blank" rel="noopener">Open</a>'+
+'<div class="a"><button class="pl" data-u="'+esc(c.u)+'" data-n="'+esc(c.n)+'">Play</button>'+
+'<button class="cp" data-u="'+esc(c.u)+'">Copy URL</button>'+
 '<a href="'+esc(purl)+'" target="_blank" rel="noopener">Country list</a></div></div>'}
 
 function render(){var query=q.value.trim().toLowerCase();
@@ -512,9 +547,35 @@ list.innerHTML=res.length?note+cap.map(card).join(''):note+'<p class="note">No c
 list.addEventListener('click',function(e){
 var tile=e.target.closest('.tile');
 if(tile){if(tile.dataset.cc){nav.cc=tile.dataset.cc;nav.cat=null}else if(tile.dataset.cat){nav.cat=tile.dataset.cat}return render()}
+var pl=e.target.closest('.pl');
+if(pl){return play(pl.dataset.u,pl.dataset.n)}
 var cp=e.target.closest('.cp');
 if(cp){navigator.clipboard.writeText(cp.dataset.u).then(function(){var o=cp.textContent;
 cp.textContent='Copied';cp.classList.add('ok');setTimeout(function(){cp.textContent=o;cp.classList.remove('ok')},1200)})}});
+
+// In-page HLS player (best effort: CORS/geo/mixed-content streams fall back).
+var modal=el('modal'),mvideo=el('mvideo'),mtitle=el('mtitle'),mfall=el('mfall'),hls=null,ptimer;
+function stopPlay(){if(hls){try{hls.destroy()}catch(e){}hls=null}try{mvideo.pause()}catch(e){}
+mvideo.removeAttribute('src');mvideo.load();clearTimeout(ptimer)}
+function closeModal(){stopPlay();modal.hidden=true}
+function showFall(url){mfall.hidden=false;
+mfall.innerHTML='This stream would not play in the browser (usually CORS, a geo-block, or an http source). '+
+'Open it in VLC, TiViMate, Kodi, or another M3U player: <a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(url)+'</a>'}
+function play(url,name){mtitle.textContent=name;mfall.hidden=true;modal.hidden=false;stopPlay();
+var v=mvideo,settled=false;
+function ok(){settled=true;clearTimeout(ptimer);v.play().catch(function(){})}
+function fail(){if(!settled){settled=true;clearTimeout(ptimer);showFall(url)}}
+ptimer=setTimeout(function(){if(v.paused)fail()},12000);
+if(v.canPlayType('application/vnd.apple.mpegurl')){v.src=url;
+v.addEventListener('loadedmetadata',ok,{once:true});v.addEventListener('error',fail,{once:true})}
+else if(window.Hls&&Hls.isSupported()){hls=new Hls({maxBufferLength:10});hls.loadSource(url);hls.attachMedia(v);
+hls.on(Hls.Events.MANIFEST_PARSED,ok);hls.on(Hls.Events.ERROR,function(_,d){if(d&&d.fatal)fail()})}
+else fail()}
+el('mclose').addEventListener('click',closeModal);
+modal.addEventListener('click',function(e){if(e.target===modal)closeModal()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)closeModal()});
+el('mfs').addEventListener('click',function(){var v=mvideo;
+(v.requestFullscreen||v.webkitRequestFullscreen||v.webkitEnterFullscreen||function(){}).call(v)});
 })();
 </script>
 </body>

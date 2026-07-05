@@ -74,6 +74,8 @@ https://ms7.mx-cd.net/tv/238-2061506/Omroep_LEO_TV.smil/playlist.m3u8
 https://58c04fb1d143f.streamlock.net/loemedia/loemedia/playlist.m3u8
 #EXTINF:-1 tvg-id="LONTV.nl@SD" tvg-logo="https://i.imgur.com/bH4XSGw.png" group-title="Undefined",LON TV (720p)
 https://streamingserver02.omroepnuenen.nl/lon/lonweb/chunklist_w1463772894.m3u8
+#EXTINF:-1 tvg-id="LokaleOmroepZeewolde.nl@SD" tvg-logo="https://i.imgur.com/Dw4u9wT.png" group-title="General",LOZ (Lokale Omroep Zeewolde) (720p)
+https://5e2b3e3114872.streamlock.net:1443/lozlive/smil:lozlive/playlist.m3u8
 #EXTINF:-1 tvg-id="MagicPowerRadio.nl@SD" tvg-logo="https://i.imgur.com/sWcwIte.png" group-title="Entertainment",Magic PowerRadio (288p) [Not 24/7]
 https://server-23.stream-server.nl:1936/Magic-PowerRadio/Magic-PowerRadio/playlist.m3u8
 #EXTINF:-1 tvg-id="NH.nl@SD" tvg-logo="https://i.imgur.com/SPkK4md.png" group-title="General;News",NH Niews (1080p)
@@ -108,8 +110,6 @@ https://d3j015sg8r68y.cloudfront.net/nlpo/clr-nlpo/omroepvenray/index.m3u8
 https://d1axml5ozykh3g.cloudfront.net/live/omroepwest/tv/index.m3u8
 #EXTINF:-1 tvg-id="OmroepZeeland.nl@SD" tvg-logo="https://i.imgur.com/3c3QUSn.png" group-title="General",Omroep Zeeland (1080p)
 https://d3isaxd2t6q8zm.cloudfront.net/live/omroepzeeland/tv/index.m3u8
-#EXTINF:-1 tvg-id="OmropFryslan.nl@SD" tvg-logo="https://i.imgur.com/khacDTU.png" group-title="General",Omrop Fryslân (1080p) [Not 24/7]
-https://s-d15f8b0b.b.cdn.bluebillywig.com/live/omropfryslan/f8f68bd5/index.m3u8
 #EXTINF:-1 tvg-id="OOGTV.nl@SD" tvg-logo="https://i.imgur.com/WzxY0PL.png" group-title="General",OOG TV (720p)
 https://d1xcc1603wntzx.cloudfront.net/nlpo/clr-nlpo/oogtv/index.m3u8
 #EXTINF:-1 tvg-id="OPENRotterdamTV.nl@SD" tvg-logo="https://i.imgur.com/nWahRAb.png" group-title="General",Open Rotterdam (480p) [Not 24/7]
@@ -134,6 +134,8 @@ https://radio538.prd1.talpatvcdn.nl/22e9bbf9616547d7bc162c993009c533/index.m3u8
 https://radioaalsmeer.nl:4443/live/tv.m3u8
 #EXTINF:-1 tvg-id="RadioJND.nl@SD" tvg-logo="https://i.imgur.com/nyVlZeL.png" group-title="Music",Radio JND (1080p)
 https://radiojnd.cdn.hostin.cc/radiojnd/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioNLTV.nl@SD" tvg-logo="https://i.imgur.com/TVaMJYB.png" group-title="Music",RadioNL TV (1080p) [Not 24/7]
+https://stream.radionl.tv/radionltv/radionltv/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioToppers.nl@SD" tvg-logo="https://i.imgur.com/9OMsUd7.png" group-title="Entertainment",RadioToppers (720p)
 https://server-67.stream-server.nl:1936/RadioToppers/RadioToppers/playlist.m3u8
 #EXTINF:-1 tvg-id="Rararadio.nl@SD" tvg-logo="https://i.imgur.com/vTpfxUG.png" group-title="Music",Rararadio (720p)
@@ -142,8 +144,6 @@ https://58c04fb1d143f.streamlock.net/rararadio/rararadio/playlist.m3u8
 https://ms2.mx-cd.net/dtv-02/260-2403096/Regio90TV.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="RegioTVDeBilt.nl@SD" tvg-logo="https://i.imgur.com/2jQbmyK.png" group-title="General",Regio TV De Bilt (720p)
 https://d3ud9qm9b5yby9.cloudfront.net/nlpo/clr-nlpo/76ecd122/index.m3u8
-#EXTINF:-1 tvg-id="RPLWoerden.nl@SD" tvg-logo="https://i.imgur.com/UdYMXWQ.png" group-title="General",RPL TV Woerden (720p)
-https://d1893oi5c6e5u0.cloudfront.net/nlpo/clr-nlpo/rpltvwoerden/index.m3u8
 #EXTINF:-1 tvg-id="RTVDrenthe.nl@SD" tvg-logo="https://i.imgur.com/UBQCjnG.png" group-title="Undefined",RTV Drenthe (1080p)
 https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/index.m3u8
 #EXTINF:-1 tvg-id="RTVLOVE.nl@SD" tvg-logo="https://i.imgur.com/hucwX6v.png" group-title="General",RTV LOVE (720p)

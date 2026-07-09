@@ -13,8 +13,6 @@ https://afrafhls.wns.live/hls/stream.m3u8
 https://live2.alalam.ir/alalam.m3u8
 #EXTINF:-1 tvg-id="AlWilayah.ir@SD" tvg-logo="https://i.imgur.com/OI1HQv5.png" group-title="Religious",Al Wilayah (720p)
 https://nl.livekadeh.com/hls2/alwilayah_tv.m3u8
-#EXTINF:-1 tvg-id="AmouzeshTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Amouzesh_TV_logo_%282023%29.svg/500px-Amouzesh_TV_logo_%282023%29.svg.png" group-title="General",Amouzesh
-https://ncdn.telewebion.ir/amouzesh/live/playlist.m3u8
 #EXTINF:-1 tvg-id="AraxTV.ir@SD" tvg-logo="" group-title="Undefined",Arax TV
 https://araxhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ArkoTV.ir@SD" tvg-logo="" group-title="Undefined",Arko TV
@@ -63,6 +61,10 @@ https://icchls.wns.live/hls/stream.m3u8
 https://icnet2hls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="icnet3.ca@SD" tvg-logo="" group-title="Religious",icnet 3
 https://ic3hls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="iFilm2.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/c/ce/Ifilm2logo.png" group-title="Movies",iFilm 2
+https://live.presstv.ir/hls/ifilm2.m3u8
+#EXTINF:-1 tvg-id="iFilmEnglish.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b9/IFILM.png" group-title="Movies",iFilm English
+https://live.presstv.ir/hls/ifilmen.m3u8
 #EXTINF:-1 tvg-id="iFilmPersian.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b9/IFILM.png" group-title="Movies",iFilm Persian
 https://live.presstv.ir/hls/ifilmfa.m3u8
 #EXTINF:-1 tvg-id="IlamTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ilam_TV.png/960px-Ilam_TV.png" group-title="General",Ilam
@@ -99,8 +101,6 @@ https://iptv.mihantv.com/mihantv/playlist.m3u8
 https://tv.iraniancongress.com/stream/tv.m3u8
 #EXTINF:-1 tvg-id="NewFlix.ir@SD" tvg-logo="" group-title="Movies",Newflix
 https://newfhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="NoorTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/c/ce/Qum_Noor_TV.svg/960px-Qum_Noor_TV.svg.png" group-title="Undefined",Noor
-https://ncdn.telewebion.ir/noor/live/playlist.m3u8
 #EXTINF:-1 tvg-id="OmideIranTV.us@SD" tvg-logo="https://i.imgur.com/CeMf68L.png" group-title="Entertainment",Omide Iran
 https://oitnhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="OXIRTV.ir@SD" tvg-logo="https://i.imgur.com/MGMhUDx.png" group-title="Entertainment",OXIR TV
@@ -155,8 +155,8 @@ https://raphls.persiana.live/hls/stream.m3u8
 https://rjtvhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="RasoulallahTv.ir@HD" tvg-logo="https://i.imgur.com/Jh5ADee.png" group-title="Religious",RasoulallahTv (1080p)
 https://avr.host247.net/live/rasoulallahtv/playlist.m3u8
-#EXTINF:-1 tvg-id="RoyaTV.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/0e3d7425-1a1b-47c4-b020-2e09a5fc2598/default" group-title="Undefined",Roya TV
-https://ncdn.telewebion.ir/iribu/live/playlist.m3u8
+#EXTINF:-1 tvg-id="SabalanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/f/f2/Ardabil_SABALAN.png" group-title="Undefined",Sabalan
+https://ncdn.telewebion.ir/sabalan/live/playlist.m3u8
 #EXTINF:-1 tvg-id="SabzTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Logo_Golestan.png/960px-Logo_Golestan.png" group-title="General",Sabz
 https://ncdn.telewebion.ir/sabz/live/playlist.m3u8
 #EXTINF:-1 tvg-id="SahandTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/3/37/Tabriz_Sahand.svg/960px-Tabriz_Sahand.svg.png" group-title="Undefined",Sahand
@@ -171,6 +171,8 @@ https://sltwohls.wns.live/hls/stream.m3u8
 https://t2hls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="TBNNejatTV.ir@SD" tvg-logo="https://i.imgur.com/e4WffQA.png" group-title="Undefined",TBN Nejat TV
 https://hls.nejat.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="TehranTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/IRIBTV5.svg/500px-IRIBTV5.svg.png" group-title="General",Tehran
+https://ncdn.telewebion.ir/tehran/live/playlist.m3u8
 #EXTINF:-1 tvg-id="Tekyemadahi.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/d602596d-7b8d-48ef-8f51-9344b4ac0eb6/default" group-title="Undefined",Tekyemadahi
 https://ncdn.telewebion.ir/tekyemadahi/live/playlist.m3u8
 #EXTINF:-1 tvg-id="TMTV.us@SD" tvg-logo="https://tmlive.tv/wp-content/uploads/2018/07/immigration-consultants-network-en-.png" group-title="General",TM TV (720p)

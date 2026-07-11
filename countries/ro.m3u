@@ -30,8 +30,6 @@ http://82.78.243.219:45739/play/a01n/index.m3u8
 http://82.78.243.219:45739/play/a00n/index.m3u8
 #EXTINF:-1 tvg-id="BanatTV.ro@SD" tvg-logo="https://i.imgur.com/yVsocid.png" group-title="General",Banat TV (720p)
 https://www.btv.ro/hls/banat-tv.m3u8
-#EXTINF:-1 tvg-id="BucovinaTV.ro@SD" tvg-logo="https://i.imgur.com/6klhXxp.png" group-title="Undefined",Bucovina TV (576i)
-https://www.bucovinatv.ro/proxy/video/playlist.m3u8
 #EXTINF:-1 tvg-id="ColumnaTV.ro@SD" tvg-logo="https://i.imgur.com/C5dIgsc.png" group-title="General",Columna TV
 https://cdn.streamnet.pro/columnatv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="ComedyCentral.ro@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Comedy_Central_2018.svg/960px-Comedy_Central_2018.svg.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Comedy",Comedy Central
@@ -85,8 +83,6 @@ https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8
 https://tv.broadcasting.ro/magictv/925f90db-5c88-4190-a53d-5163cdffe6f4.m3u8
 #EXTINF:-1 tvg-id="MediCOOLTV.ro@SD" tvg-logo="https://i.imgur.com/Xe7x1k2.png" group-title="Lifestyle",MediCOOL TV (720p)
 https://stream1.antenaplay.ro/live/MediCOOLTV/chunklist.m3u8
-#EXTINF:-1 tvg-id="MetropolaTV.ro@SD" tvg-logo="https://i.imgur.com/Gzq05v8.png" group-title="General",Metropola TV (1080p) [Not 24/7]
-https://www.livemetropolatv.ro/MetropolaTV/Metro/playlist.m3u8
 #EXTINF:-1 tvg-id="Mireasa.ro@SD" tvg-logo="https://i.imgur.com/k0VO0LH.png" group-title="Series",Mireasa (720p)
 https://stream1.antenaplay.ro/live/MireasaExtra/playlist.m3u8
 #EXTINF:-1 tvg-id="MISATV.ro@SD" tvg-logo="https://i.imgur.com/2RxQNm6.png" group-title="Religious",MISA TV
@@ -158,6 +154,8 @@ https://tvr-folclor.lg.mncdn.com/tvrfolclor/smil:tvrfolclor.smil/playlist.m3u8
 http://82.208.141.70:8778/1.m3u8
 #EXTINF:-1 tvg-id="TVRInternational.ro@SD" tvg-logo="https://i.imgur.com/w28wcHs.png" group-title="General",TVR International
 https://tvr-international.lg.mncdn.com/tvrinternational/smil:tvrinternational.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="TVRSport.ro@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/TVR_Sport_Logo_2023.svg/960px-TVR_Sport_Logo_2023.svg.png" group-title="General;Sports",TVR Sport
+https://tvr-sport.lg.mncdn.com/tvrsport/smil:tvrsport.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TVRTarguMures.ro@SD" tvg-logo="https://i.imgur.com/9Hptdqj.png" group-title="General",TVR Targu-Mures
 https://tvr-tgmures.lg.mncdn.com/tvrtgmures/smil:tvrtgmures.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TVRTimisoara.ro@SD" tvg-logo="https://i.imgur.com/0x6Edei.png" group-title="General",TVR Timisoara

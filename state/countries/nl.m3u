@@ -46,8 +46,6 @@ https://stream.fomixmedia.nl/FomixTV/video.m3u8
 https://video.uitzending.tv:19360/gigantfm/gigantfm.m3u8
 #EXTINF:-1 tvg-id="Haarlem105TV.nl@SD" tvg-logo="https://i.imgur.com/xyOVVZ0.png" group-title="General",Haarlem105 RTV (720p)
 https://d2qm50imcbcfqx.cloudfront.net/nlpo/clr-nlpo/haarlem105/index.m3u8
-#EXTINF:-1 tvg-id="HorseCountryTV.uk@SD" tvg-logo="https://i.imgur.com/1x6zYZr.png" group-title="Outdoor",Horse & Country TV (1080p)
-https://hnc-free-viewlift.amagi.tv/HNC_AUSTRALIA.m3u8
 #EXTINF:-1 tvg-id="HypeVisualRadio.nl@SD" tvg-logo="https://cdn.onlineradiobox.com/img/fblogo/1/97371.v21.png" group-title="Music",Hype Visual Radio (1080p)
 https://streammix.alsolnet.com/hyperadio/live/playlist.m3u8
 #EXTINF:-1 tvg-id="IdeaalTV.nl@SD" tvg-logo="https://i.imgur.com/JLYQFoX.png" group-title="General",Ideaal TV (480p) [Not 24/7]
@@ -76,8 +74,6 @@ https://58c04fb1d143f.streamlock.net/loemedia/loemedia/playlist.m3u8
 https://streamingserver02.omroepnuenen.nl/lon/lonweb/chunklist_w1463772894.m3u8
 #EXTINF:-1 tvg-id="MagicPowerRadio.nl@SD" tvg-logo="https://i.imgur.com/sWcwIte.png" group-title="Entertainment",Magic PowerRadio (288p) [Not 24/7]
 https://server-23.stream-server.nl:1936/Magic-PowerRadio/Magic-PowerRadio/playlist.m3u8
-#EXTINF:-1 tvg-id="MerweTV.nl@SD" tvg-logo="https://i.imgur.com/JjB7U1q.png" group-title="General",Merwe TV (720p)
-https://d2ycaxub5x98iw.cloudfront.net/nlpo/clr-nlpo/merwetv/index.m3u8
 #EXTINF:-1 tvg-id="NH.nl@SD" tvg-logo="https://i.imgur.com/SPkK4md.png" group-title="General;News",NH Niews (1080p)
 https://takeoff.jetstre.am/?account=nhnieuws&file=live&output=playlist.m3u8&protocol=https&service=wowza&type=live
 #EXTINF:-1 tvg-id="NOOSTV.nl@SD" tvg-logo="https://i.imgur.com/X8xLcpT.png" group-title="General",NOOS TV (720p)
@@ -126,6 +122,8 @@ https://rrr.sz.xlcdn.com/?account=ndc_mediagroep&file=NDC2&output=playlist.m3u8&
 https://rrr.sz.xlcdn.com/?account=ndc_mediagroep&file=NDC3&output=playlist.m3u8&service=wowza&type=live
 #EXTINF:-1 tvg-id="Radio10.nl@SD" tvg-logo="https://i.imgur.com/2oGtj7r.png" group-title="Undefined",Radio 10 (720p)
 https://radio10.prd1.talpatvcdn.nl/2b725bc7c93f477eaf0e43955ea8a6c1/index.m3u8
+#EXTINF:-1 tvg-id="Radio350.nl@SD" tvg-logo="https://i.imgur.com/3nkzXup.png" group-title="Undefined",Radio 350 (360p) [Not 24/7]
+https://stream.radio350.nl/hls/radio350.m3u8
 #EXTINF:-1 tvg-id="Radio538.nl@SD" tvg-logo="https://i.imgur.com/sd7BX9H.png" group-title="Undefined",Radio 538 (270p)
 https://radio538.prd1.talpatvcdn.nl/22e9bbf9616547d7bc162c993009c533/index.m3u8
 #EXTINF:-1 tvg-id="RadioAalsmeerTV.nl@SD" tvg-logo="https://i.imgur.com/SYzjLlI.png" group-title="Undefined",Radio Aalsmeer TV (720p) [Not 24/7]
@@ -142,6 +140,8 @@ https://ms2.mx-cd.net/dtv-02/260-2403096/Regio90TV.smil/playlist.m3u8
 https://d3ud9qm9b5yby9.cloudfront.net/nlpo/clr-nlpo/76ecd122/index.m3u8
 #EXTINF:-1 tvg-id="RTVDrenthe.nl@SD" tvg-logo="https://i.imgur.com/UBQCjnG.png" group-title="Undefined",RTV Drenthe (1080p)
 https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/index.m3u8
+#EXTINF:-1 tvg-id="RTVLOVE.nl@SD" tvg-logo="https://i.imgur.com/hucwX6v.png" group-title="General",RTV LOVE (720p)
+https://d2o8iss0ldenh4.cloudfront.net/nlpo/clr-nlpo/rtvlove/index.m3u8
 #EXTINF:-1 tvg-id="RTVMaastricht.nl@SD" tvg-logo="https://i.imgur.com/nYl8H2e.png" group-title="Undefined",RTV Maastricht (720p) [Not 24/7]
 http://stream.rtvmaastricht.nl:8081/rtvm_live/tv/playlist.m3u8
 #EXTINF:-1 tvg-id="RTVNoord.nl@SD" tvg-logo="https://i.imgur.com/l92Cb6H.png" group-title="Undefined",RTV Noord (720p) [Not 24/7]

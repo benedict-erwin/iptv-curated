@@ -1,6 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="20MinutesTV.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/20_Minutes_TV_IDF_logo_%282023%29.png/960px-20_Minutes_TV_IDF_logo_%282023%29.png" group-title="General",20 Minutes TV (1080p)
-https://live-20minutestv.digiteka.com/1961167769/index.m3u8
 #EXTINF:-1 tvg-id="Action.fr@HD" tvg-logo="https://i.imgur.com/Zv9VsVq.png" group-title="Movies",Action HD (720p)
 http://rezofoot.tv/Action/index.m3u8
 #EXTINF:-1 tvg-id="ADNTVPlus.fr@SD" tvg-logo="https://i.imgur.com/HQZQyWt.png" group-title="Animation",ADN TV+ (720p)
@@ -27,6 +25,8 @@ https://jmp2.uk/plu-66f55a9a747bfa0008521859.m3u8
 https://jmp2.uk/plu-5ffc8c345822750007e167de.m3u8
 #EXTINF:-1 tvg-id="BrionnaisTV.fr@SD" tvg-logo="https://i.imgur.com/y94bhqX.jpg" group-title="General",Brionnais TV (720p)
 https://stream2.mandarine.media/brionnaistv/brionnaistv/playlist.m3u8
+#EXTINF:-1 tvg-id="CStar.fr@SD" tvg-logo="https://i.imgur.com/w4kAX1V.png" group-title="Entertainment",C Star (477p)
+https://raw.githubusercontent.com/Paradise-91/ParaTV/refs/heads/main/streams/canalplus/cstar-dm.m3u8
 #EXTINF:-1 tvg-id="Caillou.fr@SD" tvg-logo="https://i.imgur.com/RgKaoe4.png" group-title="Undefined",Caillou
 https://do7nccdsswstc.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-1aso0bc668saa/a5233c83-f772-4a81-959a-45ec7877ef61/5.m3u8
 #EXTINF:-1 tvg-id="CanalJ.fr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Canal_J_2019_Logo.png/960px-Canal_J_2019_Logo.png" group-title="Kids",Canal J HD (720p)
@@ -69,6 +69,8 @@ http://99.27.51.147/CineClassic/index.m3u8
 #EXTINF:-1 tvg-id="CinePlusFrisson.fr@SD" tvg-logo="https://i.imgur.com/MwFtbnR.jpeg" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",Cine+ Frisson (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://99.27.51.147:8080/CineFrisson/index.m3u8
+#EXTINF:-1 tvg-id="CNews.fr@SD" tvg-logo="https://i.imgur.com/sSNhk2g.png" group-title="News",CNews (1080p)
+https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/canalplus/cnews-dm.m3u8
 #EXTINF:-1 tvg-id="CNEWSPRIME.fr@HD" tvg-logo="https://www.cnews.fr/themes/cnews/img/cnews-prime.png" group-title="News",CNEWS PRIME (1080p)
 https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/canalplus/cnews-prime-dm.m3u8
 #EXTINF:-1 tvg-id="Daria.de@FR" tvg-logo="https://images.pluto.tv/channels/6683b680efa2a10008e8a393/colorLogoPNG.png" group-title="Animation",Daria
@@ -87,6 +89,8 @@ https://edge-fast3.evrideo.tv/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HL
 https://37b4c228.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWZyX0ZJRkFQbHVzRnJlbmNoX0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-id="France2.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/France_2_2018.svg/960px-France_2_2018.svg.png" group-title="General",France 2 (1080p)
 http://69.64.57.208/france2/mono.m3u8
+#EXTINF:-1 tvg-id="France4.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/France_4_2018.svg/960px-France_4_2018.svg.png" group-title="Kids",France 4
+http://176.65.146.100:8047/play/a074/index.m3u8
 #EXTINF:-1 tvg-id="France5.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/France_5_2018.svg/960px-France_5_2018.svg.png" group-title="General",France 5 (1080p)
 http://69.64.57.208/france5/mono.m3u8
 #EXTINF:-1 tvg-id="France24.fr@French" tvg-logo="https://i.imgur.com/u8N6uoj.png" group-title="News",France 24 French (1080p)
@@ -108,8 +112,6 @@ https://jmp2.uk/plu-604f8de01b479400078fb1e7.m3u8
 https://jmp2.uk/plu-5f8ecc7aa44d9c00081fca29.m3u8
 #EXTINF:-1 tvg-id="InazumaEleven.us@France" tvg-logo="https://i.imgur.com/pLv0T3D.png" group-title="Kids;Series",Inazuma Eleven
 https://jmp2.uk/plu-632c6df43d2bc5000751f621.m3u8
-#EXTINF:-1 tvg-id="InvestigationbyPlutoTV.de@FR" tvg-logo="https://images.pluto.tv/channels/6683cd2fca74680008772545/colorLogoPNG_1747399523793.png" group-title="Series",Investigation by Pluto TV
-https://jmp2.uk/plu-6683cd2fca74680008772545.m3u8
 #EXTINF:-1 tvg-id="JAG.de@FR" tvg-logo="https://images.pluto.tv/channels/65ccd26060eb870008db95fc/colorLogoPNG.png" group-title="Series",JAG
 https://jmp2.uk/plu-65ccd26060eb870008db95fc.m3u8
 #EXTINF:-1 tvg-id="JustTattooofUs.de@FR" tvg-logo="https://images.pluto.tv/channels/6304f20c941c5d00089634e7/colorLogoPNG.png" group-title="Entertainment",Just Tattoo of Us
@@ -159,6 +161,8 @@ http://41.205.77.102/NATGEO-WILD/index.m3u8
 https://bamusa-naturetime-emea-fra-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.fr@SD" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Kids",Nickelodeon (1080p)
 http://151.80.18.177:86/Nickelodeon_FR/index.m3u8
+#EXTINF:-1 tvg-id="NickelodeonJunior.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Nickelodeon_Junior.png/960px-Nickelodeon_Junior.png" group-title="Kids",Nickelodeon Junior (1080p)
+http://151.80.18.177:86/Nickelodeon_Junior/index.m3u8
 #EXTINF:-1 tvg-id="OnePiece.us@FR" tvg-logo="https://i.imgur.com/XsvbAWR.png" group-title="Animation",One Piece
 https://jmp2.uk/plu-6380c94947c72b0007ee9a13.m3u8
 #EXTINF:-1 tvg-id="P2MTV.fr@SD" tvg-logo="https://i.imgur.com/TrecSeG.png" group-title="Music",P2M TV (720p)
@@ -244,6 +248,8 @@ https://7aa9671895264ec9a384dfed1b992171.mediatailor.us-west-2.amazonaws.com/v1/
 #EXTINF:-1 tvg-id="Syfy.fr@SD" tvg-logo="https://i.imgur.com/gUOXdjv.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Undefined",Syfy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://99.27.51.147:8080/SYFY/index.m3u8
+#EXTINF:-1 tvg-id="T18.fr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Logo_de_la_chaine_T18.svg/500px-Logo_de_la_chaine_T18.svg.png" group-title="General",T18 (1080p)
+https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/t18/t18-dm.m3u8
 #EXTINF:-1 tvg-id="TeenMom.de@FR" tvg-logo="https://images.pluto.tv/channels/62e7fc8c0d061100083946a9/colorLogoPNG.png" group-title="Entertainment",Teen Mom (720p)
 https://jmp2.uk/plu-62f3f05505e621000783df2f.m3u8
 #EXTINF:-1 tvg-id="TeletoonPlus.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/T%C3%A9l%C3%A9toon%2B_Logo.png/960px-T%C3%A9l%C3%A9toon%2B_Logo.png" group-title="Animation;Kids",Teletoon+ (720p)
@@ -259,40 +265,41 @@ http://41.205.77.102/TIJI/index.m3u8
 https://jmp2.uk/plu-5f8ecc1b37867f00071469e9.m3u8
 #EXTINF:-1 tvg-id="ToutlemondedetesteChris.de@FR" tvg-logo="https://images.pluto.tv/channels/67b4b4a21a5ca760802d25fd/colorLogoPNG_1747394750060.png" group-title="Series",Tout le monde déteste Chris
 https://jmp2.uk/plu-67b4b4a21a5ca760802d25fd.m3u8
-#EXTINF:-1 tvg-id="TraceAfrica.fr@SD" tvg-logo="https://i.imgur.com/kPUkoS7.png" group-title="Music",Trace Africa
+#EXTINF:-1 tvg-id="TraceAfrica.fr@SD" tvg-logo="https://i.imgur.com/kPUkoS7.png" group-title="Music",Trace Africa (1080p)
 https://channels.trace.plus/Traceprod/AFRICA_FR_hd/index.m3u8
-#EXTINF:-1 tvg-id="TraceAfrikora.fr@SD" tvg-logo="https://i.imgur.com/CQDdnhp.png" group-title="Music",Trace Afrikora
-https://channels.trace.plus/Traceprod/TERANGA_hd/index.m3u8
-#EXTINF:-1 tvg-id="TraceAyiti.fr@SD" tvg-logo="https://i.imgur.com/KkJ6fet.png" group-title="Music",Trace Ayiti
+#EXTINF:-1 tvg-id="TraceAyiti.fr@SD" tvg-logo="https://i.imgur.com/KkJ6fet.png" group-title="Music",Trace Ayiti (1080p)
 https://channels.trace.plus/Traceprod/AYITI_hd/index.m3u8
 #EXTINF:-1 tvg-id="TraceBrazuca.fr@HD" tvg-logo="https://i.imgur.com/DFBocPu.png" group-title="Music",Trace Brasil (1080p)
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01131-tracetv-tracebrazuca-samsungbr/playlist.m3u8
 #EXTINF:-1 tvg-id="TraceBrazuca.fr@SD" tvg-logo="https://i.imgur.com/DFBocPu.png" group-title="Music",TRACE Brazuca (1080p)
 https://amg01131-tracetv-amg01131c4-stirr-us-4390.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="TraceCaribbean.fr@SD" tvg-logo="https://i.imgur.com/ZHD7Vxy.png" group-title="Music",Trace Caribbean
+#EXTINF:-1 tvg-id="TraceCaribbean.fr@SD" tvg-logo="https://i.imgur.com/ZHD7Vxy.png" group-title="Music",Trace Caribbean (1080p)
 https://channels.trace.plus/Traceprod/CARIBBEAN_hd/index.m3u8
-#EXTINF:-1 tvg-id="TraceGospel.fr@SD" tvg-logo="https://i.imgur.com/X0UmU3K.png" group-title="Music;Religious",Trace Gospel (1080p)
-https://channels.trace.plus/Traceprod/GOSPEL_FR/.m3u8
-#EXTINF:-1 tvg-id="TraceJama.fr@SD" tvg-logo="https://i.imgur.com/pthX34m.png" group-title="Music",Trace Jama
-https://channels.trace.plus/Traceprod/JAMA_ld/index.m3u8
-#EXTINF:-1 tvg-id="TraceKitoko.fr@SD" tvg-logo="https://i.imgur.com/q6vkMrU.png" group-title="Music",Trace Kitoko
+#EXTINF:-1 tvg-id="TraceGospel.fr@SD" tvg-logo="https://i.imgur.com/X0UmU3K.png" group-title="Music;Religious",Trace Gospel Africa Franco (1080p)
+https://channels.trace.plus/Traceprod/GOSPEL_FR_hd/index.m3u8
+#EXTINF:-1 tvg-id="TraceJama.fr@SD" tvg-logo="https://i.imgur.com/pthX34m.png" group-title="Music",Trace Jama (1080p)
+https://channels.trace.plus/Traceprod/JAMA_hd/index.m3u8
+#EXTINF:-1 tvg-id="TraceKitoko.fr@SD" tvg-logo="https://i.imgur.com/q6vkMrU.png" group-title="Music",Trace Kitoko (1080p)
 https://channels.trace.plus/Traceprod/KITOKO_hd/index.m3u8
 #EXTINF:-1 tvg-id="TraceLatina.fr@SD" tvg-logo="https://i.imgur.com/CUVAi4u.png" group-title="Music",Trace Latina (1080p)
-https://amg01131-tracetv-tracelatina-glewed-vtnk7.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="TraceMboa.fr@SD" tvg-logo="https://i.imgur.com/cYwkCj2.png" group-title="Music",Trace Mboa
+https://channels.trace.plus/Traceprod/LATINA_hd/index.m3u8
+#EXTINF:-1 tvg-id="TraceMboa.fr@SD" tvg-logo="https://i.imgur.com/cYwkCj2.png" group-title="Music",Trace Mboa (1080p)
 https://channels.trace.plus/Traceprod/MBOA_hd/index.m3u8
-#EXTINF:-1 tvg-id="TraceMuzika.fr@SD" tvg-logo="https://i.imgur.com/xsEGIXO.png" group-title="Music",Trace Muzika
+#EXTINF:-1 tvg-id="TraceMuzika.fr@SD" tvg-logo="https://i.imgur.com/xsEGIXO.png" group-title="Music",Trace Muzika (1080p)
 https://channels.trace.plus/Traceprod/MUZIKA_hd/index.m3u8
-#EXTINF:-1 tvg-id="TraceMziki.fr@SD" tvg-logo="https://i.imgur.com/l3X9Gg4.png" group-title="Music",Trace Mziki
+#EXTINF:-1 tvg-id="TraceMziki.fr@SD" tvg-logo="https://i.imgur.com/l3X9Gg4.png" group-title="Music",Trace Mziki (1080p)
 https://channels.trace.plus/Traceprod/MZIKI_hd/index.m3u8
-#EXTINF:-1 tvg-id="TraceNaija.fr@SD" tvg-logo="https://i.imgur.com/Rguekcp.png" group-title="Music",Trace Naija
+#EXTINF:-1 tvg-id="TraceNaija.fr@SD" tvg-logo="https://i.imgur.com/Rguekcp.png" group-title="Music",Trace Naija (1080p)
 https://channels.trace.plus/Traceprod/NAIJA_hd/index.m3u8
 #EXTINF:-1 tvg-id="TraceSportStars.fr@HD" tvg-logo="https://i.imgur.com/FabFP5A.png" group-title="Sports",Trace Sport Stars (Australia) (1080p)
 https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="TraceUrban.fr@HD" tvg-logo="https://i.imgur.com/DLIbUMx.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" group-title="Music",Trace Urban HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-id="TraceAfrikora.fr@SD" tvg-logo="https://i.imgur.com/CQDdnhp.png" group-title="Music",Trace Teranga (1080p)
+https://channels.trace.plus/Traceprod/TERANGA_hd/index.m3u8
+#EXTINF:-1 tvg-id="TraceUrban.fr@SD" tvg-logo="https://i.imgur.com/DLIbUMx.png" group-title="Music",Trace Urban (Australia) (1080p)
+https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="TraceUrban.fr@HD" tvg-logo="https://i.imgur.com/DLIbUMx.png" group-title="Music",Trace Urban France (1080p)
 https://channels.trace.plus/Traceprod/URBAN_FR_hd/index.m3u8
-#EXTINF:-1 tvg-id="TraceVanillaIslands.fr@SD" tvg-logo="https://i.imgur.com/ngF58fe.png" group-title="Music",Trace Vanilla Islands
+#EXTINF:-1 tvg-id="TraceVanillaIslands.fr@SD" tvg-logo="https://i.imgur.com/ngF58fe.png" group-title="Music",Trace Vanilla Islands (1080p)
 https://channels.trace.plus/Traceprod/VANILLA_hd/index.m3u8
 #EXTINF:-1 tvg-id="TrueCrimebyPlutoTV.de@FR" tvg-logo="https://images.pluto.tv/channels/5f914f4b36d67d0007a91a04/colorLogoPNG.png" group-title="Series",True Crime by Pluto TV
 https://jmp2.uk/plu-5f914f4b36d67d0007a91a04.m3u8
@@ -324,6 +331,8 @@ https://live.azenagroup.com/zenith/index.ll.m3u8
 https://zylo-cinenanar-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="CineWestern.fr@SD" tvg-logo="https://i.imgur.com/tteOFkL.png" group-title="Movies",Zylo Ciné Western (1080p)
 https://amg00711-zylo-amg00711c8-rakuten-uk-2686.playouts.now.amagi.tv/playlist/amg00711-zylofast-cinewestern-rakutenuk/playlist.m3u8
+#EXTINF:-1 tvg-id="EmotionL.fr@SD" tvg-logo="https://i.imgur.com/MP34aaj.png" group-title="Movies",Zylo Emotion' L (1080p)
+https://rakutenaa-zylo-emotional-rakuten-r1zkm.amagi.tv/playlist/rakutenAA-zylo-emotional-rakuten/playlist.m3u8
 #EXTINF:-1 tvg-id="FrequenceNovelas.fr@SD" tvg-logo="https://i.imgur.com/fEjNAps.png" group-title="Series",Zylo Fréquence Novelas (1080p)
 https://d20oth1416y9a1.cloudfront.net/playlist/amg00711-zylofast-frequencenovelas-rakutenus/playlist.m3u8
 #EXTINF:-1 tvg-id="IntoCrime.fr@SD" tvg-logo="https://i.imgur.com/43at4M2.png" group-title="Documentary",Zylo Into Crime (1080p)

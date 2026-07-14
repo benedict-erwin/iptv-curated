@@ -3,6 +3,8 @@
 https://otv.wotom.net/alau/stream.m3u8
 #EXTINF:-1 tvg-id="Balapan.kz@SD" tvg-logo="https://vote.rtrk.kz/img/balapan-logo.png" group-title="Kids",Balapan (1080p)
 https://live-3.otcnet.ru/Balapan/index.m3u8
+#EXTINF:-1 tvg-id="MTRK.kz@SD" tvg-logo="https://i.imgur.com/XMyRwDk.png" group-title="General",MTRK (576p)
+https://tvcdn01.esilnet.kz/tv/mtrk/index.m3u8
 #EXTINF:-1 tvg-id="MuzzOne.kz@SD" tvg-logo="https://i.imgur.com/nHVABXh.png" http-referrer="https://muzzone.tv/" group-title="Music",MuzzOne
 #EXTVLCOPT:http-referrer=https://muzzone.tv/
 https://streams.adapto.kz/hls/live/muzzone/main_stream.m3u8

@@ -54,18 +54,17 @@ https://www.desde-paraguay.com/mega.m3u8
 http://179.60.51.134:8888/MTV/index.m3u8
 #EXTINF:-1 tvg-id="NandePortetepeTV.py@SD" tvg-logo="https://i.imgur.com/3taT6JK.jpeg" group-title="Music",Nande Portetepe TV
 https://video.hostingcaaguazu.com:19360/nandeportetepe/nandeportetepe.m3u8
+#EXTINF:-1 tvg-id="Nanduti.py@SD" tvg-logo="https://i.imgur.com/vnIkhRO.png" http-referrer="https://nanduti.com.py/nanduti-tv" group-title="News",Nanduti (1080p)
+#EXTVLCOPT:http-referrer=https://nanduti.com.py/nanduti-tv
+https://nanduti.b-cdn.net/Source.m3u8
 #EXTINF:-1 tvg-id="NextHD.py@SD" tvg-logo="https://i.imgur.com/c2rF3SS.png" group-title="Movies;Music",Next HD (480p)
 https://live.enhdtv.com:19360/nexthd/nexthd.m3u8
-#EXTINF:-1 tvg-id="OasisTV.py@SD" tvg-logo="https://i.imgur.com/u9umNKp.jpeg" group-title="Entertainment",Oasis TV (720p)
-https://video.hostingcaaguazu.com:19360/oasistv/oasistv.m3u8
 #EXTINF:-1 tvg-id="ObediraTV.py@SD" tvg-logo="https://i.imgur.com/fRzOUw5.png" group-title="Religious",Obedira TV
 https://video.hostingcaaguazu.com:19360/obediratv/obediratv.m3u8
 #EXTINF:-1 tvg-id="OviedoTV.py@SD" tvg-logo="https://i.imgur.com/6OlfgSQ.png" group-title="General",Oviedo TV
 https://video.wilohosting.com:19360/oviedotv/oviedotv.m3u8
 #EXTINF:-1 tvg-id="ParaguayTV.py@SD" tvg-logo="https://i.imgur.com/fkK7i8g.png" group-title="General",Paraguay TV (1080p)
 https://stream.paraguaytv.gov.py/memfs/bbe36fed-9b49-4d1d-adaa-4bd6d1b2e386.m3u8
-#EXTINF:-1 tvg-id="PopuTV.py@SD" tvg-logo="https://i.imgur.com/UqCogyZ.png" group-title="Entertainment",Popu TV (1080p)
-http://190.108.83.69:8000/play/a070/index.m3u8
 #EXTINF:-1 tvg-id="ProductivaTV.py@SD" tvg-logo="https://i.imgur.com/KXHK7UP.png" group-title="Outdoor",Productiva TV
 https://copacoradios.desdeparaguay.net/productivatv/productivatv_baja/playlist.m3u8?admin=nacion
 #EXTINF:-1 tvg-id="RadioColmenar925FM.py@SD" tvg-logo="https://i.imgur.com/LniNLO1.jpeg" group-title="Music",Radio Colmenar 92.5 FM
@@ -100,9 +99,5 @@ https://video.hostingcaaguazu.com:19360/tvairepy/tvairepy.m3u8
 https://video.hostingcaaguazu.com:19360/tvcanindeyu/tvcanindeyu.m3u8
 #EXTINF:-1 tvg-id="UnionTV.py@SD" tvg-logo="https://i.imgur.com/No9YzNC.png" group-title="General",UnionTV
 https://tigocloud.desdeparaguay.net/800tv/800tv/playlist.m3u8
-#EXTINF:-1 tvg-id="UniRadioTV.py@SD" tvg-logo="https://i.imgur.com/Co3YrU0.png" group-title="Undefined",UniRadio TV (1080p)
-https://video.hostingcaaguazu.com:19360/uniradiotv/uniradiotv.m3u8
 #EXTINF:-1 tvg-id="VenusMedia.py@SD" tvg-logo="https://i.imgur.com/XwmUbfp.png" group-title="Music",Venus Media (1080p)
 https://tigocloud.desdeparaguay.net/venusmedia/venusmedia/playlist.m3u8
-#EXTINF:-1 tvg-id="VillaElisaRadioTV.py@SD" tvg-logo="https://i.imgur.com/ryzCsvy.jpg" group-title="General",Villa Elisa Radio TV (1080p)
-https://copacogen.desdeparaguay.net/villaelisatv/villaelisatv/playlist.m3u8?admin=nacion

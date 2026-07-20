@@ -3,6 +3,8 @@
 https://cloudfront44.lexanetwork.com:1344/freerelay/16tv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="AlfoldTV.hu@SD" tvg-logo="https://i.imgur.com/W6jg8iM.png" group-title="Entertainment",Alföld TV (1080p)
 https://cloudfront41.lexanetwork.com:1344/relay01/livestream006.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="BajaiTV.hu@SD" tvg-logo="https://i.imgur.com/cyReGWh.png" group-title="General",Bajai TV (720p)
+https://cloudfront41.lexanetwork.com:1344/relay01/livestream002.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="BalatonTV.hu@SD" tvg-logo="https://balatontelevizio.hu/wp-content/uploads/2020/05/balaton_tv_logo.png" group-title="Undefined",Balaton TV (432p)
 https://stream.iptvservice.eu/hls/balatontv.m3u8
 #EXTINF:-1 tvg-id="BudapestEuropaTelevizio.hu@SD" tvg-logo="https://i.imgur.com/CqqWtzo.png" group-title="General",Budapest Európa Televízió (576p)
@@ -17,8 +19,6 @@ http://cloudfront44.lexanetwork.com:1732/hlsrelay003/hls/livestream.sdp.m3u8
 https://dash2.antik.sk/live/ewtn_bonum/index.m3u8
 #EXTINF:-1 tvg-id="Galaxy4.hu@SD" tvg-logo="https://i.imgur.com/fTG99xh.png" group-title="General",Galaxy4
 https://budapest-cache-1.antik.sk/live/test_galaxy_4_atk_1200/playlist.m3u8
-#EXTINF:-1 tvg-id="HeviziTV.hu@SD" tvg-logo="https://i.imgur.com/zuWQKDm.png" group-title="General",Hévízi TV (1080p)
-https://cloudfront44.lexanetwork.com:1344/relay03/livestream003.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="HirTV.hu@SD" tvg-logo="https://i.imgur.com/xmIUDRN.png" group-title="News",Hir TV (1080p)
 https://video11.videa.hu/static/live/8.2966061.2530409.1.5.590.590/index.m3u8
 #EXTINF:-1 tvg-id="KanizsaTV.hu@SD" tvg-logo="https://i.imgur.com/l02znlE.png" group-title="General",Kanizsa TV (400p)
@@ -43,12 +43,10 @@ http://stream.nmih.hu:7980/live.m3u8
 https://budapest-cache-1.antik.sk/live/test_film_plus_2_hungary_1200_atk/playlist.m3u8
 #EXTINF:-1 tvg-id="SIXOTV.hu@SD" tvg-logo="https://i.ibb.co/GTPs9Xy/9068.png" group-title="General",SIXO TV (360p)
 https://cloudfront44.lexanetwork.com:1344/relay01/HDE038.sdp/playlist.m3u8
-#EXTINF:-1 tvg-id="SzolnokTV.hu@SD" tvg-logo="https://i.imgur.com/Eiab9MP.png" group-title="General",Szolnok TV (1080p)
-https://cloudfront44.lexanetwork.com:1344/relay01/livestream004.sdp/playlist.m3u8
-#EXTINF:-1 tvg-id="TataiTV.hu@SD" tvg-logo="https://i.imgur.com/skXYntc.png" group-title="General",Tatai TV (1080p)
-https://cloudfront44.lexanetwork.com:1344/relay01/broadcast006.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="7TV.hu@SD" tvg-logo="https://i.imgur.com/CnUhAlK.png" group-title="General",TV7 Bekescsaba (360p)
 https://stream.y5.hu/stream/stream_bekescsaba/stream.m3u8
+#EXTINF:-1 tvg-id="TVEger.hu@SD" tvg-logo="https://i.imgur.com/GUVW073.png" group-title="Undefined",TV Eger (1080p)
+http://stream.tveger.hu:8010/live.m3u8
 #EXTINF:-1 tvg-id="TVKeszthely.hu@SD" tvg-logo="https://i.imgur.com/2LE8xSW.png" group-title="General",TV Keszthely (360p)
 https://cloudfront44.lexanetwork.com:1344/freerelay/keszthelyivtv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="VasarhelyiTelevizio.hu@SD" tvg-logo="https://i.imgur.com/WOEqdmx.png" group-title="General",Vásárhelyi Televízió (576p)

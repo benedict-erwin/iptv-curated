@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="3CatCameresdeltemps.es@SD" tvg-logo="https://i.imgur.com/zXy2kbe.png" group-title="Public;Weather",3Cat Càmeres del temps (1080p)
-https://directes-tv-int.3catdirectes.cat/live-content/beauties-hls/master.m3u8
-#EXTINF:-1 tvg-id="3CatPlatsbruts.es@SD" tvg-logo="https://i.imgur.com/49ZENis.png" group-title="Classic;Comedy;Public;Series",3Cat Plats bruts (1080p)
-https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8
 #EXTINF:-1 tvg-id="Canal7TeleValencia.es@SD" tvg-logo="https://i.imgur.com/ILfXDRs.png" group-title="General",7 TeleValencia (576p)
 https://play.cdn.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/028/playlist.m3u8
 #EXTINF:-1 tvg-id="8LaMarinaTV.es@SD" tvg-logo="https://i.imgur.com/BTJvvBK.png" group-title="General",8 La Marina TV (576p)
@@ -48,8 +44,6 @@ https://cloudvideo.servers10.com:8081/8004/index.m3u8
 https://directo.tuwebtv.es/canal1.m3u8
 #EXTINF:-1 tvg-id="Canal3TVBiar.es@SD" tvg-logo="https://i.imgur.com/cnKCZkK.png" group-title="General",Canal 3 Biar (480p) [Not 24/7]
 https://avantstreaming.es/hls/canal3.m3u8
-#EXTINF:-1 tvg-id="Canal10Emporda.es@SD" tvg-logo="https://i.imgur.com/ojQ6wzX.png" group-title="Undefined",Canal 10 Empordà (360p) [Not 24/7]
-https://ventdelnord.tv:8080/escala/directe.m3u8
 #EXTINF:-1 tvg-id="24HorasCanarias.es@SD" tvg-logo="https://i.ibb.co/21sXZ3GT/24h.png" group-title="News;Public",Canal 24 Horas Canarias (720p)
 https://ztnr.rtve.es/ztnr/5473142.m3u8
 #EXTINF:-1 tvg-id="24HorasCatalunya.es@SD" tvg-logo="https://i.ibb.co/21sXZ3GT/24h.png" group-title="News;Public",Canal 24 Horas Catalunya (720p)
@@ -60,12 +54,12 @@ https://media2.streambrothers.com:1936/8140/8140/playlist.m3u8
 https://nlb1-live.emitstream.com/hls/625csn5et2iszm9oze65/master.m3u8
 #EXTINF:-1 tvg-id="Canal56.es@SD" tvg-logo="https://i.imgur.com/pwRVbCz.png" group-title="Undefined",Canal 56 (576p) [Not 24/7]
 https://videos.canal56.com/directe/stream/index.m3u8
-#EXTINF:-1 tvg-id="Canal2000.es@SD" tvg-logo="https://i.imgur.com/9RoBASf.png" group-title="Undefined",Canal 2000 La Solana (720p) [Not 24/7]
-http://canal2000.berkano-systems.net/streaming/streams/canal2000.m3u8
 #EXTINF:-1 tvg-id="CanalCoinTV.es@SD" tvg-logo="https://i.imgur.com/3QPJIpa.png" group-title="General",Canal Coín (1080p)
 https://canalcoin.garjim.es/hls/directo.m3u8
 #EXTINF:-1 tvg-id="CanalDiocesano.es@SD" tvg-logo="https://i.imgur.com/uWhVKL3.png" group-title="Undefined",Canal Diocesano (576p)
 https://nlb2-live.emitstream.com/hls/5i3pxfuz4az356yu22ij/master.m3u8
+#EXTINF:-1 tvg-id="CanalDonana.es@SD" tvg-logo="https://i.imgur.com/0WrKIxm.png" group-title="Undefined",Canal Doñana (720p) [Not 24/7]
+https://secure5.todostreaming.es/live/division-alm.m3u8
 #EXTINF:-1 tvg-id="CanalMalagaRTV.es@SD" tvg-logo="https://i.imgur.com/QSUOxtM.png" group-title="General",Canal Málaga RTV (720p) [Not 24/7]
 https://canalmalaga-tv-live.flumotion.com/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalParlamento.es@SD" tvg-logo="https://i.imgur.com/BUO0wH6.png" group-title="Legislative",Canal Parlamento (360p) [Not 24/7]
@@ -99,6 +93,8 @@ https://cloudvideo.servers10.com:8081/8024/index.m3u8
 http://185.47.212.25:8080/Clan_HD/index.m3u8
 #EXTINF:-1 tvg-id="CMMTV.es@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/CMMedia.svg/960px-CMMedia.svg.png" group-title="General;Public",CMM TV HD (1080p)
 https://cdnapisec.kaltura.com/p/2288691/sp/228869100/playManifest/entryId/1_gnz6ity9/protocol/https/format/applehttp/flavorIds/1_a9gxgxzy,1_v71ryg4b,1_vbfvtjw6,1_obo1bqsx,1_3shk3s5d/a.m3u8
+#EXTINF:-1 tvg-id="ComediaalobestiadePlutoTV.de@ES" tvg-logo="https://images.pluto.tv/channels/68de3db35fc0afe85de0b843/colorLogoPNG_1759402494389.png" group-title="Comedy",Comedia a lo bestia de Pluto TV
+https://jmp2.uk/plu-68de3db35fc0afe85de0b843.m3u8
 #EXTINF:-1 tvg-id="CordobaTV.es@SD" tvg-logo="https://i.imgur.com/qVe0hET.png" group-title="News",Córdoba TV [Not 24/7]
 https://cloudvideo.servers10.com:8081/8020/index.m3u8
 #EXTINF:-1 tvg-id="CrimenHistoria.es@SD" tvg-logo="https://images.pluto.tv/channels/64ddcbb14c5ed80008fad416/colorLogoPNG.png" group-title="Documentary",Crimen & Historia (720p)
@@ -257,6 +253,8 @@ https://jmp2.uk/plu-68d566603d3a9580eb461251.m3u8
 https://mdstrm.com/live-stream-playlist/629a63ae8df27c082901f78b.m3u8
 #EXTINF:-1 tvg-id="PlutoTVAnimales.de@ES" tvg-logo="https://images.pluto.tv/channels/600ae6a78d801e0007117d21/colorLogoPNG.png" group-title="Documentary",Pluto TV Animales
 https://jmp2.uk/plu-600ae6a78d801e0007117d21.m3u8
+#EXTINF:-1 tvg-id="PlutoTVAnime.de@ES" tvg-logo="https://images.pluto.tv/channels/608181d420fc8500075f612a/colorLogoPNG_1747395463053.png" group-title="Animation",Pluto TV Anime
+https://jmp2.uk/plu-608035b8d8705f0007260287.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCatastrofes.de@ES" tvg-logo="https://images.pluto.tv/channels/645a309c5a0cd5000873f609/colorLogoPNG.png" group-title="Movies",Pluto TV Catástrofes
 https://jmp2.uk/plu-645a309c5a0cd5000873f609.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCineAccion.de@ES" tvg-logo="https://images.pluto.tv/channels/5f1ac2591dd8880007bb7d6d/colorLogoPNG_1733440545178.png" group-title="Movies",Pluto TV Cine Acción
@@ -265,6 +263,8 @@ https://jmp2.uk/plu-5f1ac2591dd8880007bb7d6d.m3u8
 https://jmp2.uk/plu-61373bb45168fe000773eecd.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCineComedia.de@ES" tvg-logo="https://images.pluto.tv/channels/5f1ac8099c49f600076579b2/colorLogoPNG_1769092378955.png" group-title="Movies",Pluto TV Cine Comedia
 https://jmp2.uk/plu-5f1ac8099c49f600076579b2.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCinedeautor.de@ES" tvg-logo="https://images.pluto.tv/channels/60cc807324d60a0007708dc8/colorLogoPNG.png" group-title="Movies",Pluto TV Cine de autor
+https://jmp2.uk/plu-60cc807324d60a0007708dc8.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCineDrama.de@ES" tvg-logo="https://images.pluto.tv/channels/5f1ac947dcd00d0007937c08/colorLogoPNG.png" group-title="Movies",Pluto TV Cine Drama
 https://jmp2.uk/plu-5f1ac947dcd00d0007937c08.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCineEstelar.de@ES" tvg-logo="https://images.pluto.tv/channels/5f1ac1f1b66c76000790ef27/colorLogoPNG.png" group-title="Movies",Pluto TV Cine Estelar
@@ -299,6 +299,8 @@ https://jmp2.uk/plu-6475bfec536e0c0008858e9f.m3u8
 https://jmp2.uk/plu-609e7e423e9173000706a681.m3u8
 #EXTINF:-1 tvg-id="PlutoTVKids.de@ES" tvg-logo="https://images.pluto.tv/channels/5f1aab1d29b39600073e243f/colorLogoPNG_1750751398943.png" group-title="Kids",Pluto TV Kids Spain (720p)
 https://jmp2.uk/plu-5f1aab1d29b39600073e243f.m3u8
+#EXTINF:-1 tvg-id="PlutoTVMotor.de@ES" tvg-logo="https://images.pluto.tv/channels/6080345ebb49b90007ce0baf/colorLogoPNG.png" group-title="Auto",Pluto TV Motor
+https://jmp2.uk/plu-6080345ebb49b90007ce0baf.m3u8
 #EXTINF:-1 tvg-id="PlutoTVParanormal.de@ES" tvg-logo="https://images.pluto.tv/channels/5f98487036af340008da1e37/colorLogoPNG.png" group-title="Movies",Pluto TV Paranormal
 https://jmp2.uk/plu-612ce5214bb5790007ad3016.m3u8
 #EXTINF:-1 tvg-id="PlutoTVPsycho.de@ES" tvg-logo="https://images.pluto.tv/channels/65ce480a78df2200131c597b/colorLogoPNG.png" group-title="Movies",Pluto TV Psycho
@@ -344,8 +346,6 @@ https://a9c57ec7ec5e4b7daeacc6316a0bb404.mediatailor.eu-west-1.amazonaws.com/v1/
 https://71db867f03ce4d71a29e92155f07ab87.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6180/master.m3u8
 #EXTINF:-1 tvg-id="RakutenTVDramaMovies.es@Spain" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Movies",Rakuten TV Drama Movies Spain (1080p)
 https://a7089c89d85f453d850c4a1518b43076.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6092/master.m3u8
-#EXTINF:-1 tvg-id="RakutenTVFamilyMovies.es@Spain" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Family;Movies",Rakuten TV Family Movies Spain (1080p)
-https://b0d59c8c98974e708e5ccb9a27cdfdfc.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6205/master.m3u8
 #EXTINF:-1 tvg-id="RakutenTVTopMovies.es@Spain" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Movies",Rakuten TV Top Movies Spain (1080p)
 https://ff335120300e4742a2b135ee9a9e7df8.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5983/master.m3u8
 #EXTINF:-1 tvg-id="RakutenViki.us@Spain" tvg-logo="https://i.imgur.com/pbyd1g2.png" group-title="Entertainment;Series",Rakuten Viki (1080p)
@@ -362,6 +362,8 @@ https://rtvelivestream.rtve.es/rtvesec/rne/rne_para_todos_main.m3u8
 https://rotv.romediavalencia.com:3839/live/rotvlive.m3u8
 #EXTINF:-1 tvg-id="RTenEspanol.ru@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Russia-today-logo.svg/960px-Russia-today-logo.svg.png" group-title="News",RT en Espanol (1080p)
 http://177.234.249.135:8888/RT/index.m3u8
+#EXTINF:-1 tvg-id="RadioTelevisionMarbella.es@SD" tvg-logo="https://i.imgur.com/o9Ro8TR.png" group-title="Undefined",RTV Marbella (720p)
+https://streaming.rtvmarbella.tv/hls/streamingweb.m3u8
 #EXTINF:-1 tvg-id="RTVVida.es@SD" tvg-logo="https://i.imgur.com/EqUfEAh.png" group-title="Music",RTV Vida (1080p)
 https://vidartv2.todostreaming.es/live/radiovida-emisiontvhd.m3u8
 #EXTINF:-1 tvg-id="Rugrats.de@ES" tvg-logo="https://images.pluto.tv/channels/610c09219fc0430007a3fce6/colorLogoPNG.png" group-title="Kids",Rugrats
@@ -391,8 +393,6 @@ https://edge.xn--tbnespaa-j3a.es/LiveApp/streams/tbnlive.m3u8
 https://ingest2-video.streaming-pro.com/tele7_ABR/stream/playlist.m3u8
 #EXTINF:-1 tvg-id="TeleElx.es@SD" tvg-logo="https://i.imgur.com/w5NTWpl.png" group-title="General",Tele Elx (1080p)
 https://tvdirecto.teleelx.es/stream/teleelx.m3u8
-#EXTINF:-1 tvg-id="TeleSafor.es@SD" tvg-logo="https://i.imgur.com/EowJfr0.png" group-title="Undefined",Tele Safor (720p) [Not 24/7]
-https://video.telesafor.com/hls/video.m3u8
 #EXTINF:-1 tvg-id="Teleganes.es@SD" tvg-logo="https://i.imgur.com/BXyplMX.png" group-title="Undefined",Teleganés (720p)
 https://nlb2-live.emitstream.com/hls/5z6oj7ziwxzfnj78vg2m/master.m3u8
 #EXTINF:-1 tvg-id="Telemadrid.es@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/TeleMadrid.svg/960px-TeleMadrid.svg.png" group-title="Undefined",Telemadrid HD (1080p)
@@ -437,9 +437,6 @@ https://cloud2.streaminglivehd.com:1936/universfaller/universfaller/playlist.m3u
 https://5940924978228.streamlock.net/j_Directo2/mp4:j_Directo2/playlist.m3u8
 #EXTINF:-1 tvg-id="Vayasemanita.us@Spain" tvg-logo="https://i.imgur.com/0bCLNUG.png" group-title="Comedy",Vaya semanita
 https://jmp2.uk/plu-5f28009b150b2500077766b8.m3u8
-#EXTINF:-1 tvg-id="Vision6TV.es@SD" tvg-logo="https://i.imgur.com/TB1wMQ7.jpg" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Undefined",Vision 6 TV (720p)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://streaming.proceso.info:8888/vision6-web/stream.m3u8
 #EXTINF:-1 tvg-id="VOTV.es@SD" tvg-logo="https://i.imgur.com/1g2Z64L.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160" group-title="Undefined",VOTV (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160
 https://ingest2-video.streaming-pro.com/votv/streaming_web/playlist.m3u8

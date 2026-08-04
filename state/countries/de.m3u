@@ -49,14 +49,14 @@ https://chemnitz.iptv-playoutcenter.de/chemnitz/chemnitzfernsehen.stream_1/playl
 https://hlspackager.akamaized.net/live/DB/CIRA_TV/HLS/CIRA_TV.m3u8
 #EXTINF:-1 tvg-id="ComedyCentralSouthPark.de@DACH" tvg-logo="https://images.pluto.tv/channels/60c716084d842c00085f6e64/colorLogoPNG_1748434979824.png" group-title="Animation;Comedy",Comedy Central South Park
 https://jmp2.uk/plu-60c716084d842c00085f6e64.m3u8
-#EXTINF:-1 tvg-id="DASDING908.de@SD" tvg-logo="https://i.imgur.com/BmklHs8.png" group-title="Music",DASDING 90.8 (720p)
-https://swrdasdingvr-hls.akamaized.net/hls/live/2018681/dasdingvr/master.m3u8
 #EXTINF:-1 tvg-id="DeluxeDance.de@SD" tvg-logo="https://i.imgur.com/Qu7t15Y.png" group-title="Music",Deluxe Dance (1080p)
 https://sdn-global-live-streaming-packager-cache.3qsdn.com/64733/64733_264_live.m3u8
 #EXTINF:-1 tvg-id="DeluxeLounge.de@SD" tvg-logo="https://i.imgur.com/pgCA35z.png" group-title="Music",Deluxe Lounge (720p)
 https://jmp2.uk/stvp-CHAJ0500413A
 #EXTINF:-1 tvg-id="DeluxeMusic.de@SD" tvg-logo="https://i.imgur.com/HimuPPb.png" group-title="Music",Deluxe Music (720p)
 https://sdn-global-live-streaming-packager-cache.3qsdn.com/13456/13456_264_live.m3u8
+#EXTINF:-1 tvg-id="DeluxeRap.de@SD" tvg-logo="https://i.imgur.com/s3h67hx.png" group-title="Music",Deluxe Rap (1080p)
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/65183/65183_264_live.m3u8
 #EXTINF:-1 tvg-id="DieNeueZeitTV.ch@SD" tvg-logo="https://i.imgur.com/K3lvrog.png" group-title="Religious",Die Neue Zeit (576p)
 https://bild-und-ton.stream/die-neue-zeit-tv-live/smil:dnz-de.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="DMF.de@SD" tvg-logo="https://i.imgur.com/sJaBU7X.jpeg" group-title="Music",DMF (1080p) [Not 24/7]
@@ -93,8 +93,6 @@ https://amogonetworx-grjngo-3-dk.samsung.wurl.tv/playlist.m3u8
 https://hnc-free-viewlift.amagi.tv/HNC_AUSTRALIA.m3u8
 #EXTINF:-1 tvg-id="hrfernsehen.de@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/HR-Fernsehen_Logo_2023.svg/960px-HR-Fernsehen_Logo_2023.svg.png" group-title="General",hr-fernsehen HD
 https://dash4.antik.sk/live/test_hr_tizen/playlist.m3u8
-#EXTINF:-1 tvg-id="HSE.de@SD" tvg-logo="https://i.imgur.com/IecRNCk.png" group-title="Shop",HSE (1080p)
-https://hse24.akamaized.net/hls/live/2006663/hse24/playlist.m3u8
 #EXTINF:-1 tvg-id="iCarly.de@DACH" tvg-logo="https://images.pluto.tv/channels/5e8b580a233dc90007f0cb9d/colorLogoPNG.png" group-title="Kids",iCarly
 https://jmp2.uk/plu-5e8b580a233dc90007f0cb9d.m3u8
 #EXTINF:-1 tvg-id="IcePilots.us@Germany" tvg-logo="https://i.imgur.com/F8GBYq3.png" group-title="Series",Ice Pilots
@@ -125,8 +123,6 @@ https://jmp2.uk/plu-66c6fcfc6838ee00085beb1a.m3u8
 http://58bd5b7a98e04.streamlock.net/medienasa-live/mdf1_high/playlist.m3u8
 #EXTINF:-1 tvg-id="MissionImpossible.de@DACH" tvg-logo="https://images.pluto.tv/channels/634fe5afece2e60007c9d8b8/colorLogoPNG.png" group-title="Movies;Series",Mission Impossible
 https://jmp2.uk/plu-634fe5afece2e60007c9d8b8.m3u8
-#EXTINF:-1 tvg-id="MoreThanSportsTV.de@SD" tvg-logo="https://i.imgur.com/SLrjImc.png" group-title="Sports",More Than Sports TV (1080p)
-https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8
 #EXTINF:-1 tvg-id="Moviedome.us@Germany" tvg-logo="https://i.imgur.com/8c54ycg.png" group-title="Movies",MOVIEDOME (720p)
 https://jmp2.uk/plu-615c1e5ce3039400070a0547.m3u8
 #EXTINF:-1 tvg-id="MTVCatfishTVShow.de@DACH" tvg-logo="https://images.pluto.tv/channels/6093f9ed2c75660007322bb7/colorLogoPNG_1750862971704.png" group-title="Entertainment",MTV Catfish TV Show (720p)
@@ -279,12 +275,16 @@ https://jmp2.uk/plu-615333098185f00008715a56.m3u8
 https://jmp2.uk/plu-642ad072283aa4000806148c.m3u8
 #EXTINF:-1 tvg-id="PlutoTVWestern.de@DACH" tvg-logo="https://images.pluto.tv/channels/630dd3b2605f140007e002f5/colorLogoPNG_1732030684562.png" group-title="Movies",Pluto TV Western
 https://jmp2.uk/plu-630dd3b2605f140007e002f5.m3u8
+#EXTINF:-1 tvg-id="PlutoTVWesternSerien.de@DACH" tvg-logo="https://images.pluto.tv/channels/682453215c646751955e1204/colorLogoPNG_1758265241676.png" group-title="Series",Pluto TV Western Serien
+https://jmp2.uk/plu-682453215c646751955e1204.m3u8
 #EXTINF:-1 tvg-id="PlutoTVWorstofBundy.de@DACH" tvg-logo="https://images.pluto.tv/channels/69b968ca1c36025fd0a3d92d/colorLogoPNG_1777369824096.png" group-title="Comedy",Pluto TV Worst of Bundy
 https://jmp2.uk/plu-69b968ca1c36025fd0a3d92d.m3u8
 #EXTINF:-1 tvg-id="ProSieben.de@SD" tvg-logo="https://i.imgur.com/zZOk3nh.png" group-title="Undefined",ProSieben (1080p)
 https://dash4.antik.sk/live/test_pro_sieben_tizen/playlist.m3u8
 #EXTINF:-1 tvg-id="PUNKTumFernsehen.de@SD" tvg-logo="https://i.imgur.com/3yamOmw.png" group-title="Undefined",PUNKTum Fernsehen (1080p) [Not 24/7]
 http://58bd5b7a98e04.streamlock.net/medienasa-live/punktum_high/playlist.m3u8
+#EXTINF:-1 tvg-id="QVC.de@SD" tvg-logo="https://i.imgur.com/EybRtsI.png" group-title="Shop",QVC Germany (720p)
+https://qvcde-live.akamaized.net/hls/live/2097104/qvc/master.m3u8
 #EXTINF:-1 tvg-id="RadioWeserTVBremen.de@SD" tvg-logo="" group-title="Music",Radio Weser TV Bremen (576p)
 https://5857499ee635b.streamlock.net/radiowesertv-live/_definst_/mp4:livestreamTV/playlist.m3u8
 #EXTINF:-1 tvg-id="RakutenTVActionMovies.es@Germany" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Movies",Rakuten TV Action Movies Germany (1080p)

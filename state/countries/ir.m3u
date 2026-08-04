@@ -9,8 +9,6 @@ https://hls.247box.live/hls/stream.m3u8
 https://bozztv.com/1gbw5/tintv2/tintv2/playlist.m3u8
 #EXTINF:-1 tvg-id="AfraFilm.ir@SD" tvg-logo="" group-title="Movies",Afra Film
 https://afrafhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="AlAlam.ir@SD" tvg-logo="https://i.imgur.com/Zdi31dy.png" group-title="News",Al Alam (360p)
-https://live2.alalam.ir/alalam.m3u8
 #EXTINF:-1 tvg-id="AlWilayah.ir@SD" tvg-logo="https://i.imgur.com/OI1HQv5.png" group-title="Religious",Al Wilayah (720p)
 https://nl.livekadeh.com/hls2/alwilayah_tv.m3u8
 #EXTINF:-1 tvg-id="AraxTV.ir@SD" tvg-logo="" group-title="Undefined",Arax TV
@@ -65,8 +63,6 @@ https://live.presstv.ir/hls/ifilmar.m3u8
 https://live.presstv.ir/hls/ifilmen.m3u8
 #EXTINF:-1 tvg-id="iFilmPersian.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b9/IFILM.png" group-title="Movies",iFilm Persian
 https://live.presstv.ir/hls/ifilmfa.m3u8
-#EXTINF:-1 tvg-id="IranInternational.uk@SD" tvg-logo="https://i.imgur.com/55RpaF3.png" group-title="News",Iran International (1080p)
-https://hlspackager.akamaized.net/live/DB/IRAN_INTERNATIONAL/HLS/IRAN_INTERNATIONAL.m3u8
 #EXTINF:-1 tvg-id="IranJewishTV.ir@SD" tvg-logo="https://i.ibb.co/JWXs7csN/en.png" group-title="Religious",Iran Jewish TV
 http://iran620.com:1935/live/IranJewishTv/playlist.m3u8
 #EXTINF:-1 tvg-id="IranNama.fr@SD" tvg-logo="" group-title="Undefined",Iran Nama
@@ -79,6 +75,8 @@ https://live.presstv.ir/hls/presstv_5_482/index.m3u8
 http://185.9.2.18/chid_926/index.m3u8
 #EXTINF:-1 tvg-id="KanalJadid.uk@SD" tvg-logo="https://i.imgur.com/7oGGgfD.png" group-title="General",Kanal Jadid
 https://kjhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="KishTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/1/14/Kish_tv.svg/960px-Kish_tv.svg.png" group-title="General",Kish
+https://ncdn.telewebion.ir/kish/live/playlist.m3u8
 #EXTINF:-1 tvg-id="MaahTV.my@SD" tvg-logo="https://i.imgur.com/FkyueH6.png" group-title="Movies",Maah TV (720p)
 https://hls.maahtv.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="MetaFilmTV.ir@SD" tvg-logo="" group-title="Movies",Meta Film TV
@@ -141,6 +139,8 @@ https://raphls.persiana.live/hls/stream.m3u8
 https://rjtvhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="RasoulallahTv.ir@HD" tvg-logo="https://i.imgur.com/Jh5ADee.png" group-title="Religious",RasoulallahTv (1080p)
 https://avr.host247.net/live/rasoulallahtv/playlist.m3u8
+#EXTINF:-1 tvg-id="SabzTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Logo_Golestan.png/960px-Logo_Golestan.png" group-title="General",Sabz
+https://ncdn.telewebion.ir/sabz/live/playlist.m3u8
 #EXTINF:-1 tvg-id="SL1.ir@SD" tvg-logo="https://i.imgur.com/n9cuM2W.jpg" group-title="Movies",SL 1
 https://slonehls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="SL2.ir@SD" tvg-logo="https://i.imgur.com/BVuUx5R.jpg" group-title="Movies",SL 2
@@ -153,3 +153,5 @@ https://hls.nejat.live/hls/stream.m3u8
 https://hls.tmtv.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="TVITN.ir@SD" tvg-logo="https://i.imgur.com/U4sKHWy.png" group-title="Entertainment",TV ITN
 https://itnhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="ZagrosTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/e/e4/Kermanshah_Zaghros.svg/960px-Kermanshah_Zaghros.svg.png" group-title="General",Zagros
+https://ncdn.telewebion.ir/zagros/live/playlist.m3u8

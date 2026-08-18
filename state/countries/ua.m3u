@@ -14,28 +14,20 @@ https://lowa8026-cmyk.github.io/Ukraine/Edyni_Novyny/2Plus2Marafon.m3u8
 http://stream.mcquack.net/405/index.m3u8
 #EXTINF:-1 tvg-id="24Kanal.ua@SD" tvg-logo="https://pbs.twimg.com/profile_images/1498285886714298374/EMSJzC-0_400x400.jpg" group-title="News",24 Kanal (720p)
 https://cdn15.live-tv.cloud/ua_infinitas_tv/news24-abr/playlist.m3u8
-#EXTINF:-1 tvg-id="Channel24.ua@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/24_Group_Ukraine_04.png/960px-24_Group_Ukraine_04.png" group-title="News",24 Канал (1080p)
-https://streamvideol1.luxnet.ua/news24/smil:news24.stream.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="366TV.ua@SD" tvg-logo="https://i.imgur.com/sC0K5BZ.png" group-title="Lifestyle",36.6 TV
 https://dash2.antik.sk/live/test_tridsatsest_hd_atktv/playlist.m3u8
 #EXTINF:-1 tvg-id="100NEWS.ua@SD" tvg-logo="https://i.imgur.com/bSXKdK5.png" group-title="Business;News",100% News (576p)
 http://85.238.112.40:8810/hls_sec/239.33.16.32-.m3u8
 #EXTINF:-1 tvg-id="ArmyTV.ua@SD" tvg-logo="https://i.imgur.com/pGByjbh.png" group-title="News",Army TV (1080p)
 https://api-tv.ipnet.ua/api/v1/manifest/2118742632.m3u8
-#EXTINF:-1 tvg-id="Avers.ua@SD" tvg-logo="https://i.imgur.com/rHHz94D.png" group-title="General",Avers (480p)
-https://avers.pp.ua/hls/efir.m3u8
-#EXTINF:-1 tvg-id="Bigudi.ua@SD" tvg-logo="https://i.imgur.com/dy9ZKG1.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Undefined",Bigudi (576p)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-http://stream.mcquack.net/340/index.m3u8
-#EXTINF:-1 tvg-id="Bolt.ua@SD" tvg-logo="https://i.imgur.com/YdIHXOR.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Movies;Series",Bolt (1080p)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-http://stream.mcquack.net/73/index.m3u8
 #EXTINF:-1 tvg-id="Channel5.ua@SD" tvg-logo="https://i.imgur.com/a9JJXPk.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="News",Channel 5 (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://stream.mcquack.net/291/index.m3u8
 #EXTINF:-1 tvg-id="ChemodanTV.ua@SD" tvg-logo="https://i.imgur.com/1WjGN8u.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Documentary;Education",Chemodan TV (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://stream.mcquack.net/399/index.m3u8
+#EXTINF:-1 tvg-id="Cherniveckiypromin.ua@SD" tvg-logo="https://i.imgur.com/O9nQ5po.png" group-title="News",Cherniveckiy promin (720p)
+https://langate.tv/promin/live_720/index.m3u8
 #EXTINF:-1 tvg-id="ContinentE.ua@SD" tvg-logo="https://i.imgur.com/9M9Y9hh.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Undefined",Continent E (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://stream.mcquack.net/449/index.m3u8
@@ -43,8 +35,6 @@ http://stream.mcquack.net/449/index.m3u8
 https://dash2.antik.sk/live/test_dacha_tv_atktv/playlist.m3u8
 #EXTINF:-1 tvg-id="DIM.ua@SD" tvg-logo="https://i.imgur.com/3cjaXIF.png" group-title="General",DIM
 https://dash2.antik.sk/live/telekanal_dim/playlist.m3u8
-#EXTINF:-1 tvg-id="DiviSport.ua@SD" tvg-logo="https://i.logos-download.com/114030/29915-s5120-904df224e4c030fefcc45adda448b6e8.png/DiviSport_Logo_2023-s5120.png" group-title="Sports",DiviSport (1080p)
-http://stream.mcquack.net/457/index.m3u8
 #EXTINF:-1 tvg-id="DniproTV.ua@SD" tvg-logo="https://i.imgur.com/mbPTVh1.png" group-title="General",DniproTV (1080p)
 http://vcdn1.produck.company:1935/out/dtv/playlist.m3u8
 #EXTINF:-1 tvg-id="DynamoKyivTV.ua@SD" tvg-logo="https://i.imgur.com/ymxmyyG.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Sports",Dynamo Kyiv TV (1080p)
@@ -82,9 +72,6 @@ http://stream.mcquack.net/158/index.m3u8
 #EXTINF:-1 tvg-id="ICTV2.ua@SD" tvg-logo="https://i.imgur.com/J4zlRGv.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Entertainment",ICTV2 (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://stream.mcquack.net/368/index.m3u8
-#EXTINF:-1 tvg-id="InRatingTV.ua@SD" tvg-logo="https://i.imgur.com/l753AgQ.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Music",InRating TV (1080p)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-http://stream.mcquack.net/147/index.m3u8
 #EXTINF:-1 tvg-id="Inter.ua@SD" tvg-logo="https://i.imgur.com/FHRagMx.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="General",Inter (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://stream.mcquack.net/174/index.m3u8
@@ -242,9 +229,6 @@ https://stream.rai.ua/rai/stream.m3u8
 #EXTINF:-1 tvg-id="Terra.ua@SD" tvg-logo="https://i.imgur.com/HFY61gj.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Undefined",Terra (576p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://stream.mcquack.net/402/index.m3u8
-#EXTINF:-1 tvg-id="TET.ua@SD" tvg-logo="https://i.imgur.com/Wu6wtbe.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Undefined",TET (1080p)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-http://stream.mcquack.net/338/index.m3u8
 #EXTINF:-1 tvg-id="TISTV.ua@SD" tvg-logo="https://i.imgur.com/jDaoUt5.png" group-title="Undefined",TIS TV (720p)
 https://cdn10.live-tv.cloud/riood/tisod-abr/riood/tisod720/playlist.m3u8
 #EXTINF:-1 tvg-id="Trofei.ua@SD" tvg-logo="https://i.imgur.com/VDt4mKB.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Outdoor",Trofei (1080p)
@@ -271,14 +255,10 @@ http://194.50.51.34/playlist.m3u8
 http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
 #EXTINF:-1 tvg-id="ZaTV.ru@SD" tvg-logo="https://i.imgur.com/pVPTl8J.png" group-title="General",За!ТВ
 https://streaming.televizor-24-tochka.ru/live/25.m3u8
-#EXTINF:-1 tvg-id="Crimea24.ru@SD" tvg-logo="https://i.imgur.com/k4C0uvp.png" group-title="News",Крым 24
-https://cdn.1tvcrimea.ru/24tvcrimea.m3u8
 #EXTINF:-1 tvg-id="Lugansk24.ua@SD" tvg-logo="https://i.imgur.com/AihoVc0.png" group-title="General",Луганск 24
 https://streaming.televizor-24-tochka.ru/live/29.m3u8
 #EXTINF:-1 tvg-id="Millet.ru@SD" tvg-logo="https://i.imgur.com/hUjLRLy.png" group-title="News",Миллет (720p)
 https://live1.1tvcrimea.ru/milletlive.m3u8
-#EXTINF:-1 tvg-id="CurrentTimeTV.cz@SD" tvg-logo="https://i.imgur.com/hKo8ApU.png" group-title="News",Настоящее Время (1080p)
-https://rfe-ingest.akamaized.net/hls/live/2033043/tvmc05/master.m3u8
 #EXTINF:-1 tvg-id="NTKTV.ua@SD" tvg-logo="https://www.ntktv.ua/bitrix/templates/ntk_copy/images/logo.png" group-title="General",НТК ТВ (1080p) [Not 24/7]
 https://stream.ntktv.ua/s/ntk/ntk.m3u8
 #EXTINF:-1 tvg-id="NTS.ru@SD" tvg-logo="https://i.imgur.com/skkDR7q.png" group-title="General",НТС (Севастополь) (1080p) [Not 24/7]

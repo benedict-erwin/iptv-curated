@@ -21,6 +21,8 @@ https://araxhls.wns.live/hls/stream.m3u8
 https://arkhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ArvanTV.ir@SD" tvg-logo="" group-title="Undefined",Arvan TV
 https://arvhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="AtrakTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/2/28/Bojnourd_ATRAK_TV.svg/960px-Bojnourd_ATRAK_TV.svg.png" group-title="General",Atrak
+https://ncdn.telewebion.ir/atrak/live/playlist.m3u8
 #EXTINF:-1 tvg-id="AtrinaTV.ir@SD" tvg-logo="" group-title="Undefined",Atrina TV
 https://atrihls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AVASeries.ir@SD" tvg-logo="https://i.imgur.com/8AfAfZE.png" group-title="Series",AVA Series
@@ -73,6 +75,8 @@ https://live.presstv.ir/hls/ifilmar.m3u8
 https://live.presstv.ir/hls/ifilmen.m3u8
 #EXTINF:-1 tvg-id="iFilmPersian.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b9/IFILM.png" group-title="Movies",iFilm Persian
 https://live.presstv.ir/hls/ifilmfa.m3u8
+#EXTINF:-1 tvg-id="IlamTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ilam_TV.png/960px-Ilam_TV.png" group-title="General",Ilam
+https://ncdn.telewebion.ir/ilam/live/playlist.m3u8
 #EXTINF:-1 tvg-id="IranInternational.uk@SD" tvg-logo="https://i.imgur.com/55RpaF3.png" group-title="News",Iran International (1080p)
 https://hlspackager.akamaized.net/live/DB/IRAN_INTERNATIONAL/HLS/IRAN_INTERNATIONAL.m3u8
 #EXTINF:-1 tvg-id="IranJewishTV.ir@SD" tvg-logo="https://i.ibb.co/JWXs7csN/en.png" group-title="Religious",Iran Jewish TV
@@ -151,8 +155,6 @@ https://onehls.persiana.live/hls/stream.m3u8
 https://turkhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaVibe.fr@HD" tvg-logo="" group-title="Music",Persiana Vibe
 https://raphls.persiana.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="PressTVFrench.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Press_TV_logo.svg/960px-Press_TV_logo.svg.png" group-title="News",Press TV French (1080p)
-https://live4.presstv.ir/live/smil:presstvfr.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="RJTV.us@SD" tvg-logo="https://i.imgur.com/a1zuW2C.png" group-title="Music",Radio Javan TV (1080p)
 https://rjtvhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="RasoulallahTv.ir@HD" tvg-logo="https://i.imgur.com/Jh5ADee.png" group-title="Religious",RasoulallahTv (1080p)

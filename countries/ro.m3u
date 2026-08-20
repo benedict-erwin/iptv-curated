@@ -19,12 +19,9 @@ https://stream1.antenaplay.ro/live/AntenaMonden/playlist.m3u8
 https://atomic.streamnet.ro/academia.m3u8
 #EXTINF:-1 tvg-id="AtomicTV.ro@SD" tvg-logo="https://i.imgur.com/O4uI0Uy.png" group-title="Music",Atomic TV (360p)
 https://atomic.streamnet.ro/atomictv.m3u8
-#EXTINF:-1 tvg-id="AXNBlack.us@Romania" tvg-logo="https://i.imgur.com/Peo1QiZ.png" group-title="Movies",AXN Black Romania [Not 24/7]
-http://315e5a5d.ottrast.com/iptv/MM4E93NGF5LADZ/6952/index.m3u8
-#EXTINF:-1 tvg-id="AXNWhite.us@SD" tvg-logo="https://i.imgur.com/47IKxmt.png" group-title="Entertainment",AXN White [Not 24/7]
-http://315e5a5d.ottrast.com/iptv/MM4E93NGF5LADZ/6950/index.m3u8
-#EXTINF:-1 tvg-id="BucovinaTV.ro@SD" tvg-logo="https://i.imgur.com/6klhXxp.png" group-title="Undefined",Bucovina TV (576i)
-https://www.bucovinatv.ro/proxy/video/playlist.m3u8
+#EXTINF:-1 tvg-id="BoomTV.ro@HD" tvg-logo="https://live.radioboom.ro/live-tv/poster.jpg" http-referrer="https://tvboom.ro/" group-title="Music",Boom TV (1080p)
+#EXTVLCOPT:http-referrer=https://tvboom.ro/
+https://tvboom.ro/live-tv/live.m3u8
 #EXTINF:-1 tvg-id="ColumnaTV.ro@SD" tvg-logo="https://i.imgur.com/C5dIgsc.png" group-title="General",Columna TV
 https://cdn.streamnet.pro/columnatv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="ComedyPlay.ro@SD" tvg-logo="https://i.imgur.com/6kAeVOk.png" group-title="Comedy",Comedy Play (576i)
@@ -33,8 +30,6 @@ https://stream1.antenaplay.ro/live/ComedyPlay/chunklist.m3u8
 http://cdn.credonet.tv:1935/ctv/livecredo/playlist.m3u8
 #EXTINF:-1 tvg-id="Digi24.ro@SD" tvg-logo="https://i.imgur.com/qmRnD0M.png" group-title="News",Digi 24 (720p)
 https://edge-ar.rcs-rds.ro/digi24ar/index.m3u8
-#EXTINF:-1 tvg-id="DottoTV.ro@SD" tvg-logo="https://i.imgur.com/pfs882Z.png" group-title="News",Dotto TV (1080p)
-https://live.dottotv.ro/index.m3u8
 #EXTINF:-1 tvg-id="EMITV.ro@SD" tvg-logo="https://i.imgur.com/B5zssCz.png" group-title="Music",EMI TV
 https://astra.emitv.ro/hls/emi/index.m3u8
 #EXTINF:-1 tvg-id="TVSE.ro@SD" tvg-logo="https://i.imgur.com/r4zKU1e.png" group-title="Undefined",Exploris (576p) [Not 24/7]
@@ -71,6 +66,10 @@ https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8
 https://tv.broadcasting.ro/magictv/925f90db-5c88-4190-a53d-5163cdffe6f4.m3u8
 #EXTINF:-1 tvg-id="Mireasa.ro@SD" tvg-logo="https://i.imgur.com/k0VO0LH.png" group-title="Series",Mireasa (720p)
 https://stream1.antenaplay.ro/live/MireasaExtra/playlist.m3u8
+#EXTINF:-1 tvg-id="MISATV.ro@SD" tvg-logo="https://i.imgur.com/2RxQNm6.png" group-title="Religious",MISA TV
+https://vidl.misatv.ro:5050/MSTV/romanian_720p_baseline/playlist.m3u8
+#EXTINF:-1 tvg-id="MoldovaTV.md@SD" tvg-logo="https://i.imgur.com/gPMlDCP.png" group-title="General",Moldova TV (1080p)
+https://moldovatv.ro/live-tv/live.m3u8
 #EXTINF:-1 tvg-id="MuscelTV.ro@SD" tvg-logo="https://i.ibb.co/Bq9CHyn/Musceltv1.png" group-title="General",Muscel TV (720p)
 https://cdn.streamnet.pro/musceltv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="NasulTV.ro@SD" tvg-logo="https://i.imgur.com/MoguWme.png" group-title="General",Nasul TV (720p) [Not 24/7]

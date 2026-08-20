@@ -79,14 +79,8 @@ https://hls.irannrtv.live/hls/stream.m3u8
 https://live.presstv.ir/hls/presstv_5_482/index.m3u8
 #EXTINF:-1 tvg-id="IRINN.ir@SD" tvg-logo="https://i.imgur.com/8tzsC9h.png" group-title="News",IRINN (576p)
 http://185.9.2.18/chid_926/index.m3u8
-#EXTINF:-1 tvg-id="JahanbinTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/4/4a/Shahrekord_Jahanbin.svg/960px-Shahrekord_Jahanbin.svg.png" group-title="General",Jahanbin
-https://ncdn.telewebion.ir/jahanbin/live/playlist.m3u8
 #EXTINF:-1 tvg-id="KanalJadid.uk@SD" tvg-logo="https://i.imgur.com/7oGGgfD.png" group-title="General",Kanal Jadid
 https://kjhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="KhalijeFarsTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/7/7c/Bandar_KHALI_J_e_FARS_TV.svg/960px-Bandar_KHALI_J_e_FARS_TV.svg.png" group-title="General",Khalij-e Fars
-https://ncdn.telewebion.ir/khalijefars/live/playlist.m3u8
-#EXTINF:-1 tvg-id="KhozestanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/9/9a/Ahwaz_TV.svg/960px-Ahwaz_TV.svg.png" group-title="General",Khozestan
-https://ncdn.telewebion.ir/khoozestan/live/playlist.m3u8
 #EXTINF:-1 tvg-id="KishTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/1/14/Kish_tv.svg/960px-Kish_tv.svg.png" group-title="General",Kish
 https://ncdn.telewebion.ir/kish/live/playlist.m3u8
 #EXTINF:-1 tvg-id="MaahTV.my@SD" tvg-logo="https://i.imgur.com/FkyueH6.png" group-title="Movies",Maah TV (720p)
@@ -149,6 +143,8 @@ https://raphls.persiana.live/hls/stream.m3u8
 https://rjtvhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="RasoulallahTv.ir@HD" tvg-logo="https://i.imgur.com/Jh5ADee.png" group-title="Religious",RasoulallahTv (1080p)
 https://avr.host247.net/live/rasoulallahtv/playlist.m3u8
+#EXTINF:-1 tvg-id="SemnanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/3/35/Semnan_TV.png" group-title="Undefined",Semnan
+https://ncdn.telewebion.ir/semnan/live/playlist.m3u8
 #EXTINF:-1 tvg-id="SL1.ir@SD" tvg-logo="https://i.imgur.com/n9cuM2W.jpg" group-title="Movies",SL 1
 https://slonehls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="SL2.ir@SD" tvg-logo="https://i.imgur.com/BVuUx5R.jpg" group-title="Movies",SL 2

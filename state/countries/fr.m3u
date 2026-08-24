@@ -27,11 +27,6 @@ https://stream2.mandarine.media/brionnaistv/brionnaistv/playlist.m3u8
 https://do7nccdsswstc.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-1aso0bc668saa/a5233c83-f772-4a81-959a-45ec7877ef61/5.m3u8
 #EXTINF:-1 tvg-id="CanalPlusCinemas.fr@SD" tvg-logo="https://i.imgur.com/fvPoNEa.jpeg" group-title="Movies",Canal+ Cinemas (720p)
 http://151.80.18.177:86/Canal+_cinema_HD/index.m3u8
-#EXTINF:-1 tvg-id="CanalPlusSport360.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/64/Canal%2BSport_360.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Sports",Canal+ Sport 360
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://futbol9865.ultratv13.workers.dev/deportivo111/14.m3u8
-#EXTINF:-1 tvg-id="CannesLerinsTV.fr@SD" tvg-logo="https://i.imgur.com/atlgnum.png" group-title="General",Cannes Lérins TV (1080p)
-https://vdo2.pro-fhi.net:3628/live/uppodsfqlive.m3u8
 #EXTINF:-1 tvg-id="MTVCatfishTVShow.de@FR" tvg-logo="https://images.pluto.tv/channels/6093f9ed2c75660007322bb7/colorLogoPNG_1750862971704.png" group-title="Entertainment",CATFISH TV (720p)
 https://jmp2.uk/plu-5f8eb66537867f0007146953.m3u8
 #EXTINF:-1 tvg-id="Cheers.de@FR" tvg-logo="https://images.pluto.tv/channels/611e7f224676bf00076a4d8d/colorLogoPNG.png" group-title="Comedy",Cheers
@@ -78,8 +73,6 @@ https://jmp2.uk/plu-62f3e8ad2a8e8000077b013d.m3u8
 http://151.80.18.177:86/Disney_Junior_HD/index.m3u8
 #EXTINF:-1 tvg-id="DossiersFBI.us@France" tvg-logo="https://i.imgur.com/8Zx6dA7.png" group-title="Documentary",Dossiers FBI
 https://jmp2.uk/plu-5f8edad922b10b000753bc37.m3u8
-#EXTINF:-1 tvg-id="EuronewsFrench.fr@SD" tvg-logo="https://i.imgur.com/8t9mdg9.png" group-title="News",Euronews French (720p)
-https://2f6c5bf4.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmxheHhUVi1ldV9FdXJvbmV3c0ZyYW5jYWlzX0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-id="EvandisGospelTV.fr@SD" tvg-logo="https://i.imgur.com/v8TiqhH.png" group-title="Religious",Evandis Gospel TV (1080p)
 https://evandis.streamakaci.tv/str_evandis_evandis/str_evandis_multi/playlist.m3u8
 #EXTINF:-1 tvg-id="FashionTVParisLOriginal.fr@SD" tvg-logo="https://i.imgur.com/GFTAN5Q.png" group-title="Lifestyle",FashionTV Paris L'Original (1080p)
@@ -92,8 +85,6 @@ http://89.187.185.76:8080/France3/index.m3u8
 http://5.180.164.197:8080/FRANCE3/index.m3u8
 #EXTINF:-1 tvg-id="France24.fr@French" tvg-logo="https://i.imgur.com/u8N6uoj.png" group-title="News",France 24 French (1080p)
 https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8
-#EXTINF:-1 tvg-id="Francophonie24.fr@SD" tvg-logo="https://i.imgur.com/uM1v1sd.png" group-title="Documentary",Francophonie24 (1080p)
-https://5421175365ea3.streamlock.net/live/smil:switch.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="GenerationsTV.fr@SD" tvg-logo="https://i.imgur.com/NgBrDMe.png" group-title="Undefined",Generations TV (576p)
 https://event.vedge.infomaniak.com/livecast/ik:generation-tv/manifest.m3u8
 #EXTINF:-1 tvg-id="Gong.fr@SD" tvg-logo="https://i.imgur.com/lA9UFMG.png" group-title="Animation",Gong (1080p)
@@ -107,6 +98,8 @@ https://srv.webtvmanager.fr:3697/stream/play.m3u8
 https://jmp2.uk/plu-604f8de01b479400078fb1e7.m3u8
 #EXTINF:-1 tvg-id="iCarly.de@FR" tvg-logo="https://images.pluto.tv/channels/5e8b580a233dc90007f0cb9d/colorLogoPNG.png" group-title="Kids",iCarly TV
 https://jmp2.uk/plu-5f8ecc7aa44d9c00081fca29.m3u8
+#EXTINF:-1 tvg-id="ILTV.fr@SD" tvg-logo="https://i.imgur.com/fVhrJHK.png" group-title="Undefined",ILTV (720p)
+https://live.creacast.com/iltv/smil:iltv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="InazumaEleven.us@France" tvg-logo="https://i.imgur.com/pLv0T3D.png" group-title="Kids;Series",Inazuma Eleven
 https://jmp2.uk/plu-632c6df43d2bc5000751f621.m3u8
 #EXTINF:-1 tvg-id="InvestigationbyPlutoTV.de@FR" tvg-logo="https://images.pluto.tv/channels/6683cd2fca74680008772545/colorLogoPNG_1747399523793.png" group-title="Series",Investigation by Pluto TV
@@ -207,8 +200,6 @@ https://jmp2.uk/plu-5f8eb99ff17815000784a3b0.m3u8
 https://jmp2.uk/plu-699865ccac36b147e74619fe.m3u8
 #EXTINF:-1 tvg-id="PlutoTVToons.de@FR" tvg-logo="https://images.pluto.tv/channels/6880aa28164eb4890282e803/colorLogoPNG_1760522020317.png" group-title="Kids",Pluto TV Toons (720p)
 https://jmp2.uk/plu-5f8eba14a4ffb8000764e950.m3u8
-#EXTINF:-1 tvg-id="PuissanceTV.fr@SD" tvg-logo="https://pbs.twimg.com/profile_images/1274572654016675842/A6v8Qo_X_400x400.jpg" group-title="General",Puissance TV
-https://event.vedge.infomaniak.com/livecast/ik:puissancetelevision/manifest.m3u8
 #EXTINF:-1 tvg-id="QwestTVJazzBeyond.fr@SD" tvg-logo="https://i.imgur.com/89yWH5L.png" group-title="Music",Qwest TV Jazz & Beyond (1080p)
 https://samsungau-qwestjazz-samsungtv-zw2jc.amagi.tv/playlist/samsungau-qwestjazz-samsungtv/playlist.m3u8
 #EXTINF:-1 tvg-id="RFMTV.fr@SD" tvg-logo="https://i.imgur.com/FVDTJxW.png" group-title="Undefined",RFM TV [Not 24/7]
@@ -232,16 +223,11 @@ https://7aa9671895264ec9a384dfed1b992171.mediatailor.us-west-2.amazonaws.com/v1/
 #EXTINF:-1 tvg-id="Syfy.fr@SD" tvg-logo="https://i.imgur.com/gUOXdjv.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Undefined",Syfy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://99.27.51.147:8080/SYFY/index.m3u8
-#EXTINF:-1 tvg-id="T18.fr@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Logo_de_la_chaine_T18.svg/500px-Logo_de_la_chaine_T18.svg.png" group-title="General",T18 (1080p)
-https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/t18/t18-dm.m3u8
 #EXTINF:-1 tvg-id="TeenMom.de@FR" tvg-logo="https://images.pluto.tv/channels/62e7fc8c0d061100083946a9/colorLogoPNG.png" group-title="Entertainment",Teen Mom (720p)
 https://jmp2.uk/plu-62f3f05505e621000783df2f.m3u8
 #EXTINF:-1 tvg-id="TF1.fr@HD" tvg-logo="https://i.imgur.com/QxHt9NC.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Entertainment",TF1 HD (720p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://151.80.18.177:86/TF1_HD/index.m3u8
-#EXTINF:-1 tvg-id="TMC.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/TMC_logo.svg/960px-TMC_logo.svg.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="General",TMC (1080p)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-http://151.80.18.177:86/TMC/index.m3u8
 #EXTINF:-1 tvg-id="TortuesNinjaTV.de@FR" tvg-logo="https://images.pluto.tv/channels/5f8ecc1b37867f00071469e9/colorLogoPNG.png" group-title="Kids",Tortues Ninja TV (720p)
 https://jmp2.uk/plu-5f8ecc1b37867f00071469e9.m3u8
 #EXTINF:-1 tvg-id="ToutlemondedetesteChris.de@FR" tvg-logo="https://images.pluto.tv/channels/67b4b4a21a5ca760802d25fd/colorLogoPNG_1747394750060.png" group-title="Series",Tout le monde déteste Chris
@@ -296,6 +282,8 @@ http://194.163.157.137:8080/hls/radioalsace.m3u8
 https://production-fast-mcrtv.content.okast.tv/channels/2116dc08-1959-465d-857f-3619daefb66b/b702b2b9-aebd-436c-be69-2118f56f3d86/master.m3u8
 #EXTINF:-1 tvg-id="TVMulhouse.fr@HD" tvg-logo="https://academie.kasumay.international/ico/radiomulhouse.png" group-title="General",TV Mulhouse (1080p)
 http://194.163.157.137:8080/hls/radiomulhouse.m3u8
+#EXTINF:-1 tvg-id="ViaMatele.fr@SD" tvg-logo="https://i.imgur.com/XVCV9rj.png" group-title="Undefined",ViàMatélé (1080p)
+https://5dd226f8f01e8.streamlock.net/via-matele-live/matelelive_1080/playlist.m3u8
 #EXTINF:-1 tvg-id="viaTelePaese.fr@SD" tvg-logo="https://i.imgur.com/TLZsAKK.png" group-title="General",viàTéléPaese (720p)
 https://srv.webtvmanager.fr:3970/live/viatelepaeselive.m3u8
 #EXTINF:-1 tvg-id="VosgesTV.fr@SD" tvg-logo="https://i.imgur.com/7y7ancc.png" group-title="Undefined",Vosges Télévision (576p) [Not 24/7]

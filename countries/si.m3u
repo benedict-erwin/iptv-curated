@@ -4,9 +4,13 @@ https://adriaapp.b-cdn.net/1080p/index.m3u8
 #EXTINF:-1 tvg-id="AXNAdria.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN Adria
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://5.57.74.130:8000/play/a0at/index.m3u8
+#EXTINF:-1 tvg-id="ExodusTV.si@SD" tvg-logo="https://i.imgur.com/WKr5ncQ.png" group-title="Religious",Exodus TV (720p)
+https://584943999.r.worldssl.net/584943999/_definst_/vzivo/playlist.m3u8
 #EXTINF:-1 tvg-id="FolxSlovenija.si@SD" tvg-logo="https://i.imgur.com/RK1IASU.png" group-title="Music",Folx Slovenija
 https://folxsloapp.b-cdn.net/1080p/index.m3u8
 #EXTINF:-1 tvg-id="OneAdria.de@SD" tvg-logo="https://i.imgur.com/NYkMamU.png" group-title="Music",One Adria
 https://oneadriaapp.b-cdn.net/1080p/index.m3u8
+#EXTINF:-1 tvg-id="TV1000.si@SD" tvg-logo="https://i.imgur.com/GHNsctR.png" group-title="Movies",TV1000 (1080p)
+http://176.61.157.250/TV1000/index.m3u8
 #EXTINF:-1 tvg-id="TVVeseljakGolicaHD.si@SD" tvg-logo="https://i.imgur.com/49VrbSW.png" group-title="Undefined",TV Veseljak Golica HD
 https://radio.serv.si/VeseljakGolicaTV/tracks-v1a1/mono.m3u8

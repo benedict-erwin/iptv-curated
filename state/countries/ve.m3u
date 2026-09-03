@@ -36,8 +36,6 @@ http://181.78.8.199:8000/play/a09k/index.m3u8
 https://live20.bozztv.com/akamaissh101/ssh101/grandetv2240/playlist.m3u8
 #EXTINF:-1 tvg-id="GuaroTV.ve@SD" tvg-logo="https://i.ibb.co/LN92K6h/IMG-20230705-154347.jpg" group-title="Entertainment",Guaro TV (720p)
 https://stream.guarotv.net:3592/hybrid/play.m3u8
-#EXTINF:-1 tvg-id="InterTV.ve@SD" tvg-logo="https://i.ibb.co/HG2DM8G/IMG-20230705-153952.jpg" group-title="Entertainment",interTV (1080p)
-https://streamtv.intervenhosting.net:3439/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="IslaTV.ve@SD" tvg-logo="https://i.imgur.com/l11Ixhi.jpeg" group-title="General",Isla TV (480p)
 https://59d39900ebfb8.streamlock.net/islatv/islatv/playlist.m3u8
 #EXTINF:-1 tvg-id="KandelaTV.ve@SD" tvg-logo="https://i.imgur.com/cCFxyIp.jpg" group-title="Music",KandelaTV (480p)
@@ -82,6 +80,8 @@ http://15.204.246.24:8080/STARCHANNELHD/index.m3u8
 http://15.204.246.24:8080/StudioUniversalHD/index.m3u8
 #EXTINF:-1 tvg-id="TAMTV.ve@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_TAM.png" group-title="General",TAM TV
 https://rtmp.tamtv.com.ve/tmp_hls/stream/index.m3u8
+#EXTINF:-1 tvg-id="TeleAragua.ve@SD" tvg-logo="https://i.imgur.com/jPzcb2S.png" group-title="General",TeleAragua (480p)
+http://45.173.198.59:8080/hls/nginx3.m3u8?tla=
 #EXTINF:-1 tvg-id="Telecentro.ve@SD" tvg-logo="https://i.imgur.com/QtRNfaj.png" group-title="General",Telecentro (480p) [Not 24/7]
 https://streamtv.intervenhosting.net:3531/live/telecentrovelive.m3u8
 #EXTINF:-1 tvg-id="Telesur.ve@English" tvg-logo="https://i.imgur.com/P50VjRX.png" group-title="News",Telesur English (480p)
@@ -94,12 +94,10 @@ https://mblesmain01.telesur.ultrabase.net/mbliveMain/hd/playlist.m3u8
 http://181.78.8.199:8000/play/a09j/index.m3u8
 #EXTINF:-1 tvg-id="TelevisoradeOriente.ve@SD" tvg-logo="https://i.imgur.com/wFC6Xxq.png" group-title="General",Televisora de Oriente (406p)
 https://cloud.fastchannel.es/manifiest/hls/prog9/tvo.m3u8
-#EXTINF:-1 tvg-id="TorococoTV.ve@SD" tvg-logo="https://i.ibb.co/9N7Scn8/1400-Torococo-TV.png" group-title="General",Torococo TV (720p) [Not 24/7]
-https://us.streaminghd.cl/torococotelevision/video.m3u8
-#EXTINF:-1 tvg-id="TRT.ve@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/67/Canal_trt_logo.PNG" group-title="General",TRT (410p) [Not 24/7]
-https://vcp12.myplaytv.com/trt/trt/playlist.m3u8
 #EXTINF:-1 tvg-id="TuTV.ve@SD" tvg-logo="https://i.imgur.com/OBEmXQF.png" group-title="General",Tu TV (720p)
 https://astl-mainstr.qvixsolutions.com/asltvtu_ext/index.m3u8
+#EXTINF:-1 tvg-id="TVOasisMonay.ve@SD" tvg-logo="https://i.imgur.com/hwd7osJ.jpeg" group-title="General",TV Oasis Monay (720p)
+https://servilive.com:3562/live/vav4c8z38live.m3u8
 #EXTINF:-1 tvg-id="TVMparati.ve@SD" tvg-logo="https://intervenhosting.net/imagenes/tvmparati.jpg" group-title="General",TVM para ti (1080p)
 https://streamtv.intervenhosting.net:3529/live/tvmparatilive.m3u8
 #EXTINF:-1 tvg-id="TVS.ve@SD" tvg-logo="https://i.imgur.com/J8ztiAN.png" group-title="General",TVS (720p)

@@ -55,6 +55,8 @@ https://citynewsregional.akamaized.net/hls/live/1024054/Regional_Live_9/master.m
 https://jmp2.uk/plu-64f8a408bd341e000818fcda.m3u8
 #EXTINF:-1 tvg-id="TheCowboyChannelCanada.ca@SD" tvg-logo="https://i.imgur.com/xwntWOP.png" group-title="Undefined",Cowboy Channel (1080p)
 https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8
+#EXTINF:-1 tvg-id="CP24.ca@SD" tvg-logo="https://i.imgur.com/YzjZUEl.png" group-title="News",CP24 (720p)
+http://107.167.16.138/cp24/index.m3u8?token=test
 #EXTINF:-1 tvg-id="DesheBidesheTV.ca@SD" tvg-logo="https://i.imgur.com/Ek1Ohj6.png" group-title="General",DesheBideshe TV
 https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
 #EXTINF:-1 tvg-id="DeshiTV.ca@SD" tvg-logo="https://i.imgur.com/PzqzgMm.png" group-title="General",Deshi TV (720p)
@@ -177,8 +179,6 @@ https://jmp2.uk/plu-62e94ec74823db0007277a8f.m3u8
 https://origin-http-delivery.isilive.ca/live/_definst_/ontla/house-en/playlist.m3u8
 #EXTINF:-1 tvg-id="OutdoorChannel.us@SD" tvg-logo="https://i.imgur.com/Kh4MWaY.png" group-title="Outdoor",Outdoor Channel (1080p)
 https://amg00718-outdoorchannela-outdoortv-samsungau-uc7mp.amagi.tv/playlist/amg00718-outdoorchannela-outdoortv-samsungau/playlist.m3u8
-#EXTINF:-1 tvg-id="OutdoorChannel.us@HD" tvg-logo="https://i.imgur.com/Kh4MWaY.png" group-title="Outdoor",Outdoor Channel HD (720p)
-http://23.237.104.106:8080/USA_OUTDOOR/index.m3u8
 #EXTINF:-1 tvg-id="PamirTV.ca@SD" tvg-logo="https://i.imgur.com/sCBbBOj.png" group-title="Culture;Music",Pamir TV (1080p) [Not 24/7]
 http://live.stream.cdn.pamirtv.com/ptv/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8
 #EXTINF:-1 tvg-id="ParamountNetwork.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/960px-Paramount_Network.svg.png" group-title="Movies;Series",Paramount Network (720p)
@@ -268,8 +268,6 @@ http://158.69.124.9:1935/sardaritv/sardaritv/playlist.m3u8
 https://cdn12.henico.net:8443/live/ssct/index.m3u8
 #EXTINF:-1 tvg-id="SohailTV.ca@SD" tvg-logo="https://i.ibb.co/dtzjKfT/Sohail-TV.png" group-title="General",Sohail TV (1080p)
 https://iptv.sohailtv.com/sohail/playlist/index.m3u8
-#EXTINF:-1 tvg-id="SooriyanTV.ca@SD" tvg-logo="https://i.ibb.co/LSyydKj/Sooriyan-TV-Tamil.jpg" group-title="Entertainment",Sooriyan TV (1080p)
-https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8
 #EXTINF:-1 tvg-id="SouthPark.us@CA" tvg-logo="https://images.pluto.tv/channels/62bdb1c5e25122000798ac79/colorLogoPNG.png" group-title="Animation;Comedy",South Park
 https://jmp2.uk/plu-62bdb1c5e25122000798ac79.m3u8
 #EXTINF:-1 tvg-id="SouthParkEnFrancais.us@CA" tvg-logo="https://images.pluto.tv/channels/62bdb919d36cbd0007e6ab8a/colorLogoPNG.png" group-title="Animation;Comedy",South Park En Français

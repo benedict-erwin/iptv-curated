@@ -1,7 +1,11 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="HiruTV.lk@SD" tvg-logo="https://i.imgur.com/M66UqPB.png" group-title="Entertainment",Hiru TV (360p) [Not 24/7]
 https://tv.hiruhost.com:1936/8012/8012/playlist.m3u8
+#EXTINF:-1 tvg-id="ImaiTV.lk@SD" tvg-logo="https://i.imgur.com/9tODclu.png" group-title="Culture",Imai TV (1080p)
+https://live20.bozztv.com/akamaissh101/ssh101/imaitv/playlist.m3u8
 #EXTINF:-1 tvg-id="NationalGeographic.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143573_ld_h15_aa.png?lock=720x540" group-title="Documentary",National Geographic (576p) [Geo-blocked]
 http://main.light-ott.net:80/play/live.php?mac=00:1A:79:17:28:41&stream=373017&extension=ts&play_token=zCaGy5dtla
 #EXTINF:-1 tvg-id="Nickelodeon.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png" group-title="Kids",Nickelodeon (576p)
 http://103.185.24.134:3001/NICK/index.m3u8
+#EXTINF:-1 tvg-id="SiyathaTV.lk@SD" tvg-logo="https://i.imgur.com/9Zc8G7i.png" group-title="Undefined",Siyatha TV (576p)
+https://rtmp01.voaplus.com/hls/6x6ik312qk4grfxocfcv.m3u8

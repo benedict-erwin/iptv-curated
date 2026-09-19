@@ -119,6 +119,8 @@ https://rrr.sz.xlcdn.com/?account=ndc_mediagroep&file=NDC2&output=playlist.m3u8&
 https://rrr.sz.xlcdn.com/?account=ndc_mediagroep&file=NDC3&output=playlist.m3u8&service=wowza&type=live
 #EXTINF:-1 tvg-id="PodiumTV.nl@SD" tvg-logo="https://i.imgur.com/bAhMhuz.jpg" group-title="Undefined",Podium.TV (1080p) [Not 24/7]
 https://rrr.sz.xlcdn.com/?account=ndc_mediagroep&file=NDC1&output=playlist.m3u8&service=wowza&type=live
+#EXTINF:-1 tvg-id="Qmusic.nl@SD" tvg-logo="https://i.imgur.com/fMTuqDu.png" group-title="Music",Qmusic (720p)
+https://stream.qmusic.nl/qmusic/videohls.m3u8
 #EXTINF:-1 tvg-id="Radio10.nl@SD" tvg-logo="https://i.imgur.com/2oGtj7r.png" group-title="Undefined",Radio 10 (720p)
 https://radio10.prd1.talpatvcdn.nl/2b725bc7c93f477eaf0e43955ea8a6c1/index.m3u8
 #EXTINF:-1 tvg-id="Radio350.nl@SD" tvg-logo="https://i.imgur.com/3nkzXup.png" group-title="Undefined",Radio 350 (360p) [Not 24/7]
@@ -137,8 +139,6 @@ https://58c04fb1d143f.streamlock.net/rararadio/rararadio/playlist.m3u8
 https://ms2.mx-cd.net/dtv-02/260-2403096/Regio90TV.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="RN7.nl@SD" tvg-logo="https://i.imgur.com/dYBTrLc.png" group-title="Undefined",RN7 (1080p)
 https://streams.rn7.nl/memfs/49823eea-a17d-4e39-a435-75b6d60df96e.m3u8
-#EXTINF:-1 tvg-id="RPLWoerden.nl@SD" tvg-logo="https://i.imgur.com/UdYMXWQ.png" group-title="General",RPL Woerden (720p)
-https://d1893oi5c6e5u0.cloudfront.net/nlpo/clr-nlpo/rpltvwoerden/index.m3u8
 #EXTINF:-1 tvg-id="RTVDrenthe.nl@SD" tvg-logo="https://i.imgur.com/UBQCjnG.png" group-title="Undefined",RTV Drenthe (1080p)
 https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/index.m3u8
 #EXTINF:-1 tvg-id="RTVLOVE.nl@SD" tvg-logo="https://i.imgur.com/hucwX6v.png" group-title="General",RTV LOVE (720p)

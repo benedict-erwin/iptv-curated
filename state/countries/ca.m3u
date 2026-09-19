@@ -57,6 +57,8 @@ https://jmp2.uk/plu-62e91af00c43540007f2bb43.m3u8
 https://jmp2.uk/plu-64f8a408bd341e000818fcda.m3u8
 #EXTINF:-1 tvg-id="CP24.ca@SD" tvg-logo="https://i.imgur.com/YzjZUEl.png" group-title="News",CP24 (720p)
 http://107.167.16.138/cp24/index.m3u8?token=test
+#EXTINF:-1 tvg-id="DesheBidesheTV.ca@SD" tvg-logo="https://i.imgur.com/Ek1Ohj6.png" group-title="General",DesheBideshe TV
+https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
 #EXTINF:-1 tvg-id="DeshiTV.ca@SD" tvg-logo="https://i.imgur.com/PzqzgMm.png" group-title="General",Deshi TV (720p)
 https://deshitv.deshitv24.net/live/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="DocMartin.us@CA" tvg-logo="https://images.pluto.tv/channels/62e922f6675f71000736db3b/colorLogoPNG.png" group-title="Series",Doc Martin (United States)
@@ -183,6 +185,8 @@ https://jmp2.uk/plu-62e94ec74823db0007277a8f.m3u8
 https://origin-http-delivery.isilive.ca/live/_definst_/ontla/house-en/playlist.m3u8
 #EXTINF:-1 tvg-id="OutdoorChannel.us@SD" tvg-logo="https://i.imgur.com/Kh4MWaY.png" group-title="Outdoor",Outdoor Channel (1080p)
 https://amg00718-outdoorchannela-outdoortv-samsungau-uc7mp.amagi.tv/playlist/amg00718-outdoorchannela-outdoortv-samsungau/playlist.m3u8
+#EXTINF:-1 tvg-id="OutdoorChannel.us@HD" tvg-logo="https://i.imgur.com/Kh4MWaY.png" group-title="Outdoor",Outdoor Channel HD (720p)
+http://23.237.104.106:8080/USA_OUTDOOR/index.m3u8
 #EXTINF:-1 tvg-id="PamirTV.ca@SD" tvg-logo="https://i.imgur.com/sCBbBOj.png" group-title="Culture;Music",Pamir TV (1080p) [Not 24/7]
 http://live.stream.cdn.pamirtv.com/ptv/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8
 #EXTINF:-1 tvg-id="ParamountNetwork.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/960px-Paramount_Network.svg.png" group-title="Movies;Series",Paramount Network (720p)
@@ -268,8 +272,6 @@ https://hls.savoir.media/live/stream.m3u8
 https://cdn12.henico.net:8443/live/ssct/index.m3u8
 #EXTINF:-1 tvg-id="SohailTV.ca@SD" tvg-logo="https://i.ibb.co/dtzjKfT/Sohail-TV.png" group-title="General",Sohail TV (1080p)
 https://iptv.sohailtv.com/sohail/playlist/index.m3u8
-#EXTINF:-1 tvg-id="SooriyanTV.ca@SD" tvg-logo="https://i.ibb.co/LSyydKj/Sooriyan-TV-Tamil.jpg" group-title="Entertainment",Sooriyan TV (1080p)
-https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8
 #EXTINF:-1 tvg-id="SouthPark.us@CA" tvg-logo="https://images.pluto.tv/channels/62bdb1c5e25122000798ac79/colorLogoPNG.png" group-title="Animation;Comedy",South Park (United States)
 https://jmp2.uk/plu-62bdb1c5e25122000798ac79.m3u8
 #EXTINF:-1 tvg-id="SouthParkEnFrancais.us@CA" tvg-logo="https://images.pluto.tv/channels/62bdb919d36cbd0007e6ab8a/colorLogoPNG.png" group-title="Animation;Comedy",South Park En Francais
@@ -288,6 +290,8 @@ https://jmp2.uk/plu-663115d923e24f000843b49c.m3u8
 https://jmp2.uk/plu-63f87d057533d80008ab9549.m3u8
 #EXTINF:-1 tvg-id="StarChannelInternational.gr@HD" tvg-logo="https://i.imgur.com/6NUpxhr.png" group-title="Entertainment",Star Channel International (720p)
 https://livestar.siliconweb.com/starvod/star_int/star_int.m3u8
+#EXTINF:-1 tvg-id="StingrayCityscapes.ca@HD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZlXPCl4ze9lr2DnadYazKxuyyEEWmgO1O1Q&s" group-title="Music",Stingray Cityscapes (1080p)
+https://aka-live1050.delivery.roku.com/7572d640-7373-4137-8b14-a3afff395349/t2-origin/out/v1/live.m3u8
 #EXTINF:-1 tvg-id="StingrayClassicRock.ca@SD" tvg-logo="https://i.imgur.com/FBgu8yB.png" group-title="Music",Stingray Classic Rock (1080p)
 https://lotus.stingray.com/manifest/ose-101ads-montreal/samsungtvplus/master.m3u8
 #EXTINF:-1 tvg-id="StingrayClassica.ca@SD" tvg-logo="https://i.imgur.com/nh1k5RC.png" group-title="Music",Stingray Classica (1080p)

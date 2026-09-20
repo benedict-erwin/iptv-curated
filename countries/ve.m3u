@@ -20,6 +20,8 @@ https://cloud.fastchannel.es/manifiest/hls/prog9/catatumbotv.m3u8
 http://15.204.246.24:8080/CinecanalHD/index.m3u8
 #EXTINF:-1 tvg-id="ComedyCentralLatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Comedy_Central_2018.svg/960px-Comedy_Central_2018.svg.png" group-title="Comedy",Comedy Central Latin America (1080p)
 http://15.204.246.24:8080/ComedyCentralHD/index.m3u8
+#EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="Animation;Kids",Disney Channel Latin America (1080p)
+http://15.204.246.24:8080/DisneyHD/index.m3u8
 #EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@Center" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="Animation;Kids",Disney Channel Latin America Center (1080p)
 http://181.78.8.199:8000/play/a0dn/index.m3u8
 #EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@PanregionalHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="Animation;Kids",Disney Channel Latin America Panregional HD (1080p)
@@ -44,8 +46,6 @@ http://181.78.8.199:8000/play/a0fs/index.m3u8
 https://streamtv.latinamedios.com:3413/live/latinatvlive.m3u8
 #EXTINF:-1 tvg-id="MasTalk.ve@SD" tvg-logo="https://i.imgur.com/unE2LGz.jpg" group-title="Entertainment",Mas Talk (1080p)
 https://vod2live.univtec.com/manifest/89290956-94ab-4950-accb-a54bbd7e176f.m3u8
-#EXTINF:-1 tvg-id="MaximaTV.ve@SD" tvg-logo="https://i.imgur.com/HMZRVL5.jpeg" group-title="Entertainment",Maxima TV
-https://maximatv.net/hls/stream.m3u8
 #EXTINF:-1 tvg-id="MeridianoTV.ve@SD" tvg-logo="https://i.imgur.com/I6gsUqD.png" group-title="Sports",Meridiano TV (576p)
 http://181.78.8.199:8000/play/a0fr/index.m3u8
 #EXTINF:-1 tvg-id="PortuguesaTelevision.ve@SD" tvg-logo="https://i.imgur.com/jHUSfGz.png" group-title="General",Portuguesa Television (480p) [Not 24/7]
@@ -88,12 +88,12 @@ https://astl-mainstr.qvixsolutions.com/asltvtu_ext/index.m3u8
 https://servilive.com:3562/live/vav4c8z38live.m3u8
 #EXTINF:-1 tvg-id="TVMparati.ve@SD" tvg-logo="https://intervenhosting.net/imagenes/tvmparati.jpg" group-title="General",TVM para ti (1080p)
 https://streamtv.intervenhosting.net:3529/live/tvmparatilive.m3u8
+#EXTINF:-1 tvg-id="TVS.ve@SD" tvg-logo="https://i.imgur.com/J8ztiAN.png" group-title="General",TVS (Venezuela) (720p)
+https://vcp10.myplaytv.com/tvs/tvs/playlist.m3u8
 #EXTINF:-1 tvg-id="UniTV.ve@SD" tvg-logo="https://i.imgur.com/KLGeznX.png" group-title="General",UniTV (720p)
 https://vcp6.myplaytv.com/unitv/unitv/playlist.m3u8
 #EXTINF:-1 tvg-id="UniversalTVLatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Universal_TV_logo.svg/960px-Universal_TV_logo.svg.png" group-title="Undefined",Universal TV Latin America (1080p)
 http://15.204.246.24:8080/UniversalHD/index.m3u8
-#EXTINF:-1 tvg-id="ValeTV.ve@SD" tvg-logo="https://i.imgur.com/NMI2Wed.png" group-title="General",Vale TV (480p) [Not 24/7]
-https://59d39900ebfb8.streamlock.net/valetv_480/valetv_480/playlist.m3u8
 #EXTINF:-1 tvg-id="Venevision.ve@SD" tvg-logo="https://i.imgur.com/gm1m8hW.png" group-title="General",Venevision (576p)
 http://181.78.8.199:8000/play/a0if/index.m3u8
 #EXTINF:-1 tvg-id="VenevisionInternacional.ve@SD" tvg-logo="https://i.imgur.com/vtGED07.jpg" group-title="General",Venevision Internacional (720p)

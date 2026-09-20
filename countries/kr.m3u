@@ -5,6 +5,8 @@ https://vod2.abn.co.kr/IPHONE/abn.m3u8
 http://45.162.64.114/ARIRANG/index.m3u8
 #EXTINF:-1 tvg-id="BBSTV.kr@SD" tvg-logo="https://i.imgur.com/01UmXRe.png" group-title="Religious",BBS TV (South Korea) (1080p)
 http://bbstv.clouducs.com:1935/bbstv-live/livestream/playlist.m3u8
+#EXTINF:-1 tvg-id="BTNTV.kr@SD" tvg-logo="https://i.imgur.com/sOoS7RQ.png" group-title="Religious",BTN TV (South Korea) (1080p)
+https://btn.nowcdn.co.kr/btn/btnlive2m/playlist.m3u8
 #EXTINF:-1 tvg-id="CJOnStyle.kr@SD" tvg-logo="https://i.imgur.com/JiSfEBv.png" group-title="Shop",CJ OnStyle (540p)
 https://live-ch1.cjonstyle.net/cjmalllive/stream2/playlist.m3u8
 #EXTINF:-1 tvg-id="CJOnStylePlus.kr@SD" tvg-logo="https://i.imgur.com/OYmOL20.png" group-title="Shop",CJ OnStyle+ (540p)
@@ -45,6 +47,8 @@ http://123.254.93.7:1935/tvlive/livestream2/playlist.m3u8
 http://61.82.49.4:1935/live/_definst_/tv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="HLCNDTV.kr@SD" tvg-logo="https://i.imgur.com/wmGJgYh.png" group-title="General",HLCN-DTV (1080p)
 https://media.kjmbc.co.kr/hls/live/stream/playlist.m3u8
+#EXTINF:-1 tvg-id="HLCQDTV.kr@SD" tvg-logo="https://i.imgur.com/HCbvAiM.png" group-title="General",HLCQ-DTV (720p) [Not 24/7]
+https://ns1.tjmbc.co.kr/live/myStream.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="HLDEDTV.kr@SD" tvg-logo="https://i.imgur.com/jknoVmp.png" group-title="General",HLDE-DTV (540p)
 http://203.251.91.122:1935/on-air-Backup/tv/playlist.m3u8
 #EXTINF:-1 tvg-id="HLDGDTV.kr@SD" tvg-logo="https://i.imgur.com/gaBq1Lz.png" group-title="General",HLDG-DTV (1080p) [Not 24/7]
@@ -53,6 +57,8 @@ https://stream1.knn.co.kr/hls/9ly4534y7dm2xfa123r2_tv/index.m3u8
 https://stream.ubc.co.kr/hls/ubctvstream/index.m3u8
 #EXTINF:-1 tvg-id="HLDRDTV.kr@SD" tvg-logo="https://i.imgur.com/zVunmpQ.png" group-title="General",HLDR-DTV (540p) [Not 24/7]
 http://1.222.207.80:1935/live/cjbtv/playlist.m3u8
+#EXTINF:-1 tvg-id="HLKJDTV.kr@SD" tvg-logo="https://i.imgur.com/iAz0Psw.png" group-title="General",HLKJ-DTV (720p) [Not 24/7]
+http://123.140.197.22/stream/1/play.m3u8
 #EXTINF:-1 tvg-id="HomeShopping.kr@SD" tvg-logo="https://i.imgur.com/IcexRXG.png" group-title="Shop",Home & Shopping (720p)
 https://s28.qtcdn.co.kr/media/liveM3U8/idx/518045142/enc/1860408350/playlist.m3u8
 #EXTINF:-1 tvg-id="HyundaiHomeShopping.kr@SD" tvg-logo="https://i.imgur.com/NJpECmq.png" group-title="Shop",Hyundai Home Shopping (720p)
@@ -67,8 +73,6 @@ https://hlive.ktv.go.kr/live/klive_h.stream/playlist.m3u8
 https://pchlslivesw.lotteimall.com/live/livestream/lotteimalllive_mp4.m3u8
 #EXTINF:-1 tvg-id="LotteOneTV.kr@SD" tvg-logo="https://i.imgur.com/bXe7tYE.png" group-title="Shop",Lotte OneTV (720p)
 https://onetvhlslive.lotteimall.com/lotteonetvlive/lotteonetvlive.mp4.m3u8
-#EXTINF:-1 tvg-id="NBS.kr@SD" tvg-logo="https://i.imgur.com/pOSroOE.png" group-title="Education",NBS (720p)
-https://media.joycorp.co.kr:4443/live/ngrp:live_all/playlist.m3u8
 #EXTINF:-1 tvg-id="NHTV.kr@SD" tvg-logo="https://i.imgur.com/DfECkgB.png" group-title="Entertainment",NHTV (720p)
 http://nonghyup.flive.skcdn.com/nonghyup/_definst_/nhlive/playlist.m3u8
 #EXTINF:-1 tvg-id="NSHomeShopping.kr@SD" tvg-logo="https://i.imgur.com/Q9xsDQo.png" group-title="Shop",NS Home Shopping (720p)
@@ -83,6 +87,8 @@ http://d26sxnc75smwvh.cloudfront.net/livehttporigin/rutclive_720p2.stream/playli
 https://liveout.catenoid.net/live-02-shinsegaetvshopping/shinsegaetvshopping_720p/playlist.m3u8
 #EXTINF:-1 tvg-id="ShoppingNT.kr@SD" tvg-logo="https://i.imgur.com/BgbJp5X.png" group-title="Shop",Shopping NT (720p)
 https://live.shoppingntmall.com/live/10011.m3u8
+#EXTINF:-1 tvg-id="TBSTV.kr@SD" tvg-logo="https://i.imgur.com/iOnWS6V.png" group-title="Undefined",TBS TV (720p)
+https://cdntv.tbs.seoul.kr/tbs/tbs_tv_web.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TVChosun2.kr@SD" tvg-logo="https://i.imgur.com/Ev5JoBJ.png" http-referrer="http://broadcast.tvchosun.com/onair/on2.cstv" group-title="Undefined",TV Chosun 2 (720p)
 #EXTVLCOPT:http-referrer=http://broadcast.tvchosun.com/onair/on2.cstv
 http://onair2.cdn.tvchosun.com/origin2/_definst_/tvchosun_s3/playlist.m3u8

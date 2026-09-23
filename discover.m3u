@@ -1,6 +1,6 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="PlutoTVAnime.de@DACH" tvg-logo="https://images.pluto.tv/channels/608181d420fc8500075f612a/colorLogoPNG_1747395463053.png" group-title="Anime",Pluto TV Anime (Germany)
-https://jmp2.uk/plu-608181d420fc8500075f612a.m3u8
+#EXTINF:-1 tvg-id="PlutoTVAnime.us@US" tvg-logo="https://images.pluto.tv/channels/5f12136385bccc00070142ed/colorLogoPNG_1777595293242.png" group-title="Anime",Pluto TV Anime
+https://jmp2.uk/plu-5812b7d3249444e05d09cc49.m3u8
 #EXTINF:-1 tvg-id="PlutoTVANIMEGO.de@FR" tvg-logo="https://images.pluto.tv/channels/691b3669c48674840c3b832a/colorLogoPNG_1778491402325.png" group-title="Anime",Pluto TV ANIME GO!
 https://jmp2.uk/plu-691b3669c48674840c3b832a.m3u8
 #EXTINF:-1 tvg-id="RetroCrush.us@SD" tvg-logo="https://i.imgur.com/M40b4YI.png" group-title="Anime",RetroCrush (1080p)
@@ -17,6 +17,8 @@ https://amg00627-amg00627c30-rakuten-es-3990.playouts.now.amagi.tv/playlist/amg0
 https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8
 #EXTINF:-1 tvg-id="PlutoTVAnimeAcao.us@BR" tvg-logo="https://images.pluto.tv/channels/604b79c558393100078faeef/colorLogoPNG.png" group-title="Anime",Pluto TV Anime Acao
 https://jmp2.uk/plu-604b79c558393100078faeef.m3u8
+#EXTINF:-1 tvg-id="TeenNick.il@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/960px-TeenNick_2019_logo.svg.png" group-title="Cartoons",TeenNick (Israel) [Not 24/7]
+http://315e5a5d.ottrast.com/iptv/MM4E93NGF5LADZ/2334/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.de@SD" tvg-logo="https://i.imgur.com/E84jnP8.png" group-title="Cartoons",Nickelodeon (Germany)
 https://ma.anixa.tv/clips/stream/nickelodeon/playlist.php
 #EXTINF:-1 tvg-id="PBSKids.us@SD" tvg-logo="https://i.imgur.com/fg8c9WK.png" group-title="Cartoons",PBS Kids (720p)
@@ -31,6 +33,8 @@ https://ryanandfriends-samsungau.amagi.tv/playlist.m3u8
 http://stream.mcquack.net/271/index.m3u8
 #EXTINF:-1 tvg-id="Sat7Kids.cy@SD" tvg-logo="https://i.imgur.com/M0ik0i2.png" group-title="Cartoons",Sat 7 Kids (1080p)
 https://svs.itworkscdn.net/sat7kidslive/sat7kids.smil/playlist_dvr.m3u8
+#EXTINF:-1 tvg-id="BeJoykids.it@HD" tvg-logo="https://bejoy.kids/wp-content/uploads/2025/09/Logo_Bejoy.png" group-title="Cartoons",BeJoy.kids (1080p)
+https://stream.paroledivita.org/bejoy.m3u8
 #EXTINF:-1 tvg-id="NikiJunior.ua@SD" tvg-logo="https://i.imgur.com/DrHsNin.png" group-title="Cartoons",Niki Junior (1080p)
 http://stream.mcquack.net/262/index.m3u8
 #EXTINF:-1 tvg-id="PlutoTVTelenovelasClasicas.de@ES" tvg-logo="https://images.pluto.tv/channels/662a69daa0a74e00087a1c72/colorLogoPNG.png" group-title="Telenovela",Pluto TV Telenovelas Clasicas
@@ -139,8 +143,6 @@ https://cb0c87cc605942ff9766a4e6744bbadc.mediatailor.us-east-1.amazonaws.com/v1/
 https://d1nhni5l2n8hjt.cloudfront.net/gf.m3u8
 #EXTINF:-1 tvg-id="DocumentaryPlus.us@US" tvg-logo="https://i.imgur.com/x57klfS.png" group-title="Documentary",Documentary+ (1080p)
 https://ef79b15c8c7c46c7a9de9d33001dbd07.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-859-DOCUMENTARYPLUS-DOCUMENTARYPLUS/mt/documentaryplus/859/hls/master/playlist.m3u8
-#EXTINF:-1 tvg-id="Ch4TeenDocumentary.kw@SD" tvg-logo="https://i.imgur.com/pHpFGeg.png" group-title="Documentary",Ch4Teen Documentary (1080p)
-https://ch14.tv/live/ch4teendoc/playlist.m3u8
 #EXTINF:-1 tvg-id="PersianaDocs.fr@HD" tvg-logo="" group-title="Documentary",Persiana Docs
 https://scihls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PlutoTVDocumentari.de@IT" tvg-logo="https://images.pluto.tv/channels/608aa8a5709d6b0007b132fe/colorLogoPNG.png" group-title="Documentary",Pluto TV Documentari

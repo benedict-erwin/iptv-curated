@@ -31,6 +31,8 @@ https://cdn.stmify.com/bbc/stream/BBC_FOUR/hevc_iptv_mse_v0.mpd
 https://xemzi.short.gy/1000015
 #EXTINF:-1 tvg-id="BBCNewsPashto.uk@HD" tvg-logo="https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png" group-title="Undefined",BBC News Pashto (720p)
 https://vs-cmaf-pushb-ww.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_afghan_tv/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCOne.uk@London" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/BBC_One_logo_2021.svg/960px-BBC_One_logo_2021.svg.png" group-title="General",BBC One
+https://cdn.stmify.com/bbc/stream/BBC_ONE_LONDON/hevc_iptv_mse_v0.mpd
 #EXTINF:-1 tvg-id="BBCParliament.uk@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/BBC_Parliament_Logo.svg/960px-BBC_Parliament_Logo.svg.png" group-title="Legislative",BBC Parliament
 https://cdn.stmify.com/bbc/stream/BBC_PARLIAMENT/hevc_iptv_mse_v0.mpd
 #EXTINF:-1 tvg-id="BBCScotland.uk@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/BBC_Scotland_2021_%28channel%29.svg/960px-BBC_Scotland_2021_%28channel%29.svg.png" group-title="General",BBC Scotland
@@ -123,8 +125,6 @@ https://all3media-homes-under-the-hammer-1-au.samsung.wurl.tv/playlist.m3u8
 https://hnc-free-viewlift.amagi.tv/HNC_AUSTRALIA.m3u8
 #EXTINF:-1 tvg-id="IBCBakthi.uk@SD" tvg-logo="https://i.imgur.com/ZNEz5Wx.png" group-title="Religious",IBC Bakthi (1080p)
 https://ibc.massstream.net/IBC2/index.m3u8
-#EXTINF:-1 tvg-id="IBCTamil.uk@SD" tvg-logo="https://i.imgur.com/uVt9vBa.png" group-title="General",IBC Tamil (1080p)
-https://ibc.massstream.net/IBC/index.m3u8
 #EXTINF:-1 tvg-id="InsideCrime.us@UK" tvg-logo="https://i.imgur.com/wvQYWsj.png" group-title="Series",Inside Crime (1080p)
 https://aenetworks-insidecrime-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="IranInternational.uk@SD" tvg-logo="https://i.imgur.com/55RpaF3.png" group-title="News",Iran International (1080p)
@@ -151,8 +151,8 @@ https://amg00627-amg00627c5-samsung-nz-2807.playouts.now.amagi.tv/playlist/amg00
 https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_030/Stream/playlist.m3u8
 #EXTINF:-1 tvg-id="MoonbugKids.uk@SD" tvg-logo="https://i.imgur.com/vZHtxQb.png" group-title="Kids",Moonbug Kids (1080p)
 https://moonbug-rokuus.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="MoreTVScifi.de@GB" tvg-logo="https://images.pluto.tv/channels/645e00d5d3fdde000829463a/colorLogoPNG.png" group-title="Movies;Series",More TV Sci-fi
-https://jmp2.uk/plu-645e00d5d3fdde000829463a.m3u8
+#EXTINF:-1 tvg-id="MoreTVCrime.de@GB" tvg-logo="https://images.pluto.tv/channels/639b558c73423d00071ce624/colorLogoPNG.png" group-title="Series",More TV Crime
+https://jmp2.uk/plu-639b558c73423d00071ce624.m3u8
 #EXTINF:-1 tvg-id="MostHaunted.uk@UK" tvg-logo="https://images.pluto.tv/channels/66d722d31878f200081c2c64/colorLogoPNG.png" group-title="Series",Most Haunted (1080p)
 https://amg00426-lds-amg00426c17-samsung-gb-10157.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="MovieSphere.us@UK" tvg-logo="https://i.imgur.com/h1ejU90.png" group-title="Movies",MovieSphere UK (1080p)
@@ -213,6 +213,8 @@ https://jmp2.uk/plu-625e8cb585ef320007806caf.m3u8
 https://jmp2.uk/plu-5d134a74ca91eedee1630faa.m3u8
 #EXTINF:-1 tvg-id="PlutoTVConspiracy.de@GB" tvg-logo="https://images.pluto.tv/channels/5d4ae94ef1a1bbb350ca41bb/colorLogoPNG.png" group-title="Documentary",Pluto TV Conspiracy
 https://jmp2.uk/plu-5d4ae94ef1a1bbb350ca41bb.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCrime.de@GB" tvg-logo="https://images.pluto.tv/channels/5e7b6c60fd20c50007910bf5/colorLogoPNG.png" group-title="Series",Pluto TV Crime GB
+https://jmp2.uk/plu-5d767790d0438aceb41d03ae.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCultFilms.de@GB" tvg-logo="https://images.pluto.tv/channels/5c5c31f2f21b553c1f673fb0/colorLogoPNG.png" group-title="Movies",Pluto TV Cult Films (Germany)
 https://jmp2.uk/plu-5c5c31f2f21b553c1f673fb0.m3u8
 #EXTINF:-1 tvg-id="PlutoTVFamilyMovieClub.de@GB" tvg-logo="https://images.pluto.tv/channels/5dc3fc6b9133f500099c7d98/colorLogoPNG.png" group-title="Movies",Pluto TV Family Movie Club
@@ -365,8 +367,6 @@ https://d1taaads3ztvmu.cloudfront.net/120723/smil:lifeokuk.smil/playlist.m3u8?hd
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/UtsavPlus.m3u8
 #EXTINF:-1 tvg-id="V2BEATTV.uk@SD" tvg-logo="https://i.imgur.com/PXGqyLn.png" group-title="Music",V2BEAT TV (720p) [Not 24/7]
 https://abr.de1se01.v2beat.live/playlist.m3u8
-#EXTINF:-1 tvg-id="VantageMusic.ee@UK" tvg-logo="https://vantagetv.ee/vantage_music.png" group-title="Music",Vantage Music UK (1080p) [Geo-blocked]
-https://hls.vantagetv.co.uk/vmusicuk_stream/index.m3u8
 #EXTINF:-1 tvg-id="WaterBear.ch@SD" tvg-logo="https://framerusercontent.com/images/41VQQ7F0fYlp1MX1N4Ixog5QnPI.png" group-title="Documentary;Outdoor",WaterBear (1080p)
 https://amg01415-waterbearnetwor-waterbear-samsunguk-1h0y8.amagi.tv/playlist/amg01415-waterbearnetwor-waterbear-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="WildatHeart.us@UK" tvg-logo="https://i.imgur.com/kyVB8Ik.png" group-title="Series",Wild at Heart

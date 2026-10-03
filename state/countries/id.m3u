@@ -1,6 +1,9 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="AhsanTV.id@SD" tvg-logo="https://i.imgur.com/dZdUbYd.png" group-title="Religious",Ahsan TV
 https://5bf7b725107e5.streamlock.net/ahsantv/ahsantv/playlist.m3u8
+#EXTINF:-1 tvg-id="AKTV.id@SD" tvg-logo="https://i.imgur.com/DUY5WXf.png" http-referrer="https://aktvuhfdigital.tv/Livestream/aktv" group-title="General",AKTV (1080p) [Not 24/7]
+#EXTVLCOPT:http-referrer=https://aktvuhfdigital.tv/Livestream/aktv
+https://akativi.siar.us/live/akativi.m3u8
 #EXTINF:-1 tvg-id="AlWafaTarim.id@SD" tvg-logo="https://i.ibb.co/3yfMjmf/logo-3.png" group-title="Religious",Al Wafa Tarim (720p)
 https://ammedia.siar.us/ammedia/live/playlist.m3u8
 #EXTINF:-1 tvg-id="AlBahjahTV.id@SD" tvg-logo="https://i.imgur.com/52dlDZk.png" group-title="Religious",Al-Bahjah TV (1080p)
@@ -42,6 +45,8 @@ https://dutatv.siar.us/dutatv/live/playlist.m3u8
 #EXTINF:-1 tvg-id="EfarinaTV.id@SD" tvg-logo="https://i.imgur.com/iYTimXh.png" http-referrer="https://live.efarinatv.net/" group-title="General",Efarina TV (720p)
 #EXTVLCOPT:http-referrer=https://live.efarinatv.net/
 https://live.efarinatv.com/hls/bgtaufikganteng.m3u8
+#EXTINF:-1 tvg-id="FicomChannel.id@SD" tvg-logo="https://i.imgur.com/KMEf0Cc.png" group-title="Entertainment",Ficom Channel (720p)
+https://v3.siar.us/ficomchannel/live/playlist.m3u8
 #EXTINF:-1 tvg-id="GrooviaKanal.id@HD" tvg-logo="https://hosting.renderforestsites.com/35126779/1657983/media/e1b4737ec68d96b27f713c034543d472.png" group-title="General",Groovia Kanal (576p)
 https://gist.githubusercontent.com/iptvonlinetv/02d209207082846012c15305f7471c55/raw/4439b54b986e696e6fcfba7a53380d85b27bbbc1/udp450.500.723:6050.m3u8
 #EXTINF:-1 tvg-id="GrooviaKids.id@HD" tvg-logo="https://hosting.renderforestsites.com/35126779/1657983/media/37034d6b30d2c092aa6827a34fa145ab.png" group-title="Kids",Groovia Kids (576p)

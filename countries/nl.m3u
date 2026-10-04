@@ -112,8 +112,6 @@ https://rrr.sz.xlcdn.com/?account=ndc_mediagroep&file=NDC2&output=playlist.m3u8&
 https://rrr.sz.xlcdn.com/?account=ndc_mediagroep&file=NDC3&output=playlist.m3u8&service=wowza&type=live
 #EXTINF:-1 tvg-id="PodiumTV.nl@SD" tvg-logo="https://i.imgur.com/bAhMhuz.jpg" group-title="Undefined",Podium.TV (1080p) [Not 24/7]
 https://rrr.sz.xlcdn.com/?account=ndc_mediagroep&file=NDC1&output=playlist.m3u8&service=wowza&type=live
-#EXTINF:-1 tvg-id="Qmusic.nl@SD" tvg-logo="https://i.imgur.com/fMTuqDu.png" group-title="Music",Qmusic (720p)
-https://stream.qmusic.nl/qmusic/videohls.m3u8
 #EXTINF:-1 tvg-id="Radio10.nl@SD" tvg-logo="https://i.imgur.com/2oGtj7r.png" group-title="Undefined",Radio 10 (720p)
 https://radio10.prd1.talpatvcdn.nl/2b725bc7c93f477eaf0e43955ea8a6c1/index.m3u8
 #EXTINF:-1 tvg-id="Radio350.nl@SD" tvg-logo="https://i.imgur.com/3nkzXup.png" group-title="Undefined",Radio 350 (360p) [Not 24/7]
@@ -138,6 +136,8 @@ https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/index.m3u8
 https://d2o8iss0ldenh4.cloudfront.net/nlpo/clr-nlpo/rtvlove/index.m3u8
 #EXTINF:-1 tvg-id="RTVMaastricht.nl@SD" tvg-logo="https://i.imgur.com/nYl8H2e.png" group-title="Undefined",RTV Maastricht (720p) [Not 24/7]
 http://stream.rtvmaastricht.nl:8081/rtvm_live/tv/playlist.m3u8
+#EXTINF:-1 tvg-id="RTVMeppel.nl@SD" tvg-logo="https://i.imgur.com/RosyQkb.png" group-title="General",RTV Meppel (720p)
+https://d2eanln3bsfb0d.cloudfront.net/nlpo/clr-nlpo/rtvmeppel/index.m3u8
 #EXTINF:-1 tvg-id="RTVNoord.nl@SD" tvg-logo="https://i.imgur.com/l92Cb6H.png" group-title="Undefined",RTV Noord (720p) [Not 24/7]
 https://media.rtvnoord.nl/live/rtvnoord/tv/index.m3u8
 #EXTINF:-1 tvg-id="RTVNoordExtra.nl@SD" tvg-logo="https://i.imgur.com/T0UvltB.png" group-title="Undefined",RTV Noord Extra (1080p) [Not 24/7]
@@ -162,8 +162,6 @@ https://d18rwjdhpr8dcw.cloudfront.net/live/rtvutrecht/rtvutrecht/index.m3u8
 https://media.rtvwesterwolde.nl/hls/live/index.m3u8
 #EXTINF:-1 tvg-id="RTVZulthe.nl@SD" tvg-logo="https://i.imgur.com/Z3zUUsJ.png" group-title="General",RTV Zulthe (720p)
 http://ms7.mx-cd.net/tv/212-1299944/RTV-Zulthe.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="Salto1.nl@SD" tvg-logo="https://i.imgur.com/hyubvS5.png" group-title="Entertainment",Salto 1 (720p)
-https://d11lnfpmek70tc.cloudfront.net/nlpo/clr-nlpo/2103d417/index.m3u8
 #EXTINF:-1 tvg-id="Salto2.nl@SD" tvg-logo="https://i.imgur.com/6H3ycdL.png" group-title="Culture",Salto 2 (720p)
 https://d11lnfpmek70tc.cloudfront.net/nlpo/clr-nlpo/bad78523/index.m3u8
 #EXTINF:-1 tvg-id="SaltoBrasaMusic.nl@SD" tvg-logo="https://i.vimeocdn.com/portrait/31947989_640x640" group-title="Music",Salto Brasa Music (1080p)
@@ -178,6 +176,8 @@ http://highvolume155.streampartner.nl/adminsrc/adminsrc/playlist.m3u8
 https://videostreams.streekstadcentraal.nl/hls/streekstad_alkmaar/streekstad_alkmaar.m3u8
 #EXTINF:-1 tvg-id="StreekTV.nl@SD" tvg-logo="https://i.imgur.com/48lkh57.png" group-title="Undefined",StreekTV (720p) [Not 24/7]
 http://cdn22.streampartner.nl/streektv/streektv/playlist.m3u8
+#EXTINF:-1 tvg-id="Studio040TV.nl@SD" tvg-logo="https://i.imgur.com/NBludRL.png" group-title="General",Studio040 TV (720p)
+https://d591ovpa48r6h.cloudfront.net/nlpo/clr-nlpo/studio040tv/index.m3u8
 #EXTINF:-1 tvg-id="StudioRheden.nl@SD" tvg-logo="https://i.imgur.com/swfxaac.png" group-title="Undefined",Studio Rheden (1080p)
 https://stream.studiorhedenlive.nl/hlstv/stream.m3u8
 #EXTINF:-1 tvg-id="TheChatShowChannel.uk@SD" tvg-logo="https://yt3.googleusercontent.com/aQ_vvywmcBt4X1SmeEMgT3uf7bb1Z__I9XVwabeg7RrSSEuIhswMlvwhyi0Wl4PlLHwXufLgOg=s900-c-k-c0x00ffffff-no-rj" group-title="Comedy;Series",The Chat Show Channel (1080p)

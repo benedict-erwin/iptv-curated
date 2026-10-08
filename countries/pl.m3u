@@ -92,6 +92,9 @@ https://6b88cde9.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdX
 https://3ee905090d464be5a51478fd9c642e93.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-pl_Moconomy/playlist.m3u8
 #EXTINF:-1 tvg-id="MTV.pl@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png" group-title="Entertainment",MTV (Poland) (1080p)
 http://57.128.231.171:8080/227/index.m3u8
+#EXTINF:-1 tvg-id="NewsmaxPolska.pl@SD" tvg-logo="https://i.imgur.com/2NhPCrY.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="News",Newsmax Polska
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+http://91.228.35.249:8001/1:0:1:1C8A:1CE8:71:820000:0:0:0
 #EXTINF:-1 tvg-id="NewsWorld.hk@FAST" tvg-logo="https://provider-static.plex.tv/epg/cms/production/2e3bf0d9-3ca6-4f65-b1d4-f180ef725d96/NewsWorld_logo_dark_-_Angela_Chan.png" group-title="News",NewsWorld (1080p)
 https://amg01076-lightning-amg01076c5-rakuten-us-1788.playouts.now.amagi.tv/playlist/amg01076-lightning-newsworld-rakutenus/playlist.m3u8
 #EXTINF:-1 tvg-id="NewTV.pl@SD" tvg-logo="https://i.imgur.com/fH8rKs3.png" group-title="General",NewTV (1080p)
@@ -151,14 +154,10 @@ https://cdn01.aztv.pl/live_tvjaslo/live_tvjaslo.stream/playlist.m3u8
 http://stream.herissons.cloud/hls/tvluban.m3u8
 #EXTINF:-1 tvg-id="TelewizjaRegionalnaZary.pl@SD" tvg-logo="https://i.imgur.com/FB9H8DO.png" group-title="General",Telewizja Regionalna Zary
 https://tvregfull.mailfull.pl/tvregfull/memfs/e64b3e05-649c-4939-9ff6-584e79285ccd_output_0.m3u8
-#EXTINF:-1 tvg-id="TelewizjaRelax.pl@SD" tvg-logo="https://i.imgur.com/dejnH0O.png" group-title="General",Telewizja Relax (1080p)
-https://srv1.streamingo.pl/memfs/be50f17e-6579-4bdf-86b1-31207aec85b8.m3u8
 #EXTINF:-1 tvg-id="ThePetCollective.us@Poland" tvg-logo="https://i.imgur.com/yH7n2dF.png" group-title="Family",The Pet Collective Poland (720p)
 https://6ec8627d.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X1RoZVBldENvbGxlY3RpdmVfSExT/playlist.m3u8
 #EXTINF:-1 tvg-id="TOPBarca.pl@SD" tvg-logo="https://images-2.rakuten.tv/storage/global-live-channel/translation/artwork/7c59e962-086b-4d64-afb3-7f83ca8c3377-width200-quality90.jpeg" group-title="Undefined",TOP Barca (1080p)
 https://amg17560-fcb-amg17560c1-rakuten-uk-4891.playouts.now.amagi.tv/playlist/amg17560-fcbarcelona-topbarcaenglish-rakutenuk/playlist.m3u8
-#EXTINF:-1 tvg-id="TopMoviesPolska.pl@SD" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/39a979b9-49df-48c1-8c1c-5763828b60aa-width200-quality90.png" group-title="Undefined",Top Movies Polska (1080p)
-https://top-movies-rakuten-tv-pl.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6059/master.m3u8
 #EXTINF:-1 tvg-id="TVASTA.pl@SD" tvg-logo="https://i.imgur.com/5g7lq9N.png" group-title="General",TV ASTA (720p)
 https://5cce8c6f0e84c.streamlock.net/LiveCast/smil:PlayStream9.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TVKujawy.pl@SD" tvg-logo="https://i.imgur.com/dGP7cIW.png" group-title="Undefined",TV Kujawy (576p) [Not 24/7]
@@ -167,6 +166,10 @@ http://stream.tvkujawy.pl:8080/live/broadcast.m3u8
 https://tvregfull.mailfull.pl/tvregfull/memfs/e64b3e05-649c-4939-9ff6-584e79285ccd.m3u8
 #EXTINF:-1 tvg-id="TVRepublika.pl@SD" tvg-logo="https://i.imgur.com/ljpK6dZ.png" group-title="Undefined",TV Republika
 http://92.114.85.87:8018/play/a008/index.m3u8
+#EXTINF:-1 tvg-id="TVTorun.pl@SD" tvg-logo="https://i.imgur.com/ZJ0yDWI.png" group-title="Undefined",TV Torun (1080p) [Not 24/7]
+http://217.173.176.107:1935/live/tvk.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="TVTrwam.pl@SD" tvg-logo="https://i.imgur.com/yq10wS5.png" group-title="Undefined",TV Trwam (1080p) [Geo-blocked]
+https://live-ch1.trwam.cf.insyscd.net/out/v1/b99041a282774d4a8fe84a54243af5de/trwamtv-live-ch1.mpd
 #EXTINF:-1 tvg-id="TVC.pl@SD" tvg-logo="https://i.imgur.com/1Wmib2f.png" group-title="Undefined",TVC (Poland) (1080p)
 http://57.128.231.171:8080/214/index.m3u8
 #EXTINF:-1 tvg-id="TVCSuper.pl@SD" tvg-logo="https://radiopolska.pl/files/thumb/32049b3594ccdd5/300" group-title="Undefined",TVC Super

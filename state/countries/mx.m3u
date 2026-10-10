@@ -29,8 +29,6 @@ https://s5.mexside.net:1936/lsac/lsac/playlist.m3u8
 https://s5.mexside.net:1936/envio2/envio2/playlist.m3u8
 #EXTINF:-1 tvg-id="Bandamax.mx@SD" tvg-logo="https://i.imgur.com/4DfnOTA.png" group-title="Music",Bandamax (1080p)
 http://181.78.106.127:5000/play/ca064/index.m3u8
-#EXTINF:-1 tvg-id="CaliforniaMediosTV.mx@SD" tvg-logo="https://i.imgur.com/IDvpRNI.png" group-title="General",California Medios TV (720p)
-https://s5.mexside.net:1936/medios/medios/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal5.mx@XETTDT" tvg-logo="https://i.imgur.com/cBC2Jre.png" group-title="General",Canal 5 (Mexico) XET-TDT (1080p)
 http://45.5.118.152:8000/play/a03i/index.m3u8
 #EXTINF:-1 tvg-id="Canal5TVCozumel.mx@SD" tvg-logo="https://i.imgur.com/0nzNMuP.jpeg" group-title="General",Canal 5 TV Cozumel (1080p)
@@ -61,6 +59,8 @@ http://15.204.246.24:8080/ComedyCentralHD/index.m3u8
 https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8
 #EXTINF:-1 tvg-id="CreaLaTV.mx@SD" tvg-logo="https://i.imgur.com/Bnjj29f.png" group-title="General",CreaLaTV (1080p)
 https://stream.crealatv.com/live.m3u8
+#EXTINF:-1 tvg-id="DiscoveryKidsLatinAmerica.us@Mexico" tvg-logo="" group-title="Kids",Discovery Kids Latin America Mexico (1080p)
+http://38.65.175.84:8000/play/a0an/index.m3u8
 #EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@Mexico" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="Animation;Kids",Disney Channel Latin America Mexico (720p)
 http://45.166.93.156:9999/play/a0f3/index.m3u8
 #EXTINF:-1 tvg-id="DisneyChannelLatinAmerica.ar@North" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" group-title="Animation;Kids",Disney Channel Latin America North (576p)
@@ -103,8 +103,6 @@ https://video0.rogohosting.com:19360/sisjalisciense/sisjalisciense.m3u8
 https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8
 #EXTINF:-1 tvg-id="LoboTV.mx@SD" tvg-logo="https://i.imgur.com/3fA50RJ.png" group-title="Music",Lobo TV (720p)
 https://5ca3e84a76d30.streamlock.net/tvlobo/videotvlobo/playlist.m3u8
-#EXTINF:-1 tvg-id="MariaVision.mx@SD" tvg-logo="https://i.imgur.com/GylOPxE.png" group-title="Religious",Maria Vision (1080p)
-http://200.122.223.13:55000/play/a022/index.m3u8
 #EXTINF:-1 tvg-id="MC.mx@SD" tvg-logo="https://i.imgur.com/TAjbaml.png" group-title="General",MC (1080p)
 http://168.196.127.137:6001/play/a070/index.m3u8
 #EXTINF:-1 tvg-id="MexiquenseTV.mx@SD" tvg-logo="https://i.imgur.com/iVfzakA.png" group-title="General",Mexiquense TV (720p)
@@ -135,6 +133,8 @@ https://srspsn.live/live/livestream.m3u8
 https://srspsn2.live/live/livestream.m3u8
 #EXTINF:-1 tvg-id="RalyTV.mx@SD" tvg-logo="https://i.imgur.com/W8a1dIa.png" group-title="General",Raly TV (720p)
 https://cloudvideo.servers10.com:8081/8072/index.m3u8
+#EXTINF:-1 tvg-id="RCGTV.mx@SD" tvg-logo="https://i.imgur.com/kYtAR26.png" group-title="Undefined",RCG TV (1080p)
+https://video1.getstreamhosting.com:1936/8172/8172/playlist.m3u8
 #EXTINF:-1 tvg-id="RTQQueretaro.mx@SD" tvg-logo="https://i.imgur.com/RRckCvf.png" group-title="Undefined",RTQ Queretaro (1080p)
 https://59d39900ebfb8.streamlock.net/rytqrolive/rytqrolive/chunklist.m3u8
 #EXTINF:-1 tvg-id="SICOMTelevision.mx@XHPBZCTDT" tvg-logo="https://i.imgur.com/dbJKErB.png" group-title="Undefined",SICOM Television XHPBZC-TDT (720p) [Not 24/7]
@@ -151,6 +151,9 @@ https://servilive.com:3263/live/channel12live.m3u8
 https://lbgo.bozztv.com/ssh101/ssh101/tele6/playlist.m3u8
 #EXTINF:-1 tvg-id="TeleSaltillo.mx@SD" tvg-logo="https://i.imgur.com/PgBtvgO.png" group-title="Undefined",Tele Saltillo
 https://servilive.com:3879/live/telesaltillolive.m3u8
+#EXTINF:-1 tvg-id="TeleYucatan.mx@SD" tvg-logo="https://i.imgur.com/XkpDSmO.png" http-referrer="https://www.teleyucatan.gob.mx/" group-title="Undefined",Tele Yucatan (1080p) [Geo-blocked]
+#EXTVLCOPT:http-referrer=https://www.teleyucatan.gob.mx/
+https://5ca3e84a76d30.streamlock.net/teleyucatan/videoteleyucatan/playlist.m3u8
 #EXTINF:-1 tvg-id="Telemax.mx@XEWHTDT" tvg-logo="https://i.imgur.com/klhTyDU.png" group-title="Undefined",Telemax (Mexico) XEWH-TDT (1080p)
 https://s5.mexside.net:1936/telemax/telemax/playlist.m3u8
 #EXTINF:-1 tvg-id="TeleplaySureste.mx@SD" tvg-logo="https://i.imgur.com/MeV5N08.png" group-title="Entertainment",Teleplay Sureste (720p)

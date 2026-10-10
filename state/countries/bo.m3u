@@ -67,6 +67,8 @@ https://edge.enhdtv.com/8054/index.m3u8
 https://edge.enhdtv.com/redamerica/index.m3u8
 #EXTINF:-1 tvg-id="RedCCTV.bo@SD" tvg-logo="https://i.imgur.com/YC5FRmq.png" group-title="Undefined",Red CCTV (480p)
 https://solo.disfrutaenlared.com:1936/redcctv/redcctv/playlist.m3u8
+#EXTINF:-1 tvg-id="RedRubi.bo@SD" tvg-logo="https://i.imgur.com/Y4KOypc.jpeg" group-title="General",Red Rubi (720p)
+https://59d39900ebfb8.streamlock.net/asiesmipueblo/asiesmipueblo/playlist.m3u8
 #EXTINF:-1 tvg-id="RedTVShop.bo@SD" tvg-logo="https://i.imgur.com/I7yB176.png" group-title="Shop",Red TV Shop (720p)
 https://master.tucableip.com/redtvshop/index.m3u8
 #EXTINF:-1 tvg-id="RedADvenirTV.bo@SD" tvg-logo="https://i.imgur.com/WGkMt2j.png" group-title="Undefined",RedADvenir TV (360p) [Not 24/7]
@@ -87,8 +89,6 @@ https://lbgo.bozztv.com/ssh101/ssh101/ok2026/playlist.m3u8
 https://video01.brascast.com/juan6318/juan6318/playlist.m3u8
 #EXTINF:-1 tvg-id="TELE6.bo@SD" tvg-logo="https://i.imgur.com/p7tt72X.png" group-title="General",TELE 6 (720p)
 https://lbgo.bozztv.com/ssh101/ssh101/tele6/playlist.m3u8
-#EXTINF:-1 tvg-id="TeleFeBolivia.bo@SD" tvg-logo="" group-title="General",Tele Fe Bolivia (720p)
-https://59d39900ebfb8.streamlock.net/telefehd/telefehd/playlist.m3u8
 #EXTINF:-1 tvg-id="TLCLatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png" group-title="Lifestyle",TLC Latin America (1080p)
 http://38.134.250.110:8000/play/a00n/index.m3u8
 #EXTINF:-1 tvg-id="TNTSeriesLatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/75/TNT_Series_Logo_2016.png" group-title="Series",TNT Series Latin America (1080p)
@@ -107,6 +107,8 @@ https://edge.enhdtv.com/8026/index.m3u8
 https://edge.enhdtv.com/8190/index.m3u8
 #EXTINF:-1 tvg-id="Unifranz.bo@HD" tvg-logo="https://unifranz.edu.bo/wp-content/themes/unifranz-web/public/images/logos/logo-light-min.442cee.svg" group-title="Education;Entertainment;News",Unifranz (720p)
 https://edge.enhdtv.com/8192/index.m3u8
+#EXTINF:-1 tvg-id="UnivalleTelevision.bo@SD" tvg-logo="https://i.imgur.com/qgrWDIs.png" group-title="Undefined",Univalle Television (1080p)
+https://master.tucableip.com/univalletv/playlist.m3u8
 #EXTINF:-1 tvg-id="UniversalTVLatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Universal_TV_logo.svg/960px-Universal_TV_logo.svg.png" group-title="Undefined",Universal TV Latin America (1080p)
 http://15.204.246.24:8080/UniversalHD/index.m3u8
 #EXTINF:-1 tvg-id="VTVCanal17.bo@SD" tvg-logo="https://i.imgur.com/TUhFzql.png" group-title="Religious",VTV Canal 17 (720p) [Not 24/7]

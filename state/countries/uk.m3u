@@ -11,6 +11,8 @@ https://cdn-globecast.akamaized.net/live/eds/akaal_tv/hls1_smart_akaal/akaal_tv.
 https://mn-nl.mncdn.com/alhiwar_live/smil:alhiwar.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AlbUKTV.uk@SD" tvg-logo="https://i.imgur.com/TMg4Kxi.png" group-title="General",Alb UK TV (1080p) [Not 24/7]
 http://albuk.dyndns.tv:1935/albuk/albuk.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="AnandTV.uk@SD" tvg-logo="https://i.imgur.com/5VOPFzs.png" group-title="General",Anand TV (United Kingdom) (720p) [Not 24/7]
+https://live-anandtv.anandmedia.net/anandtvapp/anandtv/index.m3u8
 #EXTINF:-1 tvg-id="Andromeda.us@UK" tvg-logo="https://i.imgur.com/6ot2lmd.png" group-title="Series",Andromeda UK
 https://jmp2.uk/plu-5e8db96bccae160007c71eec.m3u8
 #EXTINF:-1 tvg-id="AnthonyBourdainPartsUnknown.us@UK" tvg-logo="https://i.imgur.com/dAO9llk.png" group-title="Series",Anthony Bourdain: Parts Unknown
@@ -35,8 +37,6 @@ https://jmp2.uk/plu-611f85396abc84000738417b.m3u8
 https://hls.autopo.st/hls/britasiatv/index.m3u8
 #EXTINF:-1 tvg-id="CagneyLacey.de@GB" tvg-logo="https://images.pluto.tv/channels/6960c5a906d76f50db2816dc/colorLogoPNG_1767949823270.png" group-title="Series",Cagney & Lacey
 https://jmp2.uk/plu-6960c5a906d76f50db2816dc.m3u8
-#EXTINF:-1 tvg-id="Canaf54TV.uk@SD" tvg-logo="https://i.imgur.com/viB0FS2.png" group-title="General",Canaf54 TV
-https://5caf24a595d94.streamlock.net:1937/pvyugfkzkc/pvyugfkzkc/playlist.m3u8
 #EXTINF:-1 tvg-id="ChannelS.uk@SD" tvg-logo="https://i.imgur.com/hJxFLvF.png" group-title="Culture",Channel S (United Kingdom) (576p)
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="ClubbingTV.us@UK" tvg-logo="https://i.imgur.com/MyiA92q.png" group-title="Music",Clubbing TV UK (720p)
@@ -141,6 +141,14 @@ https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8
 https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="MrBeanLiveAction.uk@SD" tvg-logo="https://d2yv6y0n3qsl5c.cloudfront.net/MBEANP/MrBeanLiveAction-LG_LOGO_800x200.png" group-title="Comedy;Kids",Mr Bean Live Action (1080p)
 https://amg00627-amg00627c39-samsung-gb-5569.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="MTA3AlArabia.uk@SD" tvg-logo="https://i.imgur.com/m3PEldJ.png" group-title="Religious",MTA3 Al-Arabia (1080p)
+https://chlivemta1.akamaized.net/hls/live/2010556/mta3alarabia/playlist.m3u8
+#EXTINF:-1 tvg-id="MTA4Africa.uk@SD" tvg-logo="https://i.imgur.com/lmVeQQX.png" group-title="Religious",MTA4 Africa (1080p)
+https://chlivemta.akamaized.net/hls/live/2010555/mtaafrica1/playlist.m3u8
+#EXTINF:-1 tvg-id="MTA5Africa.uk@SD" tvg-logo="https://i.imgur.com/9Cobb2i.png" group-title="Religious",MTA5 Africa (1080p)
+https://chlivemta.akamaized.net/hls/live/2010555/mtaafrica2/playlist.m3u8
+#EXTINF:-1 tvg-id="MTA8America.uk@SD" tvg-logo="https://i.imgur.com/CF6X9wB.png" group-title="Religious",MTA8 America (1080p)
+https://chlivemta.akamaized.net/hls/live/2016718/mta8/playlist.m3u8
 #EXTINF:-1 tvg-id="MUTV.uk@SD" tvg-logo="https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1834.png" group-title="Sports",MUTV (720p)
 https://fastly.live.brightcove.com/6374054671112/eu-west-1/6058004203001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiYXplMnp5LmVncmVzcy55ODN1ZWIiLCJhY2NvdW50X2lkIjoiNjA1ODAwNDIwMzAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU4MDA0MjAzMDAxIl0sImp0aSI6IjYzNzQwNTQ2NzExMTIifQ.3FmuTna3DAmY7xlhK5fk6LMrosrtrR5VsU2QOgYO5y4/playlist-hls.m3u8
 #EXTINF:-1 tvg-id="MysteryTV.us@UK" tvg-logo="https://i.imgur.com/K4gwstM.png" group-title="Entertainment",Mystery TV (1080p)
@@ -241,10 +249,6 @@ https://qvcuk-live.akamaized.net/hls/live/2097112/qst/master.m3u8
 https://samsungau-qwestjazz-samsungtv-zw2jc.amagi.tv/playlist/samsungau-qwestjazz-samsungtv/playlist.m3u8
 #EXTINF:-1 tvg-id="RakutenTVActionMovies.es@UK" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Movies",Rakuten TV Action Movies UK (1080p)
 https://54045f0c40fd442c8b06df076aaf1e85.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6065/master.m3u8
-#EXTINF:-1 tvg-id="RakutenTVComedyMovies.es@UK" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Movies",Rakuten TV Comedy Movies UK (1080p)
-https://9be783d652cd4b099cf63e1dc134c4a3.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6181/master.m3u8
-#EXTINF:-1 tvg-id="RakutenTVFamilyMovies.es@UK" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Family;Movies",Rakuten TV Family Movies UK (1080p)
-https://e3207568b726401995c25670faaf32e4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6203/master.m3u8
 #EXTINF:-1 tvg-id="RakutenTVTopMovies.es@UK" tvg-logo="https://i.imgur.com/Meew6eX.png" group-title="Movies",Rakuten TV Top Movies UK (1080p)
 https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8
 #EXTINF:-1 tvg-id="RedBullTV.at@UK" tvg-logo="https://images.pluto.tv/channels/5e7cb84a172a0f0007da69e4/colorLogoPNG.png" group-title="Outdoor;Sports",Red Bull TV UK (1080p)

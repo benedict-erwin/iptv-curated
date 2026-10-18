@@ -31,6 +31,8 @@ http://45.5.118.152:8000/play/a03i/index.m3u8
 https://video0.rogohosting.com:19360/tvcozumel/tvcozumel.m3u8
 #EXTINF:-1 tvg-id="Canal10Durango.mx@SD" tvg-logo="https://i.imgur.com/H34quHQ.png" group-title="Undefined",Canal 10 Durango (1080p)
 https://5e50264bd6766.streamlock.net/canal10durango/videocanal10durango/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal22Nacional.mx@SD" tvg-logo="https://i.imgur.com/6qiYvhe.png" group-title="Undefined",Canal 22 Nacional (720p) [Geo-blocked]
+https://5fc584f3f19c9.streamlock.net/canal22/smil:canal22.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal26.mx@SD" tvg-logo="https://i.imgur.com/PAvnVN9.png" group-title="Undefined",Canal 26 (Mexico) (1080p)
 https://60417ddeaf0d9.streamlock.net/telemetrika3/smil:telemetrika3.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal33Tijuana.mx@SD" tvg-logo="https://iili.io/JCt1Nbn.png" group-title="General;News",Canal 33 Tijuana (720p)
@@ -160,8 +162,6 @@ https://s5.mexside.net:1936/telemax/telemax/playlist.m3u8
 https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8
 #EXTINF:-1 tvg-id="ThePetCollective.us@Mexico" tvg-logo="https://i.imgur.com/yH7n2dF.png" group-title="Family",The Pet Collective Mexico (720p)
 https://the-pet-collective-international-mx.samsung.wurl.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="TlaxcalaTV.mx@SD" tvg-logo="https://i.imgur.com/5vaEhfy.png" group-title="Undefined",Tlaxcala TV (360p) [Not 24/7]
-https://vid26.mega00.com:5443/live/streams/qNmc7nulmq8zPYZE1582752735050.m3u8
 #EXTINF:-1 tvg-id="TlnovelasMexico.mx@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/62/Tlnovelas_logo_2021.png" group-title="Series",Tlnovelas Mexico (1080p)
 http://167.249.23.102:8000/play/a0g8/index.m3u8
 #EXTINF:-1 tvg-id="TransmediaTelevisionMorelia.mx@SD" tvg-logo="https://i.imgur.com/jYMpVQA.png" group-title="Undefined",Transmedia Television Morelia (614p) [Geo-blocked]

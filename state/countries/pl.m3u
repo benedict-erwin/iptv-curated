@@ -38,8 +38,6 @@ http://57.128.231.171:8080/307/index.m3u8
 http://57.128.231.171:8080/306/index.m3u8
 #EXTINF:-1 tvg-id="BBCLifestyle.uk@Poland" tvg-logo="https://i.imgur.com/9mzJJ3y.png" group-title="Lifestyle",BBC Lifestyle Poland (1080p)
 http://57.128.231.171:8080/305/index.m3u8
-#EXTINF:-1 tvg-id="BialogardzkaTelewizjaKablowa.pl@HD" tvg-logo="https://btk.bsmbialogard.pl/sites/default/files/inline-images/logo%20header2%282%29.png" group-title="Entertainment",Bialogardzka Telewizja Kablowa (1080p)
-https://bsmbialogard.pl/live/index.m3u8
 #EXTINF:-1 tvg-id="Bigtime.pl@SD" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/1fe37ff8-c6b7-4123-8c68-653d657b4c5f-width200-quality90.jpeg" group-title="Undefined",Bigtime
 https://103f01c3ff79408e83c9212f8a374ecc.mediatailor.us-east-1.amazonaws.com/v1/master/0fb304b2320b25f067414d481a779b77db81760d/RakutenTV-eu_BjgtjmeDarmoweFilmy/playlist.m3u8
 #EXTINF:-1 tvg-id="BuzzfeedUnsolved.pl@FAST" tvg-logo="https://images-0.rakuten.tv/storage/global-live-channel/translation/artwork/e16cfcc7-2040-4bd5-8339-16d499f8799e-width200-quality90.png" group-title="Undefined",Buzzfeed Unsolved
@@ -114,6 +112,8 @@ http://57.128.210.196:8080/264/index.m3u8
 http://57.128.210.196:8080/263/index.m3u8
 #EXTINF:-1 tvg-id="Eurosport4Polska.pl@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/ae/Eurosport_4_2022.svg/revision/latest?cb=20220418053934" group-title="Sports",Eurosport 4 Polska (1080p)
 http://57.128.231.171:8080/291/index.m3u8
+#EXTINF:-1 tvg-id="EWTNPoland.pl@SD" tvg-logo="https://i.imgur.com/VtKYELf.png" group-title="Religious",EWTN Poland (1080p)
+https://cdn3.wowza.com/1/ZHdrMWt1NjlDSzFu/bzdDVG10/hls/live/playlist.m3u8
 #EXTINF:-1 tvg-id="ExtremeSportsChannelPolska.pl@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/Extreme_Sports_Channel.svg/960px-Extreme_Sports_Channel.svg.png" group-title="Sports",Extreme Sports Channel Polska (1080p)
 http://57.128.231.171:8080/262/index.m3u8
 #EXTINF:-1 tvg-id="FailArmy.us@Poland" tvg-logo="https://i.imgur.com/VIpQJxL.png" group-title="Comedy",FailArmy Poland (720p)
@@ -267,12 +267,12 @@ http://92.114.85.87:8010/play/a00k/index.m3u8
 https://amg00378-mavtv-amg00378c2-rakuten-us-1048.playouts.now.amagi.tv/playlist/amg00378-mavtvfast-motorsportsnetwork-rakutenus/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioRAM.pl@HD" tvg-logo="https://i.ibb.co/LXbchP5q/logo-1.png" group-title="Music",Radio RAM (1080p)
 https://1888165924.rsc.cdn77.org/live/RadioRAM/playlist.m3u8
-#EXTINF:-1 tvg-id="RadiowaCzworka.pl@SD" tvg-logo="https://i.imgur.com/VAtxF7k.png" group-title="Entertainment",Radiowa Czworka (1080p)
-https://stream14.polskieradio.pl/pr4_video/video_pr4.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="RakutenViki.us@Poland" tvg-logo="https://i.imgur.com/pbyd1g2.png" group-title="Entertainment;Series",Rakuten Viki Poland
 https://fd18f1cadd404894a31a3362c5f319bd.mediatailor.us-east-1.amazonaws.com/v1/master/04fd913bb278d8775298c26fdca9d9841f37601f/RakutenTV-eu_RakutenViki-1/playlist.m3u8
 #EXTINF:-1 tvg-id="RedCarpetTVInternational.pl@SD" tvg-logo="https://i.imgur.com/xf7UXCA.png" group-title="Undefined",Red Carpet TV International (1080p)
 https://fast-rakuten.okast.tv/fa2e8c4385712f9a9076eaf728c751de/channels/1a6ecfaa-40c6-41b8-8634-595c424f856e/21f67fd1-4d21-43ba-8ad8-3afac9982c25/master.m3u8
+#EXTINF:-1 tvg-id="RomanceTV.pl@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Romance_TV_Logo_10.2019.svg/960px-Romance_TV_Logo_10.2019.svg.png" group-title="Undefined",Romance TV (576i)
+http://92.114.85.87:8009/play/a00a/index.m3u8
 #EXTINF:-1 tvg-id="Royalworld.pl@FAST" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/39438460-99ba-412e-ac19-9342249384af-width200-quality90.jpeg" group-title="Undefined",Royalworld
 https://ac76260b1102416c93f3d20958bfeb4b.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RakutenTV-pl_Royalworld/playlist.m3u8
 #EXTINF:-1 tvg-id="SciFi.pl@SD" tvg-logo="https://i.imgur.com/QEqai8a.png" group-title="Undefined",Sci Fi (Poland) (1080p)
@@ -303,8 +303,6 @@ https://5d84fe297ee2b.streamlock.net/sercanie/scj_florek.stream_aac/playlist.m3u
 https://cdn01.aztv.pl/live_tvjaslo/live_tvjaslo.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="TelewizjaLuban.pl@SD" tvg-logo="https://i.imgur.com/t2BGp0G.jpeg" group-title="General",Telewizja Luban (720p) [Not 24/7]
 http://stream.herissons.cloud/hls/tvluban.m3u8
-#EXTINF:-1 tvg-id="TelewizjaRegionalnaZary.pl@SD" tvg-logo="https://i.imgur.com/FB9H8DO.png" group-title="General",Telewizja Regionalna Zary
-https://tvregfull.mailfull.pl/tvregfull/memfs/e64b3e05-649c-4939-9ff6-584e79285ccd_output_0.m3u8
 #EXTINF:-1 tvg-id="TelewizjaRelax.pl@SD" tvg-logo="https://i.imgur.com/dejnH0O.png" group-title="General",Telewizja Relax (1080p)
 https://srv1.streamingo.pl/memfs/be50f17e-6579-4bdf-86b1-31207aec85b8.m3u8
 #EXTINF:-1 tvg-id="ThePetCollective.us@Poland" tvg-logo="https://i.imgur.com/yH7n2dF.png" group-title="Family",The Pet Collective Poland (720p)
@@ -325,8 +323,6 @@ https://5cce8c6f0e84c.streamlock.net/LiveCast/smil:PlayStream9.smil/playlist.m3u
 http://stream.tvkujawy.pl:8080/live/broadcast.m3u8
 #EXTINF:-1 tvg-id="TVOkazje.pl@SD" tvg-logo="https://i.imgur.com/DbALkkV.png" group-title="Undefined",TV Okazje (576i)
 http://92.114.85.87:8014/play/a008/index.m3u8
-#EXTINF:-1 tvg-id="TVRegionalnaLubin.pl@SD" tvg-logo="https://i.imgur.com/2WVNt3f.png" group-title="Undefined",TV Regionalna Lubin (1080p)
-https://tvregfull.mailfull.pl/tvregfull/memfs/e64b3e05-649c-4939-9ff6-584e79285ccd.m3u8
 #EXTINF:-1 tvg-id="TVRepublika.pl@SD" tvg-logo="https://i.imgur.com/ljpK6dZ.png" group-title="Undefined",TV Republika
 http://92.114.85.87:8018/play/a008/index.m3u8
 #EXTINF:-1 tvg-id="TVTorun.pl@SD" tvg-logo="https://i.imgur.com/ZJ0yDWI.png" group-title="Undefined",TV Torun (1080p) [Not 24/7]

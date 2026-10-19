@@ -15,8 +15,6 @@ https://api-tv3.yayin.com.tr/postatv/postatv/playlist.m3u8
 https://starmenajo.com/hls/almahriah/index.m3u8
 #EXTINF:-1 tvg-id="AltasTV.tr@SD" tvg-logo="https://i.imgur.com/XaJ7fp6.png" group-title="General",Altas TV (1080p)
 https://edge1.socialsmart.tv/altastv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="AnadoluNetTV.tr@SD" tvg-logo="https://www.anadolunettv.com/d/r/logo.png" group-title="General",Anadolu Net TV (1080p)
-https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8
 #EXTINF:-1 tvg-id="ASTV.tr@SD" tvg-logo="https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png" group-title="News",AS TV (900p)
 https://live.artidijitalmedya.com/artidijital_astv/astv/playlist.m3u8
 #EXTINF:-1 tvg-id="ATV.tr@SD" tvg-logo="https://i.imgur.com/HyVUwFC.png" group-title="General",ATV (Turkiye) (1080p)
@@ -39,8 +37,6 @@ https://andro.mangeinde4.lat/checklist/androstreamlivebsh.m3u8
 https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="BricveSatrancTV.tr@SD" tvg-logo="https://i.imgur.com/TXDV1ty.png" group-title="Undefined",Bric ve Satranc TV (480p) [Not 24/7]
 http://139.162.182.79/live/test/index.m3u8
-#EXTINF:-1 tvg-id="BRTV.tr@SD" tvg-logo="https://i.imgur.com/U3qlEAp.png" group-title="Undefined",BRTV (Turkiye) (720p) [Geo-blocked]
-https://live.artidijitalmedya.com/artidijital_brtv/brtv/playlist.m3u8
 #EXTINF:-1 tvg-id="CayTV.tr@SD" tvg-logo="https://i.imgur.com/ndupxwu.png" group-title="General",Cay TV (720p)
 https://edge1.socialsmart.tv/caytv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="CiftciTV.tr@SD" tvg-logo="https://i.imgur.com/CLzP4vL.png" group-title="Culture;Education",Ciftci TV (720p) [Not 24/7]
@@ -87,8 +83,6 @@ https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 https://tv.ensonhaber.com/haberturk/haberturk.m3u8
 #EXTINF:-1 tvg-id="IcelTV.tr@SD" tvg-logo="https://i.imgur.com/CGwImKv.png" group-title="Undefined",Icel TV (720p) [Not 24/7]
 https://edge1.socialsmart.tv/iceltv/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="IlkeTV.tr@HD" tvg-logo="https://ilketv.com.tr/wp-content/uploads/2024/06/logo.png" group-title="Undefined",Ilke TV (1080p)
-https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
 #EXTINF:-1 tvg-id="Kanal3.tr@SD" tvg-logo="https://i.imgur.com/eXErSv0.png" group-title="General",Kanal 3 (1080p) [Not 24/7]
 https://live.artidijitalmedya.com/artidijital_kanal3/kanal3/playlist.m3u8
 #EXTINF:-1 tvg-id="Kanal7Avrupa.tr@SD" tvg-logo="https://i.imgur.com/wlfyj5l.png" group-title="Entertainment",Kanal 7 Avrupa (720p) [Not 24/7]
@@ -184,6 +178,8 @@ https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_tontv/tontv/playlist.m3u8
 #EXTINF:-1 tvg-id="TRT1.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/960px-TRT_1_logo_%282021-%29.svg.png" group-title="Undefined",TRT 1 (1440p)
 https://tv-trt1.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="TRT2.tr@SD" tvg-logo="https://i.imgur.com/iOCQdyD.png" group-title="Undefined",TRT 2 (1440p) [Geo-blocked]
+https://tv-trt2.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTAvaz.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TRT_Avaz_logo.svg/960px-TRT_Avaz_logo.svg.png" group-title="Undefined",TRT Avaz (720p)
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="TRTCocuk.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/960px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="Kids",TRT Cocuk (1440p)
@@ -206,8 +202,6 @@ https://tv-trtturk.medya.trt.com.tr/master.m3u8
 https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="TV1.tr@SD" tvg-logo="https://i.imgur.com/8CtrYVb.png" group-title="Undefined",TV 1 (720p)
 https://edge1.socialsmart.tv/tv1/bant1/playlist.m3u8
-#EXTINF:-1 tvg-id="TV4.tr@SD" tvg-logo="https://i.imgur.com/UpsQsbd.png" group-title="Undefined",TV 4 (720p)
-https://turkmedya-live.ercdn.net/tv4/tv4.m3u8
 #EXTINF:-1 tvg-id="TV52.tr@SD" tvg-logo="https://i.imgur.com/k4R5CzO.png" group-title="Undefined",TV 52 (720p) [Not 24/7]
 https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="TVDen.tr@SD" tvg-logo="https://i.imgur.com/Uhg95Ze.png" group-title="Undefined",TV Den (576p) [Not 24/7]

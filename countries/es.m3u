@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="3CatPlatsbruts.es@SD" tvg-logo="https://i.imgur.com/49ZENis.png" group-title="Classic;Comedy;Public;Series",3Cat Plats bruts (1080p)
+https://fast-tailor.3catdirectes.cat/v1/channel/ccma-channel2/hls.m3u8
 #EXTINF:-1 tvg-id="8LaMarinaTV.es@SD" tvg-logo="https://i.imgur.com/BTJvvBK.png" group-title="General",8 La Marina TV (576p)
 https://streaming005.gestec-video.com/hls/canal24.m3u8
 #EXTINF:-1 tvg-id="12tv.es@SD" tvg-logo="https://i.imgur.com/VSTgXsh.png" http-referrer="https://player.streamingconnect.com/" group-title="General",12tv (720p)
@@ -36,6 +38,8 @@ https://amg00793-amg00793c40-rakuten-es-5444.playouts.now.amagi.tv/playlist.m3u8
 https://live1.ovalcast.com:3916/live/bcngospeltvlive.m3u8
 #EXTINF:-1 tvg-id="BobEsponja.de@ES" tvg-logo="https://images.pluto.tv/channels/5f1aca0b4e448e00075e7c5e/colorLogoPNG.png" group-title="Kids",Bob Esponja (720p)
 https://jmp2.uk/plu-5f1aca0b4e448e00075e7c5e.m3u8
+#EXTINF:-1 tvg-id="BonDiaTV.es@SD" tvg-logo="https://i.imgur.com/VgRCu2U.png" group-title="General;Public",Bon Dia TV (1080p)
+https://directes-tv-int.3catdirectes.cat/live-content/bondia-hls/master.m3u8
 #EXTINF:-1 tvg-id="Canal1MarMenorTorrePacheco.es@SD" tvg-logo="https://i.imgur.com/MQOwCdZ.png" group-title="General;News",Canal 1 Mar Menor Torre Pacheco (1080p)
 https://directo.tuwebtv.es/canal1.m3u8
 #EXTINF:-1 tvg-id="Canal3TVBiar.es@SD" tvg-logo="https://i.imgur.com/cnKCZkK.png" group-title="General",Canal 3 TV Biar (480p) [Not 24/7]
@@ -134,8 +138,6 @@ https://cdn1.etbon.eus/etb1on/index.m3u8
 https://cdn1.etbon.eus/etb2/index.m3u8
 #EXTINF:-1 tvg-id="ETB2On.es@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f5/Logo_ETB2_On_2026.svg" group-title="Entertainment",ETB2 On (1080p)
 https://cdn1.etbon.eus/etb2on/index.m3u8
-#EXTINF:-1 tvg-id="ETBEvents1.es@SD" tvg-logo="https://i.imgur.com/bVUEmx9.png" group-title="General;Public",ETB Events 1 (1080p)
-https://cdn1.etbon.eus/oc1/index.m3u8
 #EXTINF:-1 tvg-id="EWTN.us@SpainLatinAmerica" tvg-logo="https://play-lh.googleusercontent.com/3716tvZCgzpIt-X1giV8jKwCdC8zwOI4eMUfO_ETWzNX6eGKIi2RiUK9a_fr6BCzjw" group-title="Religious",EWTN (United States) Spain & Latin America (720p)
 https://cdn3.wowza.com/1/SmVrQmZCUXZhVDgz/b3J3MFJv/hls/live/playlist.m3u8
 #EXTINF:-1 tvg-id="EWTNEspana.es@SD" tvg-logo="https://i.imgur.com/KvpMbkd.png" group-title="Religious",EWTN Espana
@@ -173,10 +175,6 @@ https://newscript.gestec-video.com/hls/8TVEVENTOS.m3u8
 https://5c0956165db0b.streamlock.net:8090/directo/_definst_/lancelot.television/master.m3u8
 #EXTINF:-1 tvg-id="LiraTV.es@SD" tvg-logo="https://i.imgur.com/hBswXYZ.png" group-title="Music",LiraTV (720p)
 https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8
-#EXTINF:-1 tvg-id="LogosTV.es@SD" tvg-logo="https://i.imgur.com/Kr3U3Ub.png" group-title="Religious",Logos TV (Spain) (1080p) [Not 24/7]
-https://streamer1.streamhost.org/salive/logosH/master.m3u8
-#EXTINF:-1 tvg-id="LogosTVKids.es@SD" tvg-logo="https://i.imgur.com/Kr3U3Ub.png" group-title="Kids;Religious",Logos TV Kids (720p) [Not 24/7]
-https://streamer1.streamhost.org/salive/logoskidsH/playlist.m3u8
 #EXTINF:-1 tvg-id="LosarchivosdelFBI.us@Spain" tvg-logo="https://i.imgur.com/eDCdJO2.png" group-title="Series",Los archivos del FBI
 https://jmp2.uk/plu-5f1acbed25948a0007ffbe65.m3u8
 #EXTINF:-1 tvg-id="LosAsesinatosdeMidsomer.us@Spain" tvg-logo="https://i.imgur.com/JIbupT1.png" group-title="Series",Los Asesinatos de Midsomer
@@ -249,10 +247,6 @@ https://jmp2.uk/plu-654a35ce346f420008d5c36e.m3u8
 https://jmp2.uk/plu-6475bfec536e0c0008858e9f.m3u8
 #EXTINF:-1 tvg-id="PlutoTVKidsClassics.de@ES" tvg-logo="https://images.pluto.tv/channels/609e7e423e9173000706a681/colorLogoPNG_1750147033956.png" group-title="Kids",Pluto TV Kids Classics (720p)
 https://jmp2.uk/plu-609e7e423e9173000706a681.m3u8
-#EXTINF:-1 tvg-id="PlutoTVMelrosePlace.us@Spain" tvg-logo="https://i.imgur.com/hXDj0fV.png" group-title="Undefined",Pluto TV Melrose Place
-https://jmp2.uk/plu-64be745340962900080b55e7.m3u8
-#EXTINF:-1 tvg-id="PlutoTVMotor.de@ES" tvg-logo="https://images.pluto.tv/channels/6080345ebb49b90007ce0baf/colorLogoPNG.png" group-title="Auto",Pluto TV Motor (Germany)
-https://jmp2.uk/plu-6080345ebb49b90007ce0baf.m3u8
 #EXTINF:-1 tvg-id="PlutoTVParanormal.de@ES" tvg-logo="https://images.pluto.tv/channels/5f98487036af340008da1e37/colorLogoPNG.png" group-title="Movies",Pluto TV Paranormal (Germany) ES
 https://jmp2.uk/plu-612ce5214bb5790007ad3016.m3u8
 #EXTINF:-1 tvg-id="PlutoTVPsycho.de@ES" tvg-logo="https://images.pluto.tv/channels/65ce480a78df2200131c597b/colorLogoPNG.png" group-title="Movies",Pluto TV Psycho
@@ -261,8 +255,6 @@ https://jmp2.uk/plu-65ce480a78df2200131c597b.m3u8
 https://jmp2.uk/plu-5f6a38eaa5b68b0007a00e7a.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSeriescriminales.de@ES" tvg-logo="https://images.pluto.tv/channels/65cf6ab58145cb0008129ca8/colorLogoPNG.png" group-title="Series",Pluto TV Series criminales
 https://jmp2.uk/plu-65cf6ab58145cb0008129ca8.m3u8
-#EXTINF:-1 tvg-id="PlutoTVSeriesSciFi.de@ES" tvg-logo="https://images.pluto.tv/channels/65ddec1ef7f0af0008be4b65/colorLogoPNG.png" group-title="Series",Pluto TV Series Sci-Fi (Germany)
-https://jmp2.uk/plu-65ddec1ef7f0af0008be4b65.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSnooker900.de@ES" tvg-logo="https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png" group-title="Sports",Pluto TV Snooker 900 (Germany) ES (720p)
 https://jmp2.uk/plu-69148c470155f9b136b5d856.m3u8
 #EXTINF:-1 tvg-id="PlutoTVTeen.de@ES" tvg-logo="https://images.pluto.tv/channels/63eb944dc111bc0008fe7021/colorLogoPNG_1761820520562.png" group-title="Kids",Pluto TV Teen (720p)
@@ -316,8 +308,6 @@ https://vidartv2.todostreaming.es/live/radiovida-emisiontvhd.m3u8
 https://jmp2.uk/plu-610c09219fc0430007a3fce6.m3u8
 #EXTINF:-1 tvg-id="SensaCineTVxPluto.de@ES" tvg-logo="https://images.pluto.tv/channels/676e7b4a4bd636000819c6a7/colorLogoPNG_1748957675934.png" group-title="Movies",SensaCine TV x Pluto
 https://jmp2.uk/plu-676e7b4a4bd636000819c6a7.m3u8
-#EXTINF:-1 tvg-id="Sintetasnohayparaiso.us@Spain" tvg-logo="https://i.imgur.com/fpwU2IQ.png" group-title="Series",Sin tetas no hay paraiso
-https://jmp2.uk/plu-604bdf4e6d0abc0007ba77ad.m3u8
 #EXTINF:-1 tvg-id="SolMusica.es@SD" tvg-logo="https://i.imgur.com/rbJrmPw.png" group-title="Music",Sol Musica (720p)
 https://d2glyu450vvghm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-21u4g5cjglv02/sm.m3u8
 #EXTINF:-1 tvg-id="SouthPark.de@ES" tvg-logo="https://images.pluto.tv/channels/628751bb7154a40007168843/colorLogoPNG_1748431640253.png" group-title="Animation;Comedy",South Park (Germany)

@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="3CatInfo.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/3CatInfo_logo.svg/960px-3CatInfo_logo.svg.png" group-title="News;Public",3CatInfo (1080p)
+https://directes-tv-int.3catdirectes.cat/live-origin/canal324-hls/master.m3u8
 #EXTINF:-1 tvg-id="7TV.es@Andalucia" tvg-logo="https://i.imgur.com/rnzMR9R.png" group-title="General",7TV
 https://especial7tv.gestec-video.com/hls/regional.m3u8
 #EXTINF:-1 tvg-id="7TV.es@Cordoba" tvg-logo="https://i.imgur.com/rnzMR9R.png" group-title="General",7TV Cordoba
@@ -18,8 +20,6 @@ https://streaming005.gestec-video.com/hls/canal24.m3u8
 https://cloud.fastchannel.es/mic/manifiest/hls/12tv/12tv.m3u8
 #EXTINF:-1 tvg-id="24Horas.es@SD" tvg-logo="https://i.ibb.co/21sXZ3GT/24h.png" group-title="News;Public",24 Horas (720p)
 https://ztnr.rtve.es/ztnr/1694255.m3u8
-#EXTINF:-1 tvg-id="24HorasCatalunya.es@SD" tvg-logo="https://i.ibb.co/21sXZ3GT/24h.png" group-title="News;Public",24 Horas Catalunya (720p)
-https://ztnr.rtve.es/ztnr/4952053.m3u8
 #EXTINF:-1 tvg-id="28kanala.es@SD" tvg-logo="https://i.imgur.com/DyvK28q.png" group-title="General",28 kanala
 https://streaming.28kanala.eus/hls/z.m3u8
 #EXTINF:-1 tvg-id="APunt.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Logotip_d%27%C3%80_Punt_%282017-%29.svg/960px-Logotip_d%27%C3%80_Punt_%282017-%29.svg.png" group-title="General;Public",A Punt (720p)
@@ -56,6 +56,8 @@ https://directo.tuwebtv.es/canal1.m3u8
 https://avantstreaming.es/hls/canal3.m3u8
 #EXTINF:-1 tvg-id="Canal4ManchaCentro.es@SD" tvg-logo="https://i.imgur.com/t3O3O9M.png" group-title="Undefined",Canal 4 Mancha Centro (720p) [Not 24/7]
 https://5924d3ad0efcf.streamlock.net/canal4/canal4live/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal7TeleValencia.es@SD" tvg-logo="https://i.imgur.com/ILfXDRs.png" group-title="General",Canal 7 TeleValencia (576p)
+https://play.cdn.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/028/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal10Emporda.es@SD" tvg-logo="https://i.imgur.com/ojQ6wzX.png" group-title="Undefined",Canal 10 Emporda (360p) [Not 24/7]
 https://ventdelnord.tv:8080/escala/directe.m3u8
 #EXTINF:-1 tvg-id="Canal33Madrid.es@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Logo_Canal_33_Madrid_2025.jpg/960px-Logo_Canal_33_Madrid_2025.jpg" group-title="Undefined",Canal 33 Madrid
@@ -204,6 +206,8 @@ https://jmp2.uk/plu-6578808014fbe400086e21bc.m3u8
 https://streaming004.gestec-video.com/hls/MIJAS.m3u8
 #EXTINF:-1 tvg-id="MTVEmbarazadaalos16.de@ES" tvg-logo="https://images.pluto.tv/channels/5f98537a5a4341000733aefe/colorLogoPNG.png" group-title="Entertainment",MTV Embarazada a los 16
 https://jmp2.uk/plu-5f98537a5a4341000733aefe.m3u8
+#EXTINF:-1 tvg-id="MTVJerseys.de@ES" tvg-logo="https://images.pluto.tv/channels/62ac3d7dc23b400008ae5b5a/colorLogoPNG.png" group-title="Entertainment",MTV Jerseys
+https://jmp2.uk/plu-62ac3d7dc23b400008ae5b5a.m3u8
 #EXTINF:-1 tvg-id="MTVOriginals.de@ES" tvg-logo="https://images.pluto.tv/channels/5f1aadf373bed3000794d1d7/colorLogoPNG.png" group-title="Entertainment",MTV Originals
 https://jmp2.uk/plu-5f1aadf373bed3000794d1d7.m3u8
 #EXTINF:-1 tvg-id="MTVVerguenzaajena.de@ES" tvg-logo="https://images.pluto.tv/channels/63eb9495a8b227000841bf64/colorLogoPNG.png" group-title="Entertainment",MTV Verguenza ajena (720p)
@@ -319,14 +323,8 @@ https://jmp2.uk/plu-676e7b4a4bd636000819c6a7.m3u8
 https://jmp2.uk/plu-604bdf4e6d0abc0007ba77ad.m3u8
 #EXTINF:-1 tvg-id="SolMusica.es@SD" tvg-logo="https://i.imgur.com/rbJrmPw.png" group-title="Music",Sol Musica (720p)
 https://d2glyu450vvghm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-21u4g5cjglv02/sm.m3u8
-#EXTINF:-1 tvg-id="SouthPark.de@ES" tvg-logo="https://images.pluto.tv/channels/628751bb7154a40007168843/colorLogoPNG_1748431640253.png" group-title="Animation;Comedy",South Park (Germany)
-https://jmp2.uk/plu-628751bb7154a40007168843.m3u8
-#EXTINF:-1 tvg-id="SouthParkVersionOriginal.de@ES" tvg-logo="https://images.pluto.tv/channels/63d7a8e5a9957100086bfc23/colorLogoPNG.png" group-title="Animation;Comedy",South Park Version Original
-https://jmp2.uk/plu-63d7a8e5a9957100086bfc23.m3u8
 #EXTINF:-1 tvg-id="SpektraTV.es@SD" tvg-logo="https://i.imgur.com/0zCt8e4.png" group-title="Music",SpektraTV (720p)
 https://cloudvideo.servers10.com:8081/8026/tracks-v1a1/index.m3u8
-#EXTINF:-1 tvg-id="Taroteame.es@SD" tvg-logo="" group-title="Religious",Taroteame (576p)
-https://5d2733224ac48.streamlock.net/taroteame/tarot_web/playlist.m3u8
 #EXTINF:-1 tvg-id="TBNEspana.es@SD" tvg-logo="https://i.imgur.com/oGvsUH9.png" group-title="Religious",TBN Espana (576p)
 https://edge.xn--tbnespaa-j3a.es/LiveApp/streams/tbnlive.m3u8
 #EXTINF:-1 tvg-id="TeleElx.es@SD" tvg-logo="https://i.imgur.com/w5NTWpl.png" group-title="General",Tele Elx (1080p)
@@ -342,8 +340,6 @@ https://live.telemadrid.cross-media.es/6389770581112/eu-central-1/6416060453001/
 #EXTINF:-1 tvg-id="TeleVigo.es@SD" tvg-logo="https://i.imgur.com/4iVmlFa.png" http-referrer="http://www.televigo.com" group-title="Undefined",TeleVigo (1080p) [Not 24/7]
 #EXTVLCOPT:http-referrer=http://www.televigo.com
 https://cloud.fastchannel.es/mic/manifiest/hls/televigo/televigo.m3u8
-#EXTINF:-1 tvg-id="TelevisionAranda.es@SD" tvg-logo="https://i.imgur.com/FwIIdKG.png" group-title="Undefined",Television Aranda (720p)
-https://cloud.streamingconnect.tv/hls/telearanda/telearanda.m3u8
 #EXTINF:-1 tvg-id="TelevisionCanaria.es@SD" tvg-logo="https://rtvc.es/archivos/2020/03/logo-mobilretina.png" group-title="Undefined",Television Canaria (1080p)
 https://rtvclive.flumotion.cloud/rtvc1live/smil:channel1PRG.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TelevisionConsciente.es@SD" tvg-logo="https://i.imgur.com/6QVHKPw.png" group-title="Religious",Television Consciente (1080p)

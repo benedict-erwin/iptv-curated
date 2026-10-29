@@ -1,11 +1,11 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="AMCLatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="Movies",AMC Latin America (1080p)
 http://15.204.246.24:8080/AMCHD/index.m3u8
-#EXTINF:-1 tvg-id="AMCSeriesLatinAmerica.us@Panregional" tvg-logo="https://amc-series.s3.amazonaws.com/menu/hbfen1Gom0_k1cyqi7rw4-amc-series-train-w.png" group-title="Series",AMC Series Latin America (1080p)
-http://45.171.64.30:6060/play/a005/index.m3u8
 #EXTINF:-1 tvg-id="CanalALMA.uy@SD" tvg-logo="https://i.imgur.com/rB7iFUF.jpg" http-referrer="https://canalalma.tv" group-title="General",Canal ALMA
 #EXTVLCOPT:http-referrer=https://canalalma.tv
 https://stmv1.voxtvhd.com.br/canalalmatv/canalalmatv/playlist.m3u8
+#EXTINF:-1 tvg-id="CanalMas.uy@SD" tvg-logo="https://i.imgur.com/gs1L1mW.png" group-title="Religious",Canal Mas (720p)
+https://canalmasuruguay.com/hls/master-abr.m3u8
 #EXTINF:-1 tvg-id="CanalOncePlus.uy@SD" tvg-logo="https://i.imgur.com/TYiMGUD.png" http-referrer="https://canal11.uy" group-title="General",Canal Once Plus
 #EXTVLCOPT:http-referrer=https://canal11.uy
 https://5e50264bd6766.streamlock.net/canal11ury/videocanal11ury/playlist.m3u8
@@ -21,6 +21,8 @@ http://45.134.141.161:2200/ARG/Disney_Channel/index.m3u8
 http://45.185.163.75:8000/play/a016/index.m3u8
 #EXTINF:-1 tvg-id="ElGourmet.ar@South" tvg-logo="https://i.imgur.com/ByMyRI9.png" group-title="Cooking",El Gourmet South (1080p)
 https://iptv.bitred.cl/ELGOURMET_HD/index.m3u8
+#EXTINF:-1 tvg-id="ESPN2LatinAmerica.us@South" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ESPN2_logo.svg/960px-ESPN2_logo.svg.png" group-title="Sports",ESPN 2 Latin America (1080p)
+https://barinaslive1.boldmss.com/ESPN_2/ESPN_2.isml/ESPN_2.m3u8
 #EXTINF:-1 tvg-id="HTV.us@Argentina" tvg-logo="https://i.imgur.com/NlKFNHS.png" group-title="Music",HTV Argentina (720p)
 http://45.134.141.161:2200/ARG/HTV/index.m3u8
 #EXTINF:-1 tvg-id="LaElegidaTelevision.uy@SD" tvg-logo="https://i.imgur.com/zdrbjDc.png" group-title="Music",La Elegida Television

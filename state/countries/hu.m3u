@@ -18,10 +18,14 @@ https://stream.iptvservice.eu/hls/balatontv.m3u8
 https://cloudfront44.lexanetwork.com:1344/freerelay/bpetv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalPlusActionEurope.nl@Magyar" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png" group-title="Movies",Canal+ Action Europe Magyar
 http://193.33.39.108:9016/play/a02n
+#EXTINF:-1 tvg-id="CartoonNetworkCEE.uk@Hungary" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="Animation;Kids",Cartoon Network CEE
+http://193.33.39.108:9007/play/a00l
 #EXTINF:-1 tvg-id="Cinemax2CentralEurope.hu@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Cinemax_2_%282016%29.png/960px-Cinemax_2_%282016%29.png" group-title="Movies",Cinemax 2 Central Europe
 http://193.33.39.108:9009/play/a024
 #EXTINF:-1 tvg-id="CinemaxCentralEurope.hu@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cinemax_2016.svg/960px-Cinemax_2016.svg.png" group-title="Movies",Cinemax Central Europe
 http://193.33.39.108:9023/play/a01b
+#EXTINF:-1 tvg-id="CityTV.hu@SD" tvg-logo="https://i.imgur.com/u0AKhzj.png" group-title="General",City TV (Hungary)
+https://citytv.hu/playlist.m3u8
 #EXTINF:-1 tvg-id="DisneyChannel.cz@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg" group-title="Kids",Disney Channel (Czech Republic)
 http://88.212.15.50/live/test_disney/playlist.m3u8
 #EXTINF:-1 tvg-id="EWTNBonumTV.hu@SD" tvg-logo="https://i.imgur.com/LdsRz2E.png" group-title="Religious",EWTN/Bonum TV
@@ -60,6 +64,8 @@ http://141.94.193.53/MAX4_HD/index.m3u8
 https://stream.moranettv.hu/live/index.m3u8
 #EXTINF:-1 tvg-id="OroszlanyiVarosiTelevizio.hu@SD" tvg-logo="https://i.imgur.com/P0fxUH5.png" group-title="General",Oroszlanyi Varosi Televizio (720p)
 https://cloudfront44.lexanetwork.com:1344/relay01/broadcast002.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="OzdiVarosiTV.hu@SD" tvg-logo="https://i.imgur.com/t0Aq3UD.png" group-title="General",Ozdi Varosi TV (720p) [Not 24/7]
+http://stream.nmih.hu:7980/live.m3u8
 #EXTINF:-1 tvg-id="RTGint.ru@SD" tvg-logo="https://i.imgur.com/ZpUNou4.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Travel",RTG int.
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://213.91.179.28:8000/play/a0bw
@@ -75,6 +81,10 @@ https://cloudfront44.lexanetwork.com:1344/relay02/livestream004.sdp/playlist.m3u
 http://stream.tveger.hu:8010/live.m3u8
 #EXTINF:-1 tvg-id="TVKeszthely.hu@SD" tvg-logo="https://i.imgur.com/2LE8xSW.png" group-title="General",TV Keszthely (360p)
 https://cloudfront44.lexanetwork.com:1344/freerelay/keszthelyivtv.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="ViasatHistory.hu@SD" tvg-logo="https://i.imgur.com/wRP9XA7.png" group-title="Documentary",Viasat History (Hungary)
+http://193.33.39.108:9007/play/a00p
+#EXTINF:-1 tvg-id="ViasatNature.hu@SD" tvg-logo="https://i.imgur.com/ousRqqD.png" group-title="Documentary",Viasat Nature (Hungary)
+http://193.33.39.108:9000/play/a05r
 #EXTINF:-1 tvg-id="XVTV.hu@SD" tvg-logo="https://i.ibb.co/hH2KF6W/4792.png" group-title="General",XV TV (480p)
 https://cloudfront44.lexanetwork.com:1344/relay01/HDE051.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="ZalaegerszegiTV.hu@SD" tvg-logo="https://i.imgur.com/MLVPf0i.png" group-title="Undefined",Zalaegerszegi TV (360p)

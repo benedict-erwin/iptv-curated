@@ -17,6 +17,8 @@ https://cdn4.mjunoon.tv:8087/streamtest/111M/chunks.m3u8
 https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8
 #EXTINF:-1 tvg-id="DiscoverPakistan.pk@SD" tvg-logo="https://i.imgur.com/IJH47fJ.png" group-title="Travel",Discover Pakistan (1080p)
 https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
+#EXTINF:-1 tvg-id="DunyaNews.pk@SD" tvg-logo="https://i.imgur.com/1PbtW0y.png" group-title="News",Dunya News (720p) [Not 24/7]
+https://imob.dunyanews.tv/livehd/ngrp:dunyalivehd_2_all/playlist.m3u8
 #EXTINF:-1 tvg-id="FalakTV.pk@SD" tvg-logo="https://i.imgur.com/2TqlNsI.png" group-title="Entertainment",Falak TV
 https://falak.rst.ae/index.m3u8
 #EXTINF:-1 tvg-id="FazalTV.pk@SD" tvg-logo="https://i.imgur.com/c0fvKia.png" group-title="Religious",Fazal TV (1080p)
@@ -47,8 +49,6 @@ https://online.godstands.tv:5443/WebRTCApp/streams/Tagalog.m3u8
 https://online.godstands.tv:5443/WebRTCApp/streams/UrduStreaming.m3u8
 #EXTINF:-1 tvg-id="GraceNetwork.pk@SD" tvg-logo="https://i.imgur.com/QSaZPJ4.png" group-title="Religious",Grace Network (720p)
 https://livecdn.live247stream.com/grace/tv/playlist.m3u8
-#EXTINF:-1 tvg-id="HumTV.pk@HD" tvg-logo="https://i.ibb.co/Tx4GfKT5/Hum-TV-HD.png" group-title="Entertainment",Hum TV (720p)
-https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
 #EXTINF:-1 tvg-id="IsaacTV.pk@SD" tvg-logo="https://i.imgur.com/RHDbsiO.png" group-title="Religious",Isaac TV (720p)
 https://livecdn.live247stream.com/isaac/tv/playlist.m3u8
 #EXTINF:-1 tvg-id="JeremiahTV.pk@SD" tvg-logo="https://raw.githubusercontent.com/songwenhui239/Songwenhui239/refs/heads/main/Jeremiah%20TV.jpeg" group-title="General",Jeremiah TV (720p)

@@ -7,6 +7,10 @@ https://jmp2.uk/plu-656df599c0fc8800089c75ab.m3u8
 https://jmp2.uk/plu-6960c5a906d76f50db2816dc.m3u8
 #EXTINF:-1 tvg-id="CSICrimeSceneInvestigation.de@GB" tvg-logo="https://images.pluto.tv/channels/6304f8d5ffb61000071ab478/colorLogoPNG.png" group-title="Series",CSI: Crime Scene Investigation
 https://jmp2.uk/plu-6304f8d5ffb61000071ab478.m3u8
+#EXTINF:-1 tvg-id="Cula4.ie@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Cula4_Purple_2022_%281%29.svg/960px-Cula4_Purple_2022_%281%29.svg.png" http-referrer="https://www.cula4.com" http-user-agent="Win64" group-title="Kids",Cula4 (576p) [Not 24/7]
+#EXTVLCOPT:http-referrer=https://www.cula4.com
+#EXTVLCOPT:http-user-agent=Win64
+http://41.180.140.146:4200/bysid/2106
 #EXTINF:-1 tvg-id="GeordieShore.de@GB" tvg-logo="https://images.pluto.tv/channels/619263ee9541940007d20d60/colorLogoPNG.png" group-title="Entertainment",Geordie Shore (Germany) GB
 https://jmp2.uk/plu-65c4960d11ced7000812c433.m3u8
 #EXTINF:-1 tvg-id="HorseCountryTV.uk@SD" tvg-logo="https://i.imgur.com/1x6zYZr.png" group-title="Outdoor",Horse & Country TV (1080p)

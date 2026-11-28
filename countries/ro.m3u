@@ -57,8 +57,6 @@ https://hls02ns.antenaplay.ro/hls/bollywood-sd/index.m3u8
 #EXTINF:-1 tvg-id="BoomTV.ro@HD" tvg-logo="https://live.radioboom.ro/live-tv/poster.jpg" http-referrer="https://tvboom.ro/" group-title="Music",Boom TV (1080p)
 #EXTVLCOPT:http-referrer=https://tvboom.ro/
 https://tvboom.ro/live-tv/live.m3u8
-#EXTINF:-1 tvg-id="BucovinaTV.ro@SD" tvg-logo="https://i.imgur.com/6klhXxp.png" group-title="Undefined",Bucovina TV (576i)
-https://www.bucovinatv.ro/proxy/video/playlist.m3u8
 #EXTINF:-1 tvg-id="Chefilacutite.ro@SD" tvg-logo="https://assets.antenaplay.ro/2026/11/04/G8N7skUwdPOXMI5hwmDm.png" group-title="Cooking",Chefi la cutite (576p)
 https://live77cdn2.antenaplay.ro/live2_sport05/live2_sport05.m3u8
 #EXTINF:-1 tvg-id="Chefiro.ro@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/1/1c/Chefi.ro_2026.png" group-title="Cooking",Chefi.ro (1080p)
@@ -112,7 +110,7 @@ https://nosignal1.antenaplay.ro/hls/fb-one-sd/index.m3u8
 https://stream1.antenaplay.ro/promo/formula-1-qatar-27-2911/chunklist.m3u8
 #EXTINF:-1 tvg-id="Formula2AntenaPlay.ro@SD" tvg-logo="https://assets.antenaplay.ro/2024/02/28/YW9VML2K4hpFUKMHme97.png" group-title="Sports",Formula 2 AntenaPlay (576p) [Not 24/7]
 https://stream1.antenaplay.ro/promo/formula-2-qatar-27-2911/chunklist.m3u8
-#EXTINF:-1 tvg-id="HtMusicChannel.ro@SD" tvg-logo="https://i.imgur.com/sqC2hqV.png" group-title="Music",H!t Music Channel (Romania) (576i)
+#EXTINF:-1 tvg-id="HtMusicChannel.ro@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/8/88/H%21T_Music_Channel_%282013%29.svg/revision/latest?cb=20210206133912" group-title="Music",H!t Music Channel (Romania) (576i)
 http://91.235.165.117:8001/play/a01e/index.m3u8
 #EXTINF:-1 tvg-id="HappyChannel.ro@HD" tvg-logo="https://i.imgur.com/kpFaiku.png" group-title="Entertainment",Happy Channel HD (1080i)
 https://live77cdn2.antenaplay.ro/live2_aws4_sdi12/live2_aws4_sdi12_5000k.m3u8
@@ -131,7 +129,7 @@ https://online.tvimpact.live/hls/impact_tv2.m3u8
 #EXTINF:-1 tvg-id="ImpactTV.ro@HD" tvg-logo="https://tvimpact.ro/impact-logo.png" http-referrer="https://tvimpact.ro/" group-title="Music",Impact TV (Romania) (1080p)
 #EXTVLCOPT:http-referrer=https://tvimpact.ro/
 https://live.tvimpact.ro:8088/hevc/index.m3u8
-#EXTINF:-1 tvg-id="ImpactTVDance.ro@SD" tvg-logo="https://i.imgur.com/G5mNdpE.png" group-title="Music",Impact TV Dance (1080p)
+#EXTINF:-1 tvg-id="ImpactTVDance.ro@SD" tvg-logo="https://ritsatv.ru/files/poster/medium/900491.webp" group-title="Music",Impact TV Dance (1080p)
 https://online.tvimpact.live/hls/dancetv.m3u8
 #EXTINF:-1 tvg-id="ImpactTVManele.ro@SD" tvg-logo="https://i.imgur.com/4JdnUAd.png" group-title="Music",Impact TV Manele (1080p)
 https://online.tvimpact.live/hls/impact_tv.m3u8
@@ -262,8 +260,8 @@ https://radiochisinau.md/hls/RChisinau.m3u8
 https://streamlov.alsolnet.com/radiofxnet/live/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioRomania3Net.ro@SD" tvg-logo="https://www.radio3net.ro/img/logos/logo_3.png" group-title="Music",Radio Romania 3Net (480p)
 https://media.3netmedia.ro/hls/stream.m3u8
-#EXTINF:-1 tvg-id="RadioRomaniaAntenaSatelor.ro@720p" tvg-logo="https://www.antenasatelor.ro/templates/default/images/custom/logo-main.svg" group-title="Music",Radio Romania Antena Satelor (720p) [Not 24/7]
-https://stream3.srr.ro/live/antenasatelor/chunklist_w1642210843.m3u8
+#EXTINF:-1 tvg-id="RadioRomaniaIasi.ro@SD" tvg-logo="https://www.radioiasi.ro/wp-content/themes/radioiasi/images/custom/logo-iasi.svg" group-title="General;Music",Radio Romania Iasi (576i) [Not 24/7]
+https://stream3.srr.ro/live/radio-iasi/chunklist_w1565024915.m3u8
 #EXTINF:-1 tvg-id="RadioRomaniaOlteniaCraiova.ro@SD" tvg-logo="https://www.rador.ro/wp-content/uploads/2017/06/logo-radio-oltenia-craiova.png" group-title="General;Music",Radio Romania Oltenia-Craiova (576p) [Not 24/7]
 https://stream3.srr.ro/live/Radio-Oltenia/chunklist_w1200239883.m3u8
 #EXTINF:-1 tvg-id="RadioRomaniaTarguMures.ro@SD" tvg-logo="https://myradioonline.ro/public/uploads/radio_img/radio-romania-targu-mures/fb_cover.jpg" group-title="General;Music",Radio Romania Targu Mures (576p)
